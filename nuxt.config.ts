@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   ],
 
   app: {
-    baseURL: '/offer-guide/',
+    baseURL: process.env.NODE_ENV === 'production' ? '/offer-guide/' : '/',
     head: {
       title: 'BuyGoods Vendor Offer Guide',
       meta: [
