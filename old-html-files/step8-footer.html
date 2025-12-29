@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 8: Footer & Legal Requirements - BuyGoods Vendor Guide</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --accent-green: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --border-gray: #e5e7eb;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --warning-red: #ef4444;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--warning-red) 0%, #dc2626 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        .step-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .critical-warning {
+            background: #fef2f2;
+            border: 3px solid var(--warning-red);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 32px auto;
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .critical-warning h3 {
+            color: var(--warning-red);
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+
+        .critical-warning p {
+            color: var(--text-dark);
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .element-card {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .element-card.critical {
+            border-color: var(--warning-red);
+            border-width: 3px;
+            background: #fef2f2;
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--warning-red) 0%, #dc2626 100%);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 18px;
+            margin-right: 16px;
+        }
+
+        .element-card h2 {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .element-card h3 {
+            font-size: 22px;
+            margin: 24px 0 12px 0;
+            color: var(--text-dark);
+        }
+
+        .element-card p {
+            color: var(--text-gray);
+            font-size: 17px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .footer-preview {
+            background: var(--bg-light);
+            border: 2px dashed var(--border-gray);
+            border-radius: 8px;
+            padding: 32px;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            padding: 20px 0;
+            border-top: 1px solid var(--border-gray);
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .footer-link {
+            color: var(--warning-red);
+            text-decoration: underline;
+        }
+
+        .disclaimer-box {
+            background: var(--white);
+            border: 2px solid var(--warning-red);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 16px 0;
+            font-size: 13px;
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .checklist li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Mistake list - uses X instead of checkmark */
+        .mistake-list {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .mistake-list li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .mistake-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            font-size: 16px;
+        }
+
+        .checklist.critical li {
+            background: #fef2f2;
+            border: 2px solid var(--warning-red);
+        }
+
+        .checklist.critical li::before {
+            content: "⚠";
+            color: var(--warning-red);
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .specs-table th,
+        .specs-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .specs-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .specs-table td {
+            color: var(--text-gray);
+        }
+
+        .alert-box {
+            border-left: 4px solid var(--accent-green);
+            background: #f0fdf4;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+
+        .alert-box.warning {
+            border-left-color: var(--warning-red);
+            background: #fef2f2;
+        }
+
+        .alert-box.critical {
+            border: 3px solid var(--warning-red);
+            border-left-width: 8px;
+        }
+
+        .alert-box strong {
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .consequence-box {
+            background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+            border: 3px solid var(--warning-red);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .consequence-box h3 {
+            color: var(--warning-red);
+            margin-top: 0;
+        }
+
+        .consequence-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .consequence-item:last-child {
+            border-bottom: none;
+        }
+
+        .consequence-item strong {
+            color: var(--warning-red);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--warning-red);
+            border: 2px solid var(--primary-blue);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Sidebar - minimal custom CSS, using Bootstrap utilities */
+        .sidebar-nav {
+            position: fixed;
+            left: 0;
+            top: 56px;
+            width: 280px;
+            height: calc(100vh - 56px);
+            z-index: 100;
+        }
+
+        /* Progress line connector */
+        .step-progress::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 45px;
+            bottom: 45px;
+            width: 2px;
+            background: var(--border-gray);
+        }
+
+        /* Step circle styling */
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--border-gray);
+            transition: all 0.3s ease;
+        }
+
+        .step-item.current .step-circle,
+        .step-item.completed .step-circle {
+            color: white !important;
+        }
+
+        /* Hover effect */
+        .step-item:hover {
+            transform: translateX(4px);
+        }
+
+        /* Completed step styling */
+        .step-item.completed .step-circle {
+            background: linear-gradient(135deg, var(--accent-green), #059669) !important;
+            border-color: var(--accent-green) !important;
+            color: transparent !important; /* Hide the number */
+        }
+
+        .step-item.completed .step-circle::after {
+            content: '✓';
+            position: absolute;
+            font-size: 18px;
+            color: white; /* Make checkmark visible */
+        }
+
+        /* Current step styling */
+        .step-item.current .step-circle {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple)) !important;
+            border-color: var(--primary-blue) !important;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            transform: scale(1.1);
+            color: white !important;
+        }
+
+        /* Main content offset */
+        body {
+            margin-left: 280px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+
+            .element-card {
+                padding: 20px;
+            }
+
+            .checklist,
+            .mistake-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 600; color: var(--warning-red);">
+                <i class="bi bi-exclamation-triangle-fill me-2" style="font-size: 24px;"></i>
+                BuyGoods Vendor Guide
+            </a>
+                </li>
+            <nav aria-label="breadcrumb" class="d-none d-md-block">
+                <ol class="breadcrumb mb-0" style="background: none;">
+                    <li class="breadcrumb-item"><a href="index.html" style="color: var(--warning-red); text-decoration: none;">Overview</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Step 8: Legal Requirements</li>
+                </ol>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar Navigation using Bootstrap utilities -->
+    <aside class="sidebar-nav bg-white border-end overflow-auto">
+        <div class="p-4">
+            <h3 class="text-uppercase fw-bold fs-6 mb-4 text-dark" style="letter-spacing: 0.5px;">Funnel Steps</h3>
+            <ul class="step-progress list-unstyled position-relative p-0">
+                <li>
+                    <a href="step1-vsl.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">1</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 1</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">VSL Page</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step2-dtc.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">2</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 2</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Checkout Page</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step3-upsell1.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">3</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 3</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Upsell 1 <span style="font-size: 10px; opacity: 0.7;">(same product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step4-downsell1.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">4</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 4</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Downsell 1 <span style="font-size: 10px; opacity: 0.7;">(smaller qty)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step5-upsell2.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">5</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 5</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Upsell 2 <span style="font-size: 10px; opacity: 0.7;">(different product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step6-downsell2.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">6</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 6</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Downsell 2 <span style="font-size: 10px; opacity: 0.7;">(different offer)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step7-thankyou.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">7</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 7</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Thank You</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step8-footer.html" class="step-item current d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">8</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-primary" style="font-size: 11px; letter-spacing: 0.5px;">Step 8</div>
+                            <div class="step-title fw-semibold text-primary" style="font-size: 14px;">Footer</div>
+                        </div>
+                    </a>
+                </li>
+                <li style="margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--border-gray);">
+                    <a href="example-vsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #10b981, #059669) !important; border-color: #10b981 !important; color: white !important;">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #10b981;">VSL Example</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="example-tsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #7c3aed, #6d28d9) !important; border-color: #7c3aed !important; color: white !important;">
+                            <i class="bi bi-file-text-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #7c3aed;">TSL Example</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="header">
+        <div class="step-badge">CRITICAL - LEGAL COMPLIANCE</div>
+        <h1>⚠️ Footer & Legal Requirements</h1>
+        <p>Essential compliance elements required on EVERY page to avoid account suspension</p>
+    </div>
+
+    <div class="critical-warning">
+        <h3>🚨 THIS IS NOT OPTIONAL 🚨</h3>
+        <p><strong>Missing these elements can result in:</strong></p>
+        <p>Immediate account suspension • Legal liability • FTC fines • Payment processor bans</p>
+        <p style="margin-top: 16px; font-size: 16px;">Every single page in your funnel MUST include these footer elements. No exceptions.</p>
+    </div>
+
+    <div class="container">
+        <div class="element-card critical">
+            <h2><span class="section-number">⚠</span> Why Legal Compliance Matters</h2>
+            <p>BuyGoods, payment processors (ClickBank, Stripe, PayPal), and government agencies (FTC, FDA) require specific disclosures on all sales pages. This isn't about being thorough - it's about staying in business.</p>
+            <p>Vendors who skip these requirements face account termination, payment holds, legal action, and permanent bans from payment platforms. The consequences are severe and immediate.</p>
+
+            <div class="alert-box critical">
+                <strong>Real Consequences:</strong> In 2023, over 1,200 vendor accounts were suspended for missing required disclosures. Don't be one of them.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">1</span> Complete Footer Example</h2>
+            <p>Here's exactly what should appear at the bottom of EVERY page in your funnel:</p>
+
+            <div class="footer-preview">
+                <div style="text-align: center; margin-bottom: 24px;">
+                    <h4 style="color: var(--text-dark); margin-bottom: 16px;">[Your Company Name]</h4>
+
+                    <div class="footer-links">
+                        <a href="#" class="footer-link">Privacy Policy</a>
+                </li>
+                        <span style="color: var(--text-gray);">|</span>
+                        <a href="#" class="footer-link">Terms & Conditions</a>
+                </li>
+                        <span style="color: var(--text-gray);">|</span>
+                        <a href="#" class="footer-link">Refund Policy</a>
+                </li>
+                        <span style="color: var(--text-gray);">|</span>
+                        <a href="#" class="footer-link">Contact Us</a>
+                </li>
+                    </div>
+
+                    <div style="margin: 20px 0; color: var(--text-gray);">
+                        <strong>Contact Information:</strong><br>
+                        [Company Name]<br>
+                        [Physical Street Address]<br>
+                        [City, State ZIP Code]<br>
+                        Email: support@yourcompany.com<br>
+                        Phone: 1-800-XXX-XXXX
+                    </div>
+                </div>
+
+                <div class="disclaimer-box">
+                    <strong style="color: var(--text-dark); display: block; margin-bottom: 8px;">FDA Disclaimer (Required for Supplements):</strong>
+                    These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. The information provided on this site is for informational purposes only and is not intended as a substitute for advice from your physician or other health care professional.
+                </div>
+
+                <div class="disclaimer-box">
+                    <strong style="color: var(--text-dark); display: block; margin-bottom: 8px;">Results Disclaimer:</strong>
+                    Results may vary from person to person. Individual results will depend on various factors including diet, exercise, metabolism, and adherence to the program. The testimonials and examples provided are not typical and do not guarantee you will achieve similar results.
+                </div>
+
+                <div class="disclaimer-box">
+                    <strong style="color: var(--text-dark); display: block; margin-bottom: 8px;">Affiliate Disclosure (if applicable):</strong>
+                    This website may receive compensation for purchases made through links on this site. This does not affect our reviews, which remain unbiased and independent.
+                </div>
+
+                <div style="text-align: center; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--border-gray); color: var(--text-gray); font-size: 13px;">
+                    © 2024 [Company Name]. All Rights Reserved.
+                </div>
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">2</span> Required Footer Elements Checklist</h2>
+            <p>Every single one of these MUST be present on ALL pages:</p>
+
+            <ul class="checklist critical">
+                <li><strong>Privacy Policy Link:</strong> How customer data is collected, stored, and used</li>
+                <li><strong>Terms & Conditions Link:</strong> Legal agreement between you and customers</li>
+                <li><strong>Refund/Return Policy Link:</strong> Clear explanation of refund process and timeframes</li>
+                <li><strong>Contact Information:</strong> Email, phone, and physical business address</li>
+                <li><strong>Physical Address:</strong> Real street address (not P.O. Box) where business operates</li>
+                <li><strong>FDA Disclaimer:</strong> Required for all supplement/health products</li>
+                <li><strong>Results Disclaimer:</strong> "Results may vary" and testimonial disclaimer</li>
+                <li><strong>Copyright Notice:</strong> © Year, Company Name, All Rights Reserved</li>
+                <li><strong>Affiliate Disclosure:</strong> If using affiliate links or partners</li>
+                <li><strong>Medical Disclaimer:</strong> Not medical advice, consult physician</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">3</span> Required Legal Pages</h2>
+            <p>You must create and link to these complete legal documents:</p>
+
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Legal Page</th>
+                        <th>Required Content</th>
+                        <th>Why It's Required</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Privacy Policy</strong></td>
+                        <td>Data collection, storage, usage, cookies, third-party sharing, GDPR/CCPA compliance</td>
+                        <td>Federal law (FTC) and state laws (CCPA). Payment processors require it.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Terms & Conditions</strong></td>
+                        <td>User obligations, liability limitations, dispute resolution, jurisdiction, warranty disclaimers</td>
+                        <td>Legal protection for your business. Defines customer relationship.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Refund Policy</strong></td>
+                        <td>Refund timeframe (60-day guarantee), process, conditions, return shipping, processing time</td>
+                        <td>FTC requires clear refund terms. Reduces chargeback risk.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contact Page</strong></td>
+                        <td>Support email, phone, hours, physical address, contact form</td>
+                        <td>Consumer protection laws require accessible contact method.</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box warning">
+                <strong>Warning:</strong> Don't use generic templates without customization. Your policies must accurately reflect YOUR business practices, or you're exposed to legal liability.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">4</span> FDA Disclaimer (Supplements)</h2>
+            <p>If you're selling supplements, health products, or anything making health claims, this disclaimer is MANDATORY:</p>
+
+            <div class="disclaimer-box">
+                <strong style="color: var(--warning-red);">Required FDA Disclaimer:</strong><br><br>
+                "These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease."
+            </div>
+
+            <h3>When FDA Disclaimer is Required:</h3>
+            <ul class="checklist">
+                <li>Dietary supplements (vitamins, herbs, minerals)</li>
+                <li>Weight loss products</li>
+                <li>Health and wellness products</li>
+                <li>Beauty/anti-aging products making health claims</li>
+                <li>Any product claiming to affect body structure or function</li>
+            </ul>
+
+            <h3>Additional Medical Disclaimers:</h3>
+            <div class="disclaimer-box">
+                "The information provided on this website is for informational purposes only and is not intended as a substitute for advice from your physician or other health care professional. You should not use the information on this website for diagnosis or treatment of any health problem. Consult with a healthcare professional before starting any diet, exercise, supplementation program, or if you have or suspect you might have a health problem."
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">5</span> Results & Testimonial Disclaimers</h2>
+            <p>The FTC requires clear disclaimers when showing testimonials, before/after photos, or income claims:</p>
+
+            <div class="disclaimer-box">
+                <strong style="color: var(--warning-red);">Required Results Disclaimer:</strong><br><br>
+                "The testimonials and examples used are exceptional results and do not apply to the average purchaser. They are not intended to represent or guarantee that anyone will achieve the same or similar results. Each individual's success depends on his or her background, dedication, desire, and motivation. As with any health-related program or service, your results may vary, and will be based on many variables including but not limited to, your individual capacity, life experience, unique health and genetic profile, starting point, expertise, and level of commitment."
+            </div>
+
+            <h3>When Results Disclaimers are Required:</h3>
+            <ul class="checklist">
+                <li>Before/after photos or testimonials</li>
+                <li>Weight loss claims with specific amounts</li>
+                <li>Income or earnings claims</li>
+                <li>Time-based results ("lose 20 lbs in 30 days")</li>
+                <li>Any specific outcome promises</li>
+            </ul>
+
+            <div class="alert-box warning">
+                <strong>FTC Enforcement:</strong> The FTC has fined companies millions for inadequate testimonial disclaimers. Don't risk it - include the full disclaimer.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">6</span> Physical Address Requirement</h2>
+            <p>You MUST display a real physical street address where your business operates:</p>
+
+            <ul class="checklist critical">
+                <li><strong>✓ Acceptable:</strong> Real street address where business is located</li>
+                <li><strong>✓ Acceptable:</strong> Registered agent address or virtual office (if legally registered)</li>
+                <li><strong>❌ NOT Acceptable:</strong> P.O. Box only (unless paired with street address)</li>
+                <li><strong>❌ NOT Acceptable:</strong> No address at all</li>
+                <li><strong>❌ NOT Acceptable:</strong> Fake or placeholder address</li>
+            </ul>
+
+            <div class="alert-box warning">
+                <strong>Why This Matters:</strong> The CAN-SPAM Act requires a physical address. Payment processors verify this. Using a fake address is fraud.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">7</span> Contact Information Requirements</h2>
+            <p>You must provide multiple ways for customers to reach you:</p>
+
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Contact Method</th>
+                        <th>Requirement</th>
+                        <th>Best Practice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td>Required - Must be monitored</td>
+                        <td>support@yourdomain.com - respond within 24 hours</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Phone</strong></td>
+                        <td>Highly recommended</td>
+                        <td>Toll-free number, list business hours</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Physical Address</strong></td>
+                        <td>Required by law</td>
+                        <td>Real street address where you can receive mail</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contact Form</strong></td>
+                        <td>Optional but helpful</td>
+                        <td>Reduces spam, easier for customers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Business Hours</strong></td>
+                        <td>Recommended</td>
+                        <td>Set expectations for response times</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">8</span> Common Compliance Mistakes</h2>
+
+            <div class="alert-box critical">
+                <strong>These Mistakes Will Get Your Account Suspended:</strong>
+            </div>
+
+            <ul class="checklist critical">
+                <li><strong>❌ No Footer on Upsell Pages:</strong> Every page needs full footer, not just main pages</li>
+                <li><strong>❌ Generic/Template Policies:</strong> Copy-paste policies that don't match your business</li>
+                <li><strong>❌ Broken Policy Links:</strong> Links that 404 or lead nowhere</li>
+                <li><strong>❌ Missing FDA Disclaimer:</strong> Required for ALL health/supplement products</li>
+                <li><strong>❌ No Physical Address:</strong> P.O. Box only or no address at all</li>
+                <li><strong>❌ Fake Contact Info:</strong> Email or phone that doesn't work</li>
+                <li><strong>❌ No Results Disclaimer:</strong> Using testimonials without proper disclosure</li>
+                <li><strong>❌ Outdated Copyright:</strong> Using wrong year or wrong company name</li>
+                <li><strong>❌ Hidden Disclaimers:</strong> Tiny text or disclaimers users can't find</li>
+                <li><strong>❌ Inconsistent Information:</strong> Different addresses/contact info on different pages</li>
+            </ul>
+        </div>
+
+        <div class="consequence-box">
+            <h3>⚠️ Consequences of Non-Compliance</h3>
+
+            <div class="consequence-item">
+                <strong>Account Suspension:</strong> BuyGoods, ClickBank, and other platforms will immediately suspend your account if required elements are missing.
+            </div>
+
+            <div class="consequence-item">
+                <strong>Payment Holds:</strong> Payment processors can freeze your funds (sometimes permanently) for compliance violations.
+            </div>
+
+            <div class="consequence-item">
+                <strong>FTC Fines:</strong> Federal Trade Commission can fine companies $10,000-$50,000+ per violation for missing disclosures.
+            </div>
+
+            <div class="consequence-item">
+                <strong>Legal Liability:</strong> Customers can sue for false advertising, fraud, or misrepresentation if disclosures are missing.
+            </div>
+
+            <div class="consequence-item">
+                <strong>Permanent Bans:</strong> Major payment processors share violation data. One ban can blacklist you across all platforms.
+            </div>
+
+            <div class="consequence-item">
+                <strong>Chargebacks:</strong> Missing policies increase chargebacks. High chargeback rates = account termination.
+            </div>
+
+            <div class="consequence-item">
+                <strong>State Attorney General Actions:</strong> States actively pursue companies with inadequate consumer protections.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">9</span> Implementation Checklist</h2>
+            <p>Follow these steps to ensure full compliance:</p>
+
+            <ul class="checklist">
+                <li><strong>Step 1:</strong> Create complete Privacy Policy (use lawyer or quality template service)</li>
+                <li><strong>Step 2:</strong> Create complete Terms & Conditions document</li>
+                <li><strong>Step 3:</strong> Create detailed Refund Policy matching your actual policy</li>
+                <li><strong>Step 4:</strong> Set up dedicated contact page with all information</li>
+                <li><strong>Step 5:</strong> Add footer to EVERY page (VSL, checkout, upsells, downsells, thank you)</li>
+                <li><strong>Step 6:</strong> Include FDA disclaimer if selling supplements/health products</li>
+                <li><strong>Step 7:</strong> Add results disclaimer near all testimonials and claims</li>
+                <li><strong>Step 8:</strong> Verify all links work and go to correct pages</li>
+                <li><strong>Step 9:</strong> Test footer displays properly on mobile devices</li>
+                <li><strong>Step 10:</strong> Have legal professional review before launch (recommended)</li>
+            </ul>
+        </div>
+
+        <div class="element-card critical">
+            <h2><span class="section-number">10</span> Final Critical Reminders</h2>
+
+            <div class="alert-box critical">
+                <strong>DO NOT SKIP THIS:</strong> Legal compliance is not optional and not something to "fix later." Get it right from day one.
+            </div>
+
+            <ul class="checklist critical">
+                <li><strong>Every Page Needs Footer:</strong> VSL, checkout, all upsells, all downsells, thank you page - no exceptions</li>
+                <li><strong>Links Must Work:</strong> Test every link. Broken policy links = compliance violation</li>
+                <li><strong>Keep Current:</strong> Update copyright year, review policies annually</li>
+                <li><strong>Match Your Practices:</strong> Policies must reflect what you actually do, not generic templates</li>
+                <li><strong>Get Legal Review:</strong> Invest in a lawyer reviewing your policies. Cheaper than FTC fines.</li>
+                <li><strong>Monitor Changes:</strong> FTC and FDA update requirements. Stay informed.</li>
+                <li><strong>Document Everything:</strong> Keep records of when policies were posted and updated</li>
+            </ul>
+
+            <div style="background: var(--warning-red); color: var(--white); padding: 24px; border-radius: 8px; margin-top: 32px; text-align: center;">
+                <h3 style="color: var(--white); margin-bottom: 12px;">Final Warning</h3>
+                <p style="color: var(--white); margin: 0; font-size: 18px;">
+                    Thousands of vendors lose their accounts every year due to missing compliance elements. Don't let it happen to you. Include EVERY required element on EVERY page before launching.
+                </p>
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="step7-thankyou.html" class="btn btn-secondary">← Previous: Thank You Page</a>
+                </li>
+            <a href="index.html" class="btn btn-primary">Back to Overview →</a>
+                </li>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

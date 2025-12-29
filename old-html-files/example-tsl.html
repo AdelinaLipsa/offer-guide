@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TSL Example: The Ultimate Weight Loss Breakthrough</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700;900&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --accent-green: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --warning-red: #ef4444;
+            --warning-orange: #f59e0b;
+            --bg-cream: #fffbeb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', -apple-system, sans-serif;
+            color: var(--text-dark);
+            background: #ffffff;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Merriweather', Georgia, serif;
+            font-weight: 900;
+            line-height: 1.3;
+        }
+
+        /* Alert Bar */
+        .alert-bar {
+            background: linear-gradient(135deg, var(--warning-red), var(--warning-orange));
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            font-weight: 700;
+            font-size: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Main Headline */
+        .main-headline {
+            text-align: center;
+            margin: 60px 0 40px;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+            border-radius: 20px;
+        }
+
+        .eyebrow {
+            color: var(--warning-red);
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        .main-headline h1 {
+            font-size: 48px;
+            color: var(--text-dark);
+            margin-bottom: 30px;
+            line-height: 1.2;
+        }
+
+        .main-headline .highlight {
+            color: var(--primary-blue);
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-headline .highlight::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 10px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.3), rgba(124, 58, 237, 0.3));
+            z-index: -1;
+        }
+
+        .subheadline {
+            font-size: 24px;
+            color: var(--text-gray);
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+
+        /* Featured Image */
+        .featured-image {
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .featured-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        }
+
+        .image-caption {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-top: 15px;
+            font-style: italic;
+        }
+
+        /* Letter Content */
+        .letter-content {
+            margin: 40px 0;
+        }
+
+        .letter-content p {
+            margin-bottom: 25px;
+        }
+
+        .letter-content strong {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .letter-content em {
+            color: var(--warning-red);
+            font-style: italic;
+        }
+
+        /* Section Headers */
+        .section-header {
+            margin: 80px 0 40px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-size: 42px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .section-divider {
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            margin: 0 auto 30px;
+            border-radius: 2px;
+        }
+
+        /* Callout Boxes */
+        .callout-box {
+            background: var(--bg-cream);
+            border-left: 6px solid var(--warning-orange);
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .callout-box h3 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--warning-red);
+        }
+
+        /* Bullet Points */
+        .benefits-list {
+            margin: 40px 0;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .benefits-list li {
+            padding: 20px;
+            margin-bottom: 15px;
+            background: white;
+            border-left: 4px solid var(--accent-green);
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+
+        .benefits-list li:hover {
+            transform: translateX(10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .benefits-list li::before {
+            content: '✓';
+            color: var(--accent-green);
+            font-weight: 900;
+            font-size: 24px;
+            margin-right: 15px;
+        }
+
+        /* Problem/Solution Boxes */
+        .problem-box {
+            background: white;
+            border-left: 6px solid var(--warning-red);
+            padding: 50px;
+            margin: 60px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(239, 68, 68, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .problem-box::before {
+            content: '⚠';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 120px;
+            opacity: 0.05;
+        }
+
+        .problem-box h3 {
+            color: var(--warning-red);
+            font-size: 32px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .problem-box h3::before {
+            content: '❌';
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+
+        .problem-box p {
+            position: relative;
+            z-index: 1;
+            line-height: 1.9;
+            font-size: 19px;
+        }
+
+        .solution-box {
+            background: white;
+            border-left: 6px solid var(--accent-green);
+            padding: 50px;
+            margin: 60px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(16, 185, 129, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .solution-box::before {
+            content: '✓';
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            font-size: 150px;
+            opacity: 0.05;
+            font-weight: 900;
+        }
+
+        .solution-box h3 {
+            color: var(--accent-green);
+            font-size: 32px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .solution-box h3::before {
+            content: '✓';
+            font-size: 40px;
+            flex-shrink: 0;
+            background: var(--accent-green);
+            color: white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .solution-box p {
+            position: relative;
+            z-index: 1;
+            line-height: 1.9;
+            font-size: 19px;
+        }
+
+        /* Testimonial Boxes */
+        .testimonial {
+            background: white;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        .testimonial::before {
+            content: '"';
+            position: absolute;
+            top: 20px;
+            left: 30px;
+            font-size: 80px;
+            color: var(--primary-blue);
+            opacity: 0.2;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-content {
+            font-size: 20px;
+            font-style: italic;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .testimonial-author img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 4px solid var(--primary-blue);
+        }
+
+        .author-info h4 {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .author-info .stars {
+            color: #fbbf24;
+            font-size: 18px;
+        }
+
+        /* CTA Sections */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            color: white;
+            padding: 60px 40px;
+            margin: 60px 0;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(37, 99, 235, 0.3);
+        }
+
+        .cta-section h2 {
+            font-size: 42px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            background: white;
+            color: var(--primary-blue);
+            padding: 25px 60px;
+            font-size: 24px;
+            font-weight: 800;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-subtext {
+            margin-top: 20px;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Guarantee Badge */
+        .guarantee-section {
+            background: linear-gradient(135deg, #d1fae5, #a7f3d0);
+            border: 4px solid var(--accent-green);
+            padding: 50px;
+            margin: 60px 0;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .guarantee-badge {
+            width: 160px;
+            height: 160px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            border: 8px solid white;
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
+            padding: 20px;
+        }
+
+        .guarantee-badge span {
+            color: white;
+            font-size: 22px;
+            font-weight: 900;
+            text-align: center;
+            line-height: 1.3;
+        }
+
+        .guarantee-section h3 {
+            font-size: 36px;
+            color: var(--accent-green);
+            margin-bottom: 20px;
+        }
+
+        /* Pricing Table */
+        .pricing-section {
+            margin: 80px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 3px solid #e5e7eb;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .pricing-card.featured {
+            border-color: var(--primary-blue);
+            transform: scale(1.05);
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+        }
+
+        .pricing-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-blue);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .pricing-card h4 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .pricing-card .price {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--primary-blue);
+            margin: 20px 0;
+        }
+
+        .pricing-card .old-price {
+            text-decoration: line-through;
+            color: var(--text-gray);
+            font-size: 24px;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            margin: 80px 0;
+        }
+
+        .faq-item {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--primary-blue);
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.1);
+        }
+
+        .faq-question {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            font-size: 18px;
+        }
+
+        /* Scarcity Counter */
+        .scarcity-box {
+            background: white;
+            border: 2px solid #f59e0b;
+            padding: 50px 40px;
+            margin: 60px 0;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(245, 158, 11, 0.15);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .scarcity-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--warning-orange), var(--warning-red));
+        }
+
+        .scarcity-box h3 {
+            font-size: 28px;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .scarcity-box p {
+            font-size: 18px;
+            color: var(--text-gray);
+            margin: 10px 0;
+        }
+
+        .stock-counter {
+            font-size: 72px;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--warning-orange), var(--warning-red));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 25px 0;
+            display: inline-block;
+        }
+
+        @media (max-width: 768px) {
+            .main-headline h1 {
+                font-size: 32px;
+            }
+
+            .section-header h2 {
+                font-size: 32px;
+            }
+
+            .cta-section h2 {
+                font-size: 28px;
+            }
+
+            .cta-button {
+                padding: 20px 40px;
+                font-size: 18px;
+            }
+
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Alert Bar -->
+    <div class="alert-bar">
+        🔥 <strong>LIMITED TIME:</strong> 60% OFF Special Offer Ends In <span id="timer">02:47:33</span>
+    </div>
+
+    <div class="container">
+        <!-- Main Headline -->
+        <div class="main-headline">
+            <div class="eyebrow">From the Desk of Dr. Michael Thompson, PhD</div>
+            <h1>
+                The <span class="highlight">Shocking Discovery</span> That's Helping Thousands Drop 20-30 Pounds in Just 60 Days...
+            </h1>
+            <p class="subheadline">
+                Without starving yourself, spending hours at the gym, or giving up your favorite foods
+            </p>
+        </div>
+
+        <!-- Letter Content -->
+        <div class="letter-content">
+            <p><strong>Dear Friend,</strong></p>
+
+            <p>
+                If you've struggled with weight loss and nothing seems to work... if you've tried every diet, every pill, every "miracle cure" on the market and you're still carrying around stubborn pounds that won't budge... then <strong>this might be the most important letter you'll ever read.</strong>
+            </p>
+
+            <p>
+                Because in the next few minutes, I'm going to reveal a <em>scientifically proven breakthrough</em> that's helping men and women just like you finally lose the weight they've been fighting for years.
+            </p>
+
+            <p>
+                And it has nothing to do with starvation diets, grueling workouts, or expensive weight loss programs.
+            </p>
+        </div>
+
+        <!-- Featured Image -->
+        <div class="featured-image">
+            <img src="https://placehold.co/800x500/2563eb/ffffff?text=BEFORE+%26+AFTER+TRANSFORMATION" alt="Before and After">
+            <p class="image-caption">Real customer results (Individual results may vary)</p>
+        </div>
+
+        <!-- Problem Section -->
+        <div class="problem-box">
+            <h3>Why Traditional Approaches Often Fall Short</h3>
+            <p>
+                Most weight loss programs focus exclusively on caloric restriction and increased activity. While these factors matter, research shows they address only part of the equation.
+            </p>
+            <p>
+                <strong>Studies indicate that metabolic efficiency, hormonal balance, and nutrient absorption</strong> play crucial roles in sustainable weight management—yet most programs ignore these factors entirely.
+            </p>
+            <p>
+                Without addressing these underlying mechanisms, many people find themselves in a frustrating cycle of temporary results followed by weight regain.
+            </p>
+        </div>
+
+        <!-- Solution Section -->
+        <div class="solution-box">
+            <h3>A Comprehensive Support System</h3>
+            <p>
+                Our formulation combines research-backed ingredients selected for their roles in metabolic function, appetite regulation, and energy production. Each component has been studied in clinical settings for its potential benefits.
+            </p>
+            <p>
+                <strong>The approach is designed to:</strong> Support your body's natural processes while you maintain healthy eating habits and appropriate activity levels. This isn't about quick fixes—it's about sustainable support for your wellness journey.
+            </p>
+        </div>
+
+        <!-- Section Header -->
+        <div class="section-header">
+            <h2>Here's What You'll Experience:</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <!-- Benefits List -->
+        <ul class="benefits-list">
+            <li><strong>Week 1-2:</strong> Notice increased energy levels and reduced cravings for sugary foods</li>
+            <li><strong>Week 3-4:</strong> See the scale start dropping as your metabolism kicks into high gear</li>
+            <li><strong>Week 5-8:</strong> Watch as stubborn belly fat melts away and your clothes fit looser</li>
+            <li><strong>Week 9-12:</strong> Achieve your goal weight and maintain it effortlessly</li>
+        </ul>
+
+        <!-- Callout Box -->
+        <div class="callout-box">
+            <h3>The Science Behind the Breakthrough</h3>
+            <p>
+                MetaBoost Pro contains a proprietary blend of 8 clinically-studied ingredients that work synergistically to:
+            </p>
+            <ul style="margin-top: 20px;">
+                <li>Activate dormant fat-burning hormones</li>
+                <li>Suppress appetite naturally without stimulants</li>
+                <li>Boost metabolism by up to 37%</li>
+                <li>Block the formation of new fat cells</li>
+            </ul>
+        </div>
+
+        <!-- Testimonial 1 -->
+        <div class="testimonial">
+            <p class="testimonial-content">
+                "I've lost 32 pounds in just 8 weeks! I can't believe how easy it was. No crazy diets, no spending hours at the gym. I just took MetaBoost Pro every morning and the weight literally melted off. This product changed my life!"
+            </p>
+            <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=1" alt="Sarah M.">
+                <div class="author-info">
+                    <h4>Sarah M., Los Angeles</h4>
+                    <div class="stars">★★★★★</div>
+                    <p style="color: #6b7280; margin: 0;">Verified Buyer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scarcity Box -->
+        <div class="scarcity-box">
+            <h3>⚠️ URGENT: Limited Supply Alert</h3>
+            <p>Due to overwhelming demand and ingredient scarcity, we only have</p>
+            <div class="stock-counter" id="stockCount">247</div>
+            <p><strong>bottles remaining in stock today</strong></p>
+        </div>
+
+        <!-- CTA Section 1 -->
+        <div class="cta-section">
+            <h2>Special Limited-Time Pricing</h2>
+            <p style="font-size: 20px; margin-bottom: 40px;">
+                For a limited time, you can get MetaBoost Pro at an exclusive 60% discount - but only if you act now!
+            </p>
+            <a href="#pricing" class="cta-button">
+                Claim Your Discount Now →
+            </a>
+            <p class="cta-subtext">
+                <i class="bi bi-shield-check-fill"></i> Protected by our 60-Day Money-Back Guarantee
+            </p>
+        </div>
+
+        <!-- Pricing Section -->
+        <div class="pricing-section" id="pricing">
+            <div class="section-header">
+                <h2>Choose Your Package</h2>
+                <div class="section-divider"></div>
+                <p style="color: #6b7280;">Select the package that's right for you and SAVE UP TO 60%</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h4>Starter</h4>
+                    <p>1 Month Supply</p>
+                    <div class="old-price">$99</div>
+                    <div class="price">$69</div>
+                    <p style="color: #6b7280;">$69 per bottle</p>
+                    <button class="cta-button" style="width: 100%; padding: 15px;">Order Now</button>
+                </div>
+
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <h4>Best Value</h4>
+                    <p>3 Month Supply</p>
+                    <div class="old-price">$297</div>
+                    <div class="price">$147</div>
+                    <p style="color: #6b7280;">Only $49 per bottle</p>
+                    <p style="color: #10b981; font-weight: 700; margin: 10px 0;">SAVE $150!</p>
+                    <button class="cta-button" style="width: 100%; padding: 15px;">Order Now</button>
+                </div>
+
+                <div class="pricing-card">
+                    <h4>Ultimate</h4>
+                    <p>6 Month Supply</p>
+                    <div class="old-price">$594</div>
+                    <div class="price">$234</div>
+                    <p style="color: #6b7280;">Only $39 per bottle</p>
+                    <p style="color: #10b981; font-weight: 700; margin: 10px 0;">SAVE $360!</p>
+                    <button class="cta-button" style="width: 100%; padding: 15px;">Order Now</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guarantee Section -->
+        <div class="guarantee-section">
+            <div class="guarantee-badge">
+                <span>60 DAY<br>GUARANTEE</span>
+            </div>
+            <h3>100% Satisfaction Guaranteed</h3>
+            <p style="font-size: 20px;">
+                Try MetaBoost Pro completely risk-free for 60 days. If you don't see dramatic results, simply return your bottles (even if they're empty) for a full refund. No questions asked.
+            </p>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial">
+            <p class="testimonial-content">
+                "As a busy executive, I don't have time for complicated diet plans. MetaBoost Pro made it incredibly simple. I lost 28 pounds in 10 weeks while still eating the foods I love. My doctor is amazed at my transformation!"
+            </p>
+            <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=12" alt="John D.">
+                <div class="author-info">
+                    <h4>John D., New York</h4>
+                    <div class="stars">★★★★★</div>
+                    <p style="color: #6b7280; margin: 0;">Verified Buyer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: How quickly will I see results?</div>
+                <div class="faq-answer">
+                    A: Most customers notice increased energy and reduced cravings within the first week. Visible weight loss typically begins in weeks 2-3, with dramatic results by week 8.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Is MetaBoost Pro safe?</div>
+                <div class="faq-answer">
+                    A: Absolutely! MetaBoost Pro is manufactured in an FDA-approved facility and contains only natural, clinically-tested ingredients. It's non-GMO, gluten-free, and has no known side effects.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: Do I need to diet or exercise?</div>
+                <div class="faq-answer">
+                    A: No! While a healthy lifestyle is always beneficial, MetaBoost Pro works independently. Many customers achieve dramatic results without changing their diet or exercise routine.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">Q: What if it doesn't work for me?</div>
+                <div class="faq-answer">
+                    A: We offer a 60-day money-back guarantee. If you're not completely satisfied, return your bottles for a full refund - no questions asked.
+                </div>
+            </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="cta-section">
+            <h2>Ready to Transform Your Body?</h2>
+            <p style="font-size: 20px; margin-bottom: 40px;">
+                Join thousands of satisfied customers who've already discovered the MetaBoost Pro difference
+            </p>
+            <a href="#pricing" class="cta-button">
+                Order MetaBoost Pro Now →
+            </a>
+            <p class="cta-subtext">
+                <i class="bi bi-lock-fill"></i> Secure Checkout | <i class="bi bi-truck-fill"></i> Free Shipping | <i class="bi bi-shield-check-fill"></i> 60-Day Guarantee
+            </p>
+        </div>
+
+        <!-- Final Testimonial -->
+        <div class="testimonial">
+            <p class="testimonial-content">
+                "I was skeptical at first, but MetaBoost Pro exceeded all my expectations. I've lost 41 pounds in 12 weeks and I feel 20 years younger. This is not just a product - it's a life-changer!"
+            </p>
+            <div class="testimonial-author">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Emily R.">
+                <div class="author-info">
+                    <h4>Emily R., Chicago</h4>
+                    <div class="stars">★★★★★</div>
+                    <p style="color: #6b7280; margin: 0;">Verified Buyer</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="margin-top: 80px; padding: 40px 0; border-top: 2px solid #e5e7eb; text-align: center; color: #6b7280; font-size: 14px;">
+            <p><strong>DISCLAIMER:</strong> Individual results may vary. These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</p>
+            <div style="margin-top: 20px;">
+                <a href="#" style="color: #2563eb; margin: 0 15px;">Privacy Policy</a>
+                <a href="#" style="color: #2563eb; margin: 0 15px;">Terms & Conditions</a>
+                <a href="#" style="color: #2563eb; margin: 0 15px;">Refund Policy</a>
+                <a href="#" style="color: #2563eb; margin: 0 15px;">Contact Us</a>
+            </div>
+            <p style="margin-top: 20px;">© 2024 MetaBoost Pro. All Rights Reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Countdown Timer
+        function updateTimer() {
+            const timer = document.getElementById('timer');
+            let [hours, minutes, seconds] = timer.textContent.split(':').map(Number);
+
+            seconds--;
+            if (seconds < 0) {
+                seconds = 59;
+                minutes--;
+            }
+            if (minutes < 0) {
+                minutes = 59;
+                hours--;
+            }
+            if (hours < 0) {
+                hours = 0;
+                minutes = 0;
+                seconds = 0;
+            }
+
+            timer.textContent = `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+        }
+
+        setInterval(updateTimer, 1000);
+
+        // Stock Counter
+        setInterval(() => {
+            const stockCount = document.getElementById('stockCount');
+            const current = parseInt(stockCount.textContent);
+            if (current > 200) {
+                stockCount.textContent = current - 1;
+            }
+        }, 30000); // Decrease every 30 seconds
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+
+        // Button handlers
+        document.querySelectorAll('.cta-button, button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#pricing') {
+                    e.preventDefault();
+                    alert('This is a demo! In production, this would redirect to checkout.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

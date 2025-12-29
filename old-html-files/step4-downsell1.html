@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 4: Downsell 1 - BuyGoods Vendor Guide</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --accent-green: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --border-gray: #e5e7eb;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --warning-red: #ef4444;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        .step-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .element-card {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 18px;
+            margin-right: 16px;
+        }
+
+        .element-card h2 {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .element-card h3 {
+            font-size: 22px;
+            margin: 24px 0 12px 0;
+            color: var(--text-dark);
+        }
+
+        .element-card p {
+            color: var(--text-gray);
+            font-size: 17px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .downsell-preview {
+            background: var(--bg-light);
+            border: 2px dashed var(--border-gray);
+            border-radius: 8px;
+            padding: 40px;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .last-chance-headline {
+            background: #fbbf24;
+            color: var(--text-dark);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .offer-box {
+            background: var(--white);
+            border: 3px solid var(--accent-green);
+            border-radius: 12px;
+            padding: 32px;
+            margin: 24px 0;
+            box-shadow: 0 8px 24px rgba(16, 185, 129, 0.2);
+        }
+
+        .product-showcase {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin: 24px 0;
+            flex-wrap: wrap;
+        }
+
+        .product-image {
+            background: var(--bg-light);
+            width: 150px;
+            height: 180px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            color: var(--text-gray);
+            font-size: 14px;
+            border: 2px solid var(--border-gray);
+        }
+
+        .price-highlight {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #059669 100%);
+            color: var(--white);
+            padding: 24px;
+            border-radius: 12px;
+            margin: 24px 0;
+        }
+
+        .price-amount {
+            font-size: 56px;
+            font-weight: 700;
+            margin: 12px 0;
+        }
+
+        .savings-callout {
+            background: #fef3c7;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .btn-yes {
+            flex: 1;
+            background: linear-gradient(135deg, var(--accent-green) 0%, #059669 100%);
+            color: var(--white);
+            padding: 20px 40px;
+            border-radius: 8px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            min-width: 250px;
+        }
+
+        .btn-no {
+            flex: 1;
+            background: var(--white);
+            color: var(--text-gray);
+            padding: 20px 40px;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            min-width: 250px;
+        }
+
+        .comparison-table {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .comparison-box {
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .declined-offer {
+            background: #fee;
+            border: 2px solid var(--border-gray);
+            opacity: 0.6;
+        }
+
+        .current-offer {
+            background: #f0fdf4;
+            border: 3px solid var(--accent-green);
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .checklist li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Mistake list - uses X instead of checkmark */
+        .mistake-list {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .mistake-list li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .mistake-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            font-size: 16px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .specs-table th,
+        .specs-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .specs-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .specs-table td {
+            color: var(--text-gray);
+        }
+
+        .alert-box {
+            border-left: 4px solid var(--accent-green);
+            background: #f0fdf4;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+
+        .alert-box.warning {
+            border-left-color: var(--warning-red);
+            background: #fef2f2;
+        }
+
+        .alert-box strong {
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .metrics-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .metrics-box h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        .metric-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .metric-item:last-child {
+            border-bottom: none;
+        }
+
+        .metric-item strong {
+            color: var(--text-dark);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Sidebar - minimal custom CSS, using Bootstrap utilities */
+        .sidebar-nav {
+            position: fixed;
+            left: 0;
+            top: 56px;
+            width: 280px;
+            height: calc(100vh - 56px);
+            z-index: 100;
+        }
+
+        /* Progress line connector */
+        .step-progress::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 45px;
+            bottom: 45px;
+            width: 2px;
+            background: var(--border-gray);
+        }
+
+        /* Step circle styling */
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--border-gray);
+            transition: all 0.3s ease;
+        }
+
+        .step-item.current .step-circle,
+        .step-item.completed .step-circle {
+            color: white !important;
+        }
+
+        /* Hover effect */
+        .step-item:hover {
+            transform: translateX(4px);
+        }
+
+        /* Completed step styling */
+        .step-item.completed .step-circle {
+            background: linear-gradient(135deg, var(--accent-green), #059669) !important;
+            border-color: var(--accent-green) !important;
+            color: transparent !important; /* Hide the number */
+        }
+
+        .step-item.completed .step-circle::after {
+            content: '✓';
+            position: absolute;
+            font-size: 18px;
+            color: white; /* Make checkmark visible */
+        }
+
+        /* Current step styling */
+        .step-item.current .step-circle {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple)) !important;
+            border-color: var(--primary-blue) !important;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            transform: scale(1.1);
+            color: white !important;
+        }
+
+        /* Main content offset */
+        body {
+            margin-left: 280px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .last-chance-headline {
+                font-size: 24px;
+            }
+
+            .comparison-table {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+
+            .element-card {
+                padding: 20px;
+            }
+
+            .checklist,
+            .mistake-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 600; color: var(--primary-blue);">
+                <i class="bi bi-rocket-takeoff me-2" style="font-size: 24px;"></i>
+                BuyGoods Vendor Guide
+            </a>
+                </li>
+            <nav aria-label="breadcrumb" class="d-none d-md-block">
+                <ol class="breadcrumb mb-0" style="background: none;">
+                    <li class="breadcrumb-item"><a href="index.html" style="color: var(--primary-blue); text-decoration: none;">Overview</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Step 4: Downsell 1</li>
+                </ol>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar Navigation using Bootstrap utilities -->
+    <aside class="sidebar-nav bg-white border-end overflow-auto">
+        <div class="p-4">
+            <h3 class="text-uppercase fw-bold fs-6 mb-4 text-dark" style="letter-spacing: 0.5px;">Funnel Steps</h3>
+            <ul class="step-progress list-unstyled position-relative p-0">
+                <li>
+                    <a href="step1-vsl.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">1</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 1</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">VSL Page</div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step2-dtc.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">2</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 2</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Checkout Page</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step3-upsell1.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">3</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 3</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Upsell 1 <span style="font-size: 10px; opacity: 0.7;">(same product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step4-downsell1.html" class="step-item current d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">4</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-primary" style="font-size: 11px; letter-spacing: 0.5px;">Step 4</div>
+                            <div class="step-title fw-semibold text-primary" style="font-size: 14px;">Downsell 1 <span style="font-size: 10px; opacity: 0.7;">(smaller qty)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step5-upsell2.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">5</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 5</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Upsell 2 <span style="font-size: 10px; opacity: 0.7;">(different product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step6-downsell2.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">6</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 6</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Downsell 2 <span style="font-size: 10px; opacity: 0.7;">(different offer)</span></div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step7-thankyou.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">7</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 7</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Thank You</div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step8-footer.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">8</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 8</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Footer</div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li style="margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--border-gray);">
+                    <a href="example-vsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #10b981, #059669) !important; border-color: #10b981 !important; color: white !important;">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #10b981;">VSL Example</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="example-tsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #7c3aed, #6d28d9) !important; border-color: #7c3aed !important; color: white !important;">
+                            <i class="bi bi-file-text-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #7c3aed;">TSL Example</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="header">
+        <div class="step-badge">STEP 4 OF 7</div>
+        <h1>Downsell 1: Smaller Quantity</h1>
+        <p>Recover customers who declined your first upsell with a more attractive offer</p>
+    </div>
+
+    <div class="container">
+        <div class="element-card">
+            <h2><span class="section-number">1</span> What is Downsell 1?</h2>
+            <p>When a customer clicks "No Thanks" on Upsell 1, they immediately see this downsell page. Instead of letting them go, you present a SMALLER, MORE ATTRACTIVE offer that's harder to refuse.</p>
+            <p>The key difference: This offer is for fewer bottles but at an even BETTER per-bottle discount than the upsell. It removes the objection of "too expensive" while still increasing your average order value.</p>
+
+            <div class="alert-box">
+                <strong>Recovery Strategy:</strong> 15-25% of customers who declined Upsell 1 will accept Downsell 1. This is pure profit recovery that would otherwise be lost. Even a small acceptance adds significant revenue over time.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">2</span> Visual Structure</h2>
+            <p>Here's how your Downsell 1 page should look:</p>
+
+            <div class="downsell-preview">
+                <div class="last-chance-headline">⏰ Last Chance! Special Discount</div>
+
+                <h3 style="font-size: 26px; color: var(--text-dark); margin: 24px 0;">
+                    We Understand - Let Us Make This Even Better For You
+                </h3>
+
+                <p style="font-size: 18px; color: var(--text-gray); max-width: 700px; margin: 0 auto 32px;">
+                    We noticed the previous offer wasn't right for you. So we've created an even BETTER deal - just 1 extra bottle at our absolute lowest price ever. This is truly our final offer.
+                </p>
+
+                <div class="comparison-table">
+                    <div class="comparison-box declined-offer">
+                        <div style="text-decoration: line-through; font-size: 14px; margin-bottom: 8px;">Previous Offer (Declined)</div>
+                        <div style="font-size: 28px; font-weight: 700; color: var(--text-gray);">3 Bottles</div>
+                        <div style="font-size: 20px; margin-top: 8px;">$117</div>
+                        <div style="font-size: 14px; color: var(--text-gray); margin-top: 4px;">$39 per bottle</div>
+                    </div>
+                    <div class="comparison-box current-offer">
+                        <div style="font-weight: 600; color: var(--accent-green); margin-bottom: 8px;">✓ New Offer - BEST PRICE</div>
+                        <div style="font-size: 32px; font-weight: 700; color: var(--text-dark);">Just 1 Bottle</div>
+                        <div style="font-size: 24px; margin-top: 8px; font-weight: 700; color: var(--accent-green);">$29</div>
+                        <div style="font-size: 14px; color: var(--accent-green); margin-top: 4px; font-weight: 600;">SAVE 58% - Best Price Ever!</div>
+                    </div>
+                </div>
+
+                <div class="product-showcase">
+                    <div class="product-image">[ PRODUCT IMAGE ]<br>1 Bottle</div>
+                </div>
+
+                <div class="offer-box">
+                    <h3 style="color: var(--accent-green); margin-bottom: 20px;">Why This Is Our Best Deal:</h3>
+
+                    <div class="price-highlight">
+                        <div style="font-size: 18px; margin-bottom: 8px;">Add Just 1 More Bottle For Only:</div>
+                        <div class="price-amount">$29</div>
+                        <div style="font-size: 16px; opacity: 0.9;">Regular Price: $69 | You Save: $40 (58% OFF)</div>
+                    </div>
+
+                    <ul style="list-style: none; text-align: left; max-width: 500px; margin: 24px auto;">
+                        <li style="padding: 8px 0; padding-left: 28px; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold;">✓</span>
+                            Our absolute LOWEST price - $29 per bottle
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 28px; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold;">✓</span>
+                            Just 1 bottle - small commitment
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 28px; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold;">✓</span>
+                            Ships FREE with your current order
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 28px; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold;">✓</span>
+                            Same 60-day money-back guarantee
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 28px; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold;">✓</span>
+                            One-click add (no re-entering info)
+                        </li>
+                        <li style="padding: 8px 0; padding-left: 28px; position: relative;">
+                            <span style="position: absolute; left: 0; color: var(--accent-green); font-weight: bold;">✓</span>
+                            Never offered at this price again
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="savings-callout">
+                    <div style="font-size: 20px; font-weight: 700; color: var(--text-dark); margin-bottom: 8px;">
+                        ⚡ This Is Your Final Opportunity
+                    </div>
+                    <p style="margin: 0; color: var(--text-gray);">
+                        Once you leave this page, this $29 price will never be available again. The regular price is $69.
+                    </p>
+                </div>
+
+                <div class="cta-buttons">
+                    <div class="btn-yes">[ BUTTON: "YES! Add 1 Bottle For Only $29" ]</div>
+                    <div class="btn-no">[ LINK: "No thanks, I'll pay full price later" ]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">3</span> Required Elements Checklist</h2>
+
+            <ul class="checklist">
+                <li><strong>"Last Chance" Headline:</strong> Create urgency without pressure</li>
+                <li><strong>Empathy Message:</strong> Acknowledge their decline without making them feel bad</li>
+                <li><strong>Smaller Quantity:</strong> Typically 1-2 bottles vs. 3+ in the upsell</li>
+                <li><strong>Better Per-Unit Price:</strong> Lower price per bottle than the upsell</li>
+                <li><strong>Comparison Visual:</strong> Show declined offer vs. current offer</li>
+                <li><strong>Clear Savings:</strong> Emphasize the discount percentage (40-60%)</li>
+                <li><strong>Low Commitment Angle:</strong> "Just 1 bottle" feels easy to say yes to</li>
+                <li><strong>Finality Messaging:</strong> "Never offered again" creates FOMO</li>
+                <li><strong>Strong Yes Button:</strong> Include price in the button text</li>
+                <li><strong>Weak No Button:</strong> Frame decline as a loss</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">4</span> Pricing Strategy</h2>
+
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Upsell 1 (Declined)</th>
+                        <th>Downsell 1 Offer</th>
+                        <th>Per-Bottle Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>3 Bottles for $117 ($39/each)</td>
+                        <td>1 Bottle for $29</td>
+                        <td>$29 (better deal per bottle)</td>
+                    </tr>
+                    <tr>
+                        <td>2 Bottles for $98 ($49/each)</td>
+                        <td>1 Bottle for $29</td>
+                        <td>$29 (better deal per bottle)</td>
+                    </tr>
+                    <tr>
+                        <td>6 Bottles for $180 ($30/each)</td>
+                        <td>2 Bottles for $58</td>
+                        <td>$29 (slightly better deal)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box">
+                <strong>The Psychology:</strong> Even though the per-bottle price is lower, the total amount is much smaller ($29 vs $117). This removes the "too expensive" objection while still providing significant value increase to your business.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">5</span> Why Downsells Work</h2>
+
+            <h3>Objection Removal</h3>
+            <p>The downsell addresses why customers declined the upsell:</p>
+            <ul class="checklist">
+                <li><strong>Price Objection:</strong> $29 feels insignificant compared to $117</li>
+                <li><strong>Quantity Objection:</strong> 1 bottle is a tiny commitment</li>
+                <li><strong>Decision Fatigue:</strong> Simpler choice - just one option</li>
+                <li><strong>Regret Aversion:</strong> "What if I miss out?" - final offer creates FOMO</li>
+            </ul>
+
+            <h3>Key Messaging Points</h3>
+            <ul class="checklist">
+                <li>We heard you - this is a better fit</li>
+                <li>Absolute lowest price ever offered</li>
+                <li>Just 1 bottle - minimal commitment</li>
+                <li>This is your FINAL chance at this price</li>
+                <li>Ships free with current order</li>
+                <li>No-brainer addition to extend supply</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">6</span> Best Practices</h2>
+
+            <ul class="checklist">
+                <li><strong>Keep It Simple:</strong> Single offer only - don't add complexity</li>
+                <li><strong>Emphasize Better Value:</strong> Lower per-bottle price than upsell</li>
+                <li><strong>Show Respect:</strong> Don't make them feel bad for declining</li>
+                <li><strong>Create Urgency:</strong> "Final offer" and "never again" messaging</li>
+                <li><strong>Minimize Risk:</strong> Emphasize guarantee and free shipping</li>
+                <li><strong>Use Smaller Numbers:</strong> "$29" feels insignificant vs. "$117"</li>
+                <li><strong>Frame the Decline Negatively:</strong> "No thanks, I'll pay full price later"</li>
+                <li><strong>Test Different Quantities:</strong> Try 1 bottle vs. 2 bottles</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">7</span> Common Mistakes to Avoid</h2>
+
+            <div class="alert-box warning">
+                <strong>Warning:</strong> These mistakes will kill your recovery rate.
+            </div>
+
+            <ul class="mistake-list">
+                <li><strong>Same or Worse Deal:</strong> Downsell must be MORE attractive per unit</li>
+                <li><strong>Still Too Expensive:</strong> Keep total under $50 for best results</li>
+                <li><strong>Shaming the Customer:</strong> Never make them feel bad for declining</li>
+                <li><strong>Multiple Options:</strong> Keep it to ONE simple offer</li>
+                <li><strong>No Urgency:</strong> Without finality, they'll think they can get it later</li>
+                <li><strong>Complicated Messaging:</strong> Keep copy simple and benefit-focused</li>
+                <li><strong>Different Product:</strong> Keep it the same product as original order</li>
+                <li><strong>Weak Positioning:</strong> Must feel like an exclusive "final chance" deal</li>
+            </ul>
+        </div>
+
+        <div class="metrics-box">
+            <h3>Performance Metrics & Benchmarks</h3>
+
+            <div class="metric-item">
+                <strong>Acceptance Rate:</strong> 15-25% of those who declined Upsell 1 should accept Downsell 1.
+            </div>
+
+            <div class="metric-item">
+                <strong>Revenue Recovery:</strong> If 300 people decline Upsell 1, and 60 accept Downsell 1 at $29, you recover $1,740.
+            </div>
+
+            <div class="metric-item">
+                <strong>Combined Impact:</strong> Upsell 1 (30% × $117) + Downsell 1 (17.5% × $29) = ~$40 additional per customer.
+            </div>
+
+            <div class="metric-item">
+                <strong>Optimal Price Point:</strong> $29-39 for single bottle downsells performs best. Higher reduces acceptance.
+            </div>
+
+            <div class="metric-item">
+                <strong>Page Load Speed:</strong> Keep under 2 seconds - delays kill urgency and acceptance rates.
+            </div>
+
+            <div class="metric-item">
+                <strong>A/B Testing Impact:</strong> Testing price points ($29 vs $35 vs $39) can change acceptance by 20-30%.
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="step3-upsell1.html" class="btn btn-secondary">← Previous: Upsell 1</a>
+                </li>
+            <a href="step5-upsell2.html" class="btn btn-primary">Next: Upsell 2 →</a>
+                </li>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

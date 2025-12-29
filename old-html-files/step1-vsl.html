@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 1: VSL Page - BuyGoods Vendor Guide</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --accent-green: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --border-gray: #e5e7eb;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --warning-red: #ef4444;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        .step-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .element-card {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 18px;
+            margin-right: 16px;
+        }
+
+        .element-card h2 {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .element-card h3 {
+            font-size: 22px;
+            margin: 24px 0 12px 0;
+            color: var(--text-dark);
+        }
+
+        .element-card p {
+            color: var(--text-gray);
+            font-size: 17px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .visual-preview {
+            background: var(--bg-light);
+            border: 2px dashed var(--border-gray);
+            border-radius: 8px;
+            padding: 40px;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .visual-preview-placeholder {
+            color: var(--text-gray);
+            font-size: 18px;
+            font-weight: 600;
+            margin: 16px 0;
+        }
+
+        .video-placeholder {
+            background: #000;
+            color: var(--white);
+            padding: 80px 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .button-placeholder {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            padding: 16px 40px;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: 600;
+            margin: 12px;
+        }
+
+        .product-bottles {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .bottle-option {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            padding: 20px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .bottle-image {
+            background: var(--bg-light);
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+            margin-bottom: 12px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .checklist li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Mistake list - uses X instead of checkmark */
+        .mistake-list {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .mistake-list li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .mistake-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            font-size: 16px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .specs-table th,
+        .specs-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .specs-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .specs-table td {
+            color: var(--text-gray);
+        }
+
+        .alert-box {
+            border-left: 4px solid var(--accent-green);
+            background: #f0fdf4;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+
+        .alert-box.warning {
+            border-left-color: var(--warning-red);
+            background: #fef2f2;
+        }
+
+        .alert-box strong {
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .metrics-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .metrics-box h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        .metric-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .metric-item:last-child {
+            border-bottom: none;
+        }
+
+        .metric-item strong {
+            color: var(--text-dark);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Sidebar - minimal custom CSS, using Bootstrap utilities */
+        .sidebar-nav {
+            position: fixed;
+            left: 0;
+            top: 56px;
+            width: 280px;
+            height: calc(100vh - 56px);
+            z-index: 100;
+        }
+
+        /* Progress line connector */
+        .step-progress::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 45px;
+            bottom: 45px;
+            width: 2px;
+            background: var(--border-gray);
+        }
+
+        /* Step circle styling */
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--border-gray);
+            transition: all 0.3s ease;
+        }
+
+        .step-item.current .step-circle,
+        .step-item.completed .step-circle {
+            color: white !important;
+        }
+
+        /* Hover effect */
+        .step-item:hover {
+            transform: translateX(4px);
+        }
+
+        /* Completed step styling */
+        .step-item.completed .step-circle {
+            background: linear-gradient(135deg, var(--accent-green), #059669) !important;
+            border-color: var(--accent-green) !important;
+            color: transparent !important; /* Hide the number */
+        }
+
+        .step-item.completed .step-circle::after {
+            content: '✓';
+            position: absolute;
+            font-size: 18px;
+            color: white; /* Make checkmark visible */
+        }
+
+        /* Current step styling */
+        .step-item.current .step-circle {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple)) !important;
+            border-color: var(--primary-blue) !important;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            transform: scale(1.1);
+            color: white !important;
+        }
+
+        /* Main content offset */
+        body {
+            margin-left: 280px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .product-bottles {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+
+            .element-card {
+                padding: 20px;
+            }
+
+            .checklist,
+            .mistake-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 600; color: var(--primary-blue);">
+                <i class="bi bi-rocket-takeoff me-2" style="font-size: 24px;"></i>
+                BuyGoods Vendor Guide
+            </a>
+            <nav aria-label="breadcrumb" class="d-none d-md-block">
+                <ol class="breadcrumb mb-0" style="background: none;">
+                    <li class="breadcrumb-item"><a href="index.html" style="color: var(--primary-blue); text-decoration: none;">Overview</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Step 1: VSL Page</li>
+                </ol>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar Navigation using Bootstrap utilities -->
+    <aside class="sidebar-nav bg-white border-end overflow-auto">
+        <div class="p-4">
+            <h3 class="text-uppercase fw-bold fs-6 mb-4 text-dark" style="letter-spacing: 0.5px;">Funnel Steps</h3>
+            <ul class="step-progress list-unstyled position-relative p-0">
+                <li>
+                    <a href="step1-vsl.html" class="step-item current d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">1</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-primary" style="font-size: 11px; letter-spacing: 0.5px;">Step 1</div>
+                            <div class="step-title fw-semibold text-primary" style="font-size: 14px;">VSL Page</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step2-dtc.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">2</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 2</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Checkout Page</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step3-upsell1.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">3</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 3</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Upsell 1 <span style="font-size: 10px; opacity: 0.7;">(same product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step4-downsell1.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">4</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 4</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Downsell 1 <span style="font-size: 10px; opacity: 0.7;">(smaller qty)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step5-upsell2.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">5</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 5</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Upsell 2 <span style="font-size: 10px; opacity: 0.7;">(different product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step6-downsell2.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">6</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 6</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Downsell 2 <span style="font-size: 10px; opacity: 0.7;">(different offer)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step7-thankyou.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">7</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 7</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Thank You</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step8-footer.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">8</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 8</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Footer</div>
+                        </div>
+                    </a>
+                </li>
+                <li style="margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--border-gray);">
+                    <a href="example-vsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #10b981, #059669) !important; border-color: #10b981 !important; color: white !important;">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #10b981;">VSL Example</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="example-tsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #7c3aed, #6d28d9) !important; border-color: #7c3aed !important; color: white !important;">
+                            <i class="bi bi-file-text-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #7c3aed;">TSL Example</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="header">
+        <div class="step-badge">STEP 1 OF 7</div>
+        <h1>VSL Page (Video Sales Letter)</h1>
+        <p>The foundation of your funnel - Present your product through a compelling video presentation</p>
+    </div>
+
+    <div class="container">
+        <div class="element-card">
+            <h2><span class="section-number">1</span> What is a VSL Page?</h2>
+            <p>A Video Sales Letter (VSL) page is the entry point of your sales funnel where prospects watch a 15-20 minute video presentation about your product. This page is designed to educate, build desire, and ultimately convince viewers to purchase your product.</p>
+            <p>The VSL format works because it allows you to tell a complete story, build emotional connection, present scientific evidence, and overcome objections - all before asking for the sale.</p>
+
+            <div class="alert-box">
+                <strong>Why VSL Works:</strong> Video presentations convert 2-5% of viewers into buyers, which is significantly higher than text-only sales pages. The extended format allows you to build trust and thoroughly present your value proposition.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">2</span> Visual Structure</h2>
+            <p>Here's how your VSL page should be structured from top to bottom:</p>
+
+            <div class="visual-preview">
+                <h3 style="color: var(--text-dark); margin-bottom: 20px;">Page Layout Preview</h3>
+
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <div style="font-size: 32px; font-weight: 700; color: var(--text-dark); margin-bottom: 12px;">
+                        Discover the Secret to [Desired Outcome]
+                    </div>
+                    <div style="font-size: 18px; color: var(--text-gray);">
+                        Watch this short presentation to learn how [Product Name] can help you...
+                    </div>
+                </div>
+
+                <div class="video-placeholder">
+                    <div class="visual-preview-placeholder">[ VSL VIDEO PLAYER HERE ]</div>
+                    <div style="font-size: 14px; opacity: 0.7; margin-top: 12px;">15-20 minute sales video</div>
+                </div>
+
+                <div style="margin: 30px 0; padding: 20px; background: rgba(239, 68, 68, 0.1); border-radius: 8px;">
+                    <p style="margin: 0; color: var(--text-gray); font-style: italic;">
+                        ⏰ Buy buttons appear here ONLY after video completes (after 20 minutes)
+                    </p>
+                </div>
+
+                <div id="post-video-section" style="margin-top: 30px;">
+                    <div class="visual-preview-placeholder" style="margin-bottom: 20px;">
+                        After video ends, this section appears:
+                    </div>
+
+                    <div class="product-bottles">
+                        <div class="bottle-option">
+                            <div class="bottle-image">[ PRODUCT IMAGE ]</div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">1 Bottle</div>
+                            <div style="color: var(--text-gray); font-size: 14px;">30-Day Supply</div>
+                        </div>
+                        <div class="bottle-option" style="border-color: var(--primary-blue); background: rgba(37, 99, 235, 0.05);">
+                            <div style="background: var(--primary-blue); color: white; padding: 4px 8px; border-radius: 4px; font-size: 12px; margin-bottom: 8px;">MOST POPULAR</div>
+                            <div class="bottle-image">[ PRODUCT IMAGE ]</div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">3 Bottles</div>
+                            <div style="color: var(--text-gray); font-size: 14px;">90-Day Supply</div>
+                        </div>
+                        <div class="bottle-option">
+                            <div class="bottle-image">[ PRODUCT IMAGE ]</div>
+                            <div style="font-weight: 600; margin-bottom: 8px;">6 Bottles</div>
+                            <div style="color: var(--text-gray); font-size: 14px;">180-Day Supply</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 30px;">
+                        <div class="button-placeholder">[ BUTTON: "Yes! I Want [Product Name]" ]</div>
+                    </div>
+
+                    <div style="margin-top: 40px; padding: 20px; background: var(--bg-light); border-radius: 8px;">
+                        <div class="visual-preview-placeholder" style="margin-bottom: 12px;">[ SCIENTIFIC REFERENCES ]</div>
+                        <p style="font-size: 14px; color: var(--text-gray); margin: 0;">
+                            List your scientific studies, clinical trials, and expert endorsements here
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">3</span> Required Elements Checklist</h2>
+            <p>Every VSL page must include these essential elements:</p>
+
+            <ul class="checklist">
+                <li><strong>Compelling Headline:</strong> Promise a specific benefit or solution</li>
+                <li><strong>Video Player:</strong> Prominently placed at top of page, auto-play enabled</li>
+                <li><strong>Timed Buy Buttons:</strong> Appear only after video completes (prevents skipping)</li>
+                <li><strong>Product Visuals:</strong> High-quality images of your product bottles/packages</li>
+                <li><strong>Package Options:</strong> Display 1, 3, and 6 bottle options clearly</li>
+                <li><strong>Trust Indicators:</strong> Money-back guarantee, secure checkout badges</li>
+                <li><strong>Scientific References:</strong> Studies, trials, expert endorsements</li>
+                <li><strong>Scarcity/Urgency:</strong> Limited stock or time-based offers (optional but effective)</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">4</span> Technical Specifications</h2>
+
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Element</th>
+                        <th>Specification</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Video Length</strong></td>
+                        <td>15-20 minutes optimal (shorter = less conversion, longer = drop-off)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Video Format</strong></td>
+                        <td>MP4, hosted on reliable CDN or platform (Vimeo, Wistia recommended)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Button Reveal Timing</strong></td>
+                        <td>Set to appear at 85-90% of video completion (not before)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Page Load Speed</strong></td>
+                        <td>Under 3 seconds (critical for conversion)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mobile Optimization</strong></td>
+                        <td>Video must be fully responsive, controls accessible on mobile</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Package Options</strong></td>
+                        <td>Always show 3 options: Basic (1-2), Best Value (3-4), Premium (6+)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">5</span> VSL Content Structure</h2>
+            <p>Your 15-20 minute video should follow this proven structure:</p>
+
+            <h3>Act 1: Hook & Problem (Minutes 0-5)</h3>
+            <ul class="checklist">
+                <li>Open with shocking fact or bold claim</li>
+                <li>Identify the problem your audience faces</li>
+                <li>Agitate the pain points</li>
+                <li>Promise a solution is coming</li>
+            </ul>
+
+            <h3>Act 2: Solution & Mechanism (Minutes 5-12)</h3>
+            <ul class="checklist">
+                <li>Introduce your product as the solution</li>
+                <li>Explain the unique mechanism (what makes it different)</li>
+                <li>Present scientific evidence and studies</li>
+                <li>Show testimonials and results</li>
+            </ul>
+
+            <h3>Act 3: Offer & Close (Minutes 12-20)</h3>
+            <ul class="checklist">
+                <li>Present the pricing and package options</li>
+                <li>Stack the value (bonuses, guarantees)</li>
+                <li>Create urgency (limited availability, special pricing)</li>
+                <li>Overcome final objections</li>
+                <li>Clear call-to-action</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">6</span> Best Practices</h2>
+
+            <div class="alert-box">
+                <strong>Disable Video Controls:</strong> Remove the ability to skip ahead in the video. This ensures viewers watch your complete presentation and prevents them from jumping to the price without seeing the value buildup.
+            </div>
+
+            <ul class="checklist">
+                <li><strong>Use Professional Video Production:</strong> Poor audio/video quality kills credibility</li>
+                <li><strong>Add Captions:</strong> 85% of Facebook videos are watched without sound - captions increase engagement</li>
+                <li><strong>Test Button Timing:</strong> Experiment with when buttons appear (80% vs 90% vs 100% completion)</li>
+                <li><strong>Optimize for Mobile:</strong> 60%+ of traffic is mobile - ensure video plays smoothly</li>
+                <li><strong>A/B Test Headlines:</strong> Your headline can change conversion by 50%+</li>
+                <li><strong>Keep Page Simple:</strong> Don't add distracting elements - focus stays on video</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">7</span> Common Mistakes to Avoid</h2>
+
+            <div class="alert-box warning">
+                <strong>Warning:</strong> These mistakes are common among new vendors and can devastate your conversion rates.
+            </div>
+
+            <ul class="mistake-list">
+                <li><strong>Showing Buy Button Too Early:</strong> If people can skip to price, they will - and won't buy</li>
+                <li><strong>Video Too Long:</strong> Beyond 25 minutes, drop-off rates skyrocket</li>
+                <li><strong>No Mobile Testing:</strong> Broken mobile experience = 60% of potential revenue lost</li>
+                <li><strong>Weak Hook:</strong> First 30 seconds determine if people stay - make them count</li>
+                <li><strong>Too Many Package Options:</strong> More than 3 choices creates decision paralysis</li>
+                <li><strong>Missing Guarantees:</strong> Without risk-reversal, conversion drops 30-40%</li>
+                <li><strong>Poor Video Quality:</strong> Grainy video or bad audio signals "scam" to viewers</li>
+            </ul>
+        </div>
+
+        <div class="metrics-box">
+            <h3>Performance Metrics & Benchmarks</h3>
+
+            <div class="metric-item">
+                <strong>Video Completion Rate:</strong> Aim for 40-60% of viewers watching to the end. Below 30% means your video needs work.
+            </div>
+
+            <div class="metric-item">
+                <strong>VSL Conversion Rate:</strong> Industry standard is 2-5% of viewers become buyers. Top performers hit 8-12%.
+            </div>
+
+            <div class="metric-item">
+                <strong>Average Watch Time:</strong> Should be 10-15 minutes minimum. Under 8 minutes means you're losing people early.
+            </div>
+
+            <div class="metric-item">
+                <strong>Mobile vs Desktop:</strong> Expect 60-70% mobile traffic. Mobile conversion is typically 20-30% lower than desktop.
+            </div>
+
+            <div class="metric-item">
+                <strong>Package Selection:</strong> "Best Value" (3-pack) should sell 50-60% of the time, Premium (6-pack) 25-30%, Basic 15-20%.
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="index.html" class="btn btn-secondary">← Back to Overview</a>
+            <a href="step2-dtc.html" class="btn btn-primary">Next: Checkout Page →</a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

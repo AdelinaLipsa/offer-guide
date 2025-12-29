@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step 7: Thank You Page - BuyGoods Vendor Guide</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --accent-green: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --border-gray: #e5e7eb;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --warning-red: #ef4444;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            padding: 60px 20px;
+            min-height: 200px;
+            text-align: center;
+        }
+
+        .step-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .header h1 {
+            font-size: 42px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .header p {
+            font-size: 20px;
+            opacity: 0.95;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .element-card {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 32px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 18px;
+            margin-right: 16px;
+        }
+
+        .element-card h2 {
+            display: flex;
+            align-items: center;
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .element-card h3 {
+            font-size: 22px;
+            margin: 24px 0 12px 0;
+            color: var(--text-dark);
+        }
+
+        .element-card p {
+            color: var(--text-gray);
+            font-size: 17px;
+            margin-bottom: 16px;
+            line-height: 1.7;
+        }
+
+        .thankyou-preview {
+            background: var(--bg-light);
+            border: 2px dashed var(--border-gray);
+            border-radius: 8px;
+            padding: 40px;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 48px;
+            color: var(--white);
+        }
+
+        .order-summary-box {
+            background: var(--white);
+            border: 2px solid var(--accent-green);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 24px 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .order-number {
+            background: var(--bg-light);
+            border: 2px dashed var(--border-gray);
+            border-radius: 8px;
+            padding: 16px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin: 16px 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .info-card {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .info-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .timeline {
+            background: var(--white);
+            border: 2px solid var(--border-gray);
+            border-radius: 12px;
+            padding: 28px;
+            margin: 24px 0;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 20px;
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-weight: 700;
+        }
+
+        .timeline-content h4 {
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .timeline-content p {
+            color: var(--text-gray);
+            font-size: 15px;
+            margin: 0;
+        }
+
+        .checklist {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .checklist li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .checklist li::before {
+            content: "✓";
+            position: absolute;
+            left: 12px;
+            color: var(--accent-green);
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        /* Mistake list - uses X instead of checkmark */
+        .mistake-list {
+            list-style: none;
+            margin: 20px 0;
+            padding: 0;
+            column-count: 2;
+            column-gap: 24px;
+        }
+
+        .mistake-list li {
+            padding: 12px 12px 12px 40px;
+            margin-bottom: 8px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            position: relative;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .mistake-list li::before {
+            content: "❌";
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            font-size: 16px;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .specs-table th,
+        .specs-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .specs-table th {
+            background: var(--bg-light);
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .specs-table td {
+            color: var(--text-gray);
+        }
+
+        .alert-box {
+            border-left: 4px solid var(--accent-green);
+            background: #f0fdf4;
+            padding: 20px;
+            margin: 24px 0;
+            border-radius: 8px;
+        }
+
+        .alert-box.warning {
+            border-left-color: var(--warning-red);
+            background: #fef2f2;
+        }
+
+        .alert-box.info {
+            border-left-color: var(--primary-blue);
+            background: #eff6ff;
+        }
+
+        .alert-box strong {
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+
+        .metrics-box {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.1) 0%, rgba(124, 58, 237, 0.1) 100%);
+            border: 2px solid var(--primary-blue);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .metrics-box h3 {
+            color: var(--primary-blue);
+            margin-top: 0;
+        }
+
+        .metric-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-gray);
+        }
+
+        .metric-item:last-child {
+            border-bottom: none;
+        }
+
+        .metric-item strong {
+            color: var(--text-dark);
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            gap: 16px;
+        }
+
+        .btn {
+            padding: 16px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: var(--white);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-blue);
+            border: 2px solid var(--primary-blue);
+            flex: 1;
+            text-align: center;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        /* Sidebar - minimal custom CSS, using Bootstrap utilities */
+        .sidebar-nav {
+            position: fixed;
+            left: 0;
+            top: 56px;
+            width: 280px;
+            height: calc(100vh - 56px);
+            z-index: 100;
+        }
+
+        /* Progress line connector */
+        .step-progress::before {
+            content: '';
+            position: absolute;
+            left: 20px;
+            top: 45px;
+            bottom: 45px;
+            width: 2px;
+            background: var(--border-gray);
+        }
+
+        /* Step circle styling */
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--border-gray);
+            transition: all 0.3s ease;
+        }
+
+        .step-item.current .step-circle,
+        .step-item.completed .step-circle {
+            color: white !important;
+        }
+
+        /* Hover effect */
+        .step-item:hover {
+            transform: translateX(4px);
+        }
+
+        /* Completed step styling */
+        .step-item.completed .step-circle {
+            background: linear-gradient(135deg, var(--accent-green), #059669) !important;
+            border-color: var(--accent-green) !important;
+            color: transparent !important; /* Hide the number */
+        }
+
+        .step-item.completed .step-circle::after {
+            content: '✓';
+            position: absolute;
+            font-size: 18px;
+            color: white; /* Make checkmark visible */
+        }
+
+        /* Current step styling */
+        .step-item.current .step-circle {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple)) !important;
+            border-color: var(--primary-blue) !important;
+            box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
+            transform: scale(1.1);
+            color: white !important;
+        }
+
+        /* Main content offset */
+        body {
+            margin-left: 280px;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation {
+                flex-direction: column;
+            }
+
+            .element-card {
+                padding: 20px;
+            }
+
+            .checklist,
+            .mistake-list {
+                column-count: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center" href="index.html" style="font-weight: 600; color: var(--primary-blue);">
+                <i class="bi bi-rocket-takeoff me-2" style="font-size: 24px;"></i>
+                BuyGoods Vendor Guide
+            </a>
+                </li>
+            <nav aria-label="breadcrumb" class="d-none d-md-block">
+                <ol class="breadcrumb mb-0" style="background: none;">
+                    <li class="breadcrumb-item"><a href="index.html" style="color: var(--primary-blue); text-decoration: none;">Overview</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Step 7: Thank You Page</li>
+                </ol>
+            </nav>
+        </div>
+    </nav>
+
+    <!-- Left Sidebar Navigation using Bootstrap utilities -->
+    <aside class="sidebar-nav bg-white border-end overflow-auto">
+        <div class="p-4">
+            <h3 class="text-uppercase fw-bold fs-6 mb-4 text-dark" style="letter-spacing: 0.5px;">Funnel Steps</h3>
+            <ul class="step-progress list-unstyled position-relative p-0">
+                <li>
+                    <a href="step1-vsl.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">1</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 1</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">VSL Page</div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step2-dtc.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">2</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 2</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Checkout Page</div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step3-upsell1.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">3</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 3</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Upsell 1 <span style="font-size: 10px; opacity: 0.7;">(same product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step4-downsell1.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">4</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 4</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Downsell 1 <span style="font-size: 10px; opacity: 0.7;">(smaller qty)</span></div>
+                        </div>
+                    </a>
+                </li>
+                </li>
+                <li>
+                    <a href="step5-upsell2.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">5</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 5</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Upsell 2 <span style="font-size: 10px; opacity: 0.7;">(different product)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step6-downsell2.html" class="step-item completed d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">6</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-success" style="font-size: 11px; letter-spacing: 0.5px;">Step 6</div>
+                            <div class="step-title fw-semibold text-success" style="font-size: 14px;">Downsell 2 <span style="font-size: 10px; opacity: 0.7;">(different offer)</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step7-thankyou.html" class="step-item current d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">7</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-primary" style="font-size: 11px; letter-spacing: 0.5px;">Step 7</div>
+                            <div class="step-title fw-semibold text-primary" style="font-size: 14px;">Thank You</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="step8-footer.html" class="step-item future d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white text-secondary fw-bold flex-shrink-0 me-3 position-relative">8</div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-label text-uppercase fw-semibold text-secondary" style="font-size: 11px; letter-spacing: 0.5px;">Step 8</div>
+                            <div class="step-title fw-semibold text-secondary" style="font-size: 14px;">Footer</div>
+                        </div>
+                    </a>
+                </li>
+                <li style="margin-top: 20px; padding-top: 20px; border-top: 2px solid var(--border-gray);">
+                    <a href="example-vsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #10b981, #059669) !important; border-color: #10b981 !important; color: white !important;">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #10b981;">VSL Example</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="example-tsl.html" target="_blank" rel="noopener noreferrer" class="step-item d-flex align-items-center py-3 text-decoration-none position-relative transition">
+                        <div class="step-circle d-flex align-items-center justify-content-center bg-white fw-bold flex-shrink-0 me-3 position-relative" style="background: linear-gradient(135deg, #7c3aed, #6d28d9) !important; border-color: #7c3aed !important; color: white !important;">
+                            <i class="bi bi-file-text-fill"></i>
+                        </div>
+                        <div class="step-info flex-grow-1">
+                            <div class="step-title fw-semibold" style="font-size: 14px; color: #7c3aed;">TSL Example</div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="header">
+        <div class="step-badge">STEP 7 OF 7</div>
+        <h1>Thank You Page</h1>
+        <p>Set expectations and reduce refunds through clear communication</p>
+    </div>
+
+    <div class="container">
+        <div class="element-card">
+            <h2><span class="section-number">1</span> What is the Thank You Page?</h2>
+            <p>The Thank You page is the FINAL stop in your funnel after all upsells/downsells. This page confirms the order and, most importantly, sets proper expectations for delivery, communication, and results. Done right, this page can reduce your refund rate by 15-25%.</p>
+            <p>Many vendors overlook this page, but it's critical. Customers who don't know what to expect are more likely to panic, email support repeatedly, or request refunds.</p>
+
+            <div class="alert-box">
+                <strong>Critical Purpose:</strong> This page prevents buyer's remorse, reduces support tickets, and significantly lowers refund rates. Every dollar spent on refunds is pure loss - this page protects your revenue.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">2</span> Visual Structure</h2>
+            <p>Here's how your Thank You page should look:</p>
+
+            <div class="thankyou-preview">
+                <div class="success-icon">✓</div>
+
+                <h3 style="font-size: 36px; color: var(--accent-green); margin-bottom: 12px;">
+                    Order Confirmed! 🎉
+                </h3>
+
+                <p style="font-size: 20px; color: var(--text-dark); font-weight: 600; margin-bottom: 8px;">
+                    Thank you for your order!
+                </p>
+
+                <p style="font-size: 16px; color: var(--text-gray); max-width: 600px; margin: 0 auto 32px;">
+                    Your order has been successfully processed and you'll receive a confirmation email shortly at the email address provided.
+                </p>
+
+                <div class="order-summary-box">
+                    <h4 style="color: var(--text-dark); margin-bottom: 16px;">Order Summary</h4>
+
+                    <div class="order-number">
+                        Order #: <span style="color: var(--primary-blue);">BG-123456789</span>
+                    </div>
+
+                    <div style="text-align: left; margin: 20px 0;">
+                        <div style="padding: 12px 0; border-bottom: 1px solid var(--border-gray);">
+                            <strong>Items Ordered:</strong>
+                            <div style="color: var(--text-gray); margin-top: 4px;">• 3 Bottles of [Product Name]</div>
+                            <div style="color: var(--text-gray);">• 1 Bottle of [Complementary Product]</div>
+                        </div>
+                        <div style="padding: 12px 0; border-bottom: 1px solid var(--border-gray);">
+                            <strong>Total Paid:</strong> <span style="color: var(--accent-green); font-size: 18px;">$166</span>
+                        </div>
+                        <div style="padding: 12px 0;">
+                            <strong>Shipping To:</strong>
+                            <div style="color: var(--text-gray); margin-top: 4px;">John Doe</div>
+                            <div style="color: var(--text-gray);">123 Main Street, City, ST 12345</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h4 style="color: var(--text-dark); margin-bottom: 8px;">Check Your Email</h4>
+                        <p style="font-size: 14px; color: var(--text-gray); margin: 0;">
+                            Confirmation sent to:<br>
+                            <strong style="color: var(--text-dark);">john@example.com</strong>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📦</div>
+                        <h4 style="color: var(--text-dark); margin-bottom: 8px;">Processing Time</h4>
+                        <p style="font-size: 14px; color: var(--text-gray); margin: 0;">
+                            Orders ship within<br>
+                            <strong style="color: var(--text-dark);">1-2 business days</strong>
+                        </p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🚚</div>
+                        <h4 style="color: var(--text-dark); margin-bottom: 8px;">Delivery Time</h4>
+                        <p style="font-size: 14px; color: var(--text-gray); margin: 0;">
+                            Expect delivery in<br>
+                            <strong style="color: var(--text-dark);">7-10 business days</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <h4 style="color: var(--text-dark); margin-bottom: 20px; text-align: center;">What Happens Next</h4>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">1</div>
+                        <div class="timeline-content">
+                            <h4>Order Confirmation Email (Within 5 minutes)</h4>
+                            <p>Check your inbox for order details and receipt</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">2</div>
+                        <div class="timeline-content">
+                            <h4>Order Processing (1-2 business days)</h4>
+                            <p>Your order is being prepared and packaged</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">3</div>
+                        <div class="timeline-content">
+                            <h4>Shipping Notification (Day 2-3)</h4>
+                            <p>You'll receive tracking information via email</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-icon">4</div>
+                        <div class="timeline-content">
+                            <h4>Delivery (7-10 business days)</h4>
+                            <p>Your package arrives at your doorstep</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #eff6ff; border: 2px solid var(--primary-blue); border-radius: 12px; padding: 24px; margin: 32px 0;">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 12px;">💯 60-Day Money-Back Guarantee</h4>
+                    <p style="margin: 0; color: var(--text-gray);">
+                        Try [Product Name] risk-free for 60 days. If you're not completely satisfied, contact our support team for a full refund - no questions asked.
+                    </p>
+                </div>
+
+                <div style="background: var(--bg-light); border: 2px solid var(--border-gray); border-radius: 12px; padding: 24px; margin: 32px 0;">
+                    <h4 style="color: var(--text-dark); margin-bottom: 12px;">📞 Need Help?</h4>
+                    <p style="margin: 0 0 12px 0; color: var(--text-gray);">
+                        Our support team is here to help with any questions.
+                    </p>
+                    <div style="color: var(--text-dark);">
+                        <strong>Email:</strong> support@yourcompany.com<br>
+                        <strong>Phone:</strong> 1-800-XXX-XXXX<br>
+                        <strong>Hours:</strong> Mon-Fri, 9AM-5PM EST
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">3</span> Required Elements Checklist</h2>
+
+            <ul class="checklist">
+                <li><strong>Order Confirmation Message:</strong> Clear "Order Confirmed" or "Thank You" headline</li>
+                <li><strong>Order Number:</strong> Unique identifier for customer reference</li>
+                <li><strong>Email Confirmation Notice:</strong> Tell them to check email (prevents panic)</li>
+                <li><strong>Order Summary:</strong> List what they purchased and total paid</li>
+                <li><strong>Shipping Address:</strong> Show where it's being sent for verification</li>
+                <li><strong>Processing Timeline:</strong> When order will ship (1-2 business days)</li>
+                <li><strong>Delivery Timeline:</strong> When to expect delivery (7-10 business days)</li>
+                <li><strong>What Happens Next:</strong> Step-by-step timeline of the process</li>
+                <li><strong>Tracking Information:</strong> When/how they'll receive tracking</li>
+                <li><strong>Money-Back Guarantee:</strong> Remind them of the guarantee</li>
+                <li><strong>Support Contact Info:</strong> Email, phone, and hours</li>
+                <li><strong>Billing Descriptor:</strong> What will appear on their credit card statement</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">4</span> Why This Page Reduces Refunds</h2>
+
+            <h3>Psychology of Buyer's Remorse</h3>
+            <p>Immediately after purchasing, customers often experience:</p>
+            <ul class="checklist">
+                <li>Uncertainty about whether they made the right decision</li>
+                <li>Anxiety about when product will arrive</li>
+                <li>Confusion about what happens next</li>
+                <li>Worry about whether the order actually went through</li>
+            </ul>
+
+            <h3>How This Page Addresses Each Concern</h3>
+            <table class="specs-table">
+                <thead>
+                    <tr>
+                        <th>Customer Concern</th>
+                        <th>How Thank You Page Addresses It</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Did my order go through?</td>
+                        <td>Order confirmation, order number, and email notice</td>
+                    </tr>
+                    <tr>
+                        <td>When will I get it?</td>
+                        <td>Clear timeline: processing + shipping + delivery dates</td>
+                    </tr>
+                    <tr>
+                        <td>What if it doesn't work?</td>
+                        <td>Prominent money-back guarantee reminder</td>
+                    </tr>
+                    <tr>
+                        <td>Who do I contact with questions?</td>
+                        <td>Clear support contact information</td>
+                    </tr>
+                    <tr>
+                        <td>Did I make the right choice?</td>
+                        <td>Positive reinforcement and next steps</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="alert-box info">
+                <strong>Refund Prevention:</strong> Studies show that 30-40% of refund requests come from customers who "never received" their order or "didn't know what to expect." This page eliminates that confusion.
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">5</span> Critical Information to Include</h2>
+
+            <h3>Delivery Timeline (Most Important)</h3>
+            <p>Be SPECIFIC about delivery timeframes:</p>
+            <ul class="checklist">
+                <li><strong>Order Processing:</strong> "Ships within 1-2 business days"</li>
+                <li><strong>Shipping Time:</strong> "5-7 business days for delivery"</li>
+                <li><strong>Total Timeline:</strong> "Expect delivery in 7-10 business days"</li>
+                <li><strong>Tracking Info:</strong> "You'll receive tracking within 24-48 hours of shipment"</li>
+            </ul>
+
+            <div class="alert-box warning">
+                <strong>Warning:</strong> Under-promising is better than over-promising. If you say "3-5 days" and it takes 7, you'll get refund requests. Say "7-10 days" and deliver in 7, and customers are happy.
+            </div>
+
+            <h3>Billing Descriptor</h3>
+            <p>Tell customers what will appear on their credit card statement:</p>
+            <div class="alert-box info">
+                <strong>Include this:</strong> "The charge on your credit card statement will appear as: CLKBANK*COM or similar - this is your [Product Name] purchase."
+            </div>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">6</span> Best Practices</h2>
+
+            <ul class="checklist">
+                <li><strong>Be Specific:</strong> Exact timelines, not vague "soon"</li>
+                <li><strong>Reassure Immediately:</strong> Confirmation within first few lines</li>
+                <li><strong>Email Emphasis:</strong> Tell them 3-4 times to check email</li>
+                <li><strong>Visual Timeline:</strong> Show step-by-step what happens next</li>
+                <li><strong>Show Order Details:</strong> Let them verify everything is correct</li>
+                <li><strong>Prominent Guarantee:</strong> Reduce buyer's remorse by emphasizing risk-free</li>
+                <li><strong>Easy Support Access:</strong> Make it simple to contact you with questions</li>
+                <li><strong>Positive Tone:</strong> Celebrate their purchase, don't just confirm it</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">7</span> Common Mistakes to Avoid</h2>
+
+            <div class="alert-box warning">
+                <strong>Warning:</strong> These mistakes lead to higher refund rates and support tickets.
+            </div>
+
+            <ul class="mistake-list">
+                <li><strong>Vague Timelines:</strong> "Ships soon" creates anxiety</li>
+                <li><strong>No Order Number:</strong> Customers need a reference for support</li>
+                <li><strong>Forgetting Email Notice:</strong> Customers panic if they don't see confirmation</li>
+                <li><strong>Missing Contact Info:</strong> Frustrated customers refund instead of asking</li>
+                <li><strong>No Guarantee Reminder:</strong> Buyer's remorse increases without reassurance</li>
+                <li><strong>Overpromising Delivery:</strong> Missing delivery dates triggers refunds</li>
+                <li><strong>Too Brief:</strong> One sentence confirmation isn't enough information</li>
+                <li><strong>No Billing Descriptor:</strong> Customers forget and dispute the charge</li>
+            </ul>
+        </div>
+
+        <div class="element-card">
+            <h2><span class="section-number">8</span> Optional But Effective Additions</h2>
+
+            <h3>Social Proof Reminder</h3>
+            <p>Include a testimonial or statistic to reinforce their decision:</p>
+            <div class="alert-box">
+                <strong>Example:</strong> "You're joining over 50,000 satisfied customers who have experienced the benefits of [Product Name]!"
+            </div>
+
+            <h3>Usage Instructions Preview</h3>
+            <p>Give them something to look forward to:</p>
+            <ul class="checklist">
+                <li>"When your order arrives, take [X] capsules daily with food"</li>
+                <li>"Most customers see results within 2-4 weeks"</li>
+                <li>"For best results, use consistently for 90 days"</li>
+            </ul>
+
+            <h3>Community/Social Links</h3>
+            <p>Invite them to join your community (reduces refunds through engagement):</p>
+            <ul class="checklist">
+                <li>Private Facebook group for customers</li>
+                <li>Instagram for success stories</li>
+                <li>Email list for tips and updates</li>
+            </ul>
+        </div>
+
+        <div class="metrics-box">
+            <h3>Performance Metrics & Benchmarks</h3>
+
+            <div class="metric-item">
+                <strong>Refund Rate Reduction:</strong> Proper thank you pages reduce refunds by 15-25% compared to basic confirmation.
+            </div>
+
+            <div class="metric-item">
+                <strong>Support Ticket Reduction:</strong> Clear expectations reduce "where is my order?" tickets by 40-50%.
+            </div>
+
+            <div class="metric-item">
+                <strong>Chargeback Prevention:</strong> Billing descriptor notice reduces chargebacks by 20-30%.
+            </div>
+
+            <div class="metric-item">
+                <strong>Customer Satisfaction:</strong> Customers who know what to expect rate their experience 30% higher.
+            </div>
+
+            <div class="metric-item">
+                <strong>Revenue Protection:</strong> Reducing refunds from 8% to 6% on $100k revenue = $2,000 saved monthly.
+            </div>
+
+            <div class="metric-item">
+                <strong>Email Open Rates:</strong> Mentioning "check email" multiple times increases confirmation email opens by 25%.
+            </div>
+        </div>
+
+        <div class="navigation">
+            <a href="step6-downsell2.html" class="btn btn-secondary">← Previous: Downsell 2</a>
+                </li>
+            <a href="step8-footer.html" class="btn btn-primary">Next: Footer Requirements →</a>
+                </li>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

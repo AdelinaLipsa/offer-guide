@@ -1,0 +1,1323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuyGoods Vendor Offer Guide - Complete Sales Funnel Structure</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-blue: #2563eb;
+            --secondary-purple: #7c3aed;
+            --accent-green: #10b981;
+            --text-dark: #1f2937;
+            --text-gray: #6b7280;
+            --border-gray: #e5e7eb;
+            --bg-light: #f9fafb;
+            --white: #ffffff;
+            --warning-red: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(180deg, #f9fafb 0%, #ffffff 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .hero-header {
+            background: linear-gradient(45deg, #2563eb 0%, #7c3aed 25%, #ec4899 50%, #8b5cf6 75%, #2563eb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+            color: white;
+            padding: 80px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            25% { background-position: 100% 50%; }
+            50% { background-position: 100% 100%; }
+            75% { background-position: 0% 100%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') bottom center no-repeat;
+            opacity: 0.3;
+        }
+
+        .hero-header::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 70%);
+            animation: shimmerMove 8s linear infinite;
+            pointer-events: none;
+        }
+
+        @keyframes shimmerMove {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+            animation: rocketFly 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+            transform-origin: center center;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes rocketFly {
+            0% {
+                transform: translate(0, 0) rotate(45deg) scale(1);
+                opacity: 1;
+            }
+            5% {
+                transform: translate(20px, -40px) rotate(50deg) scale(1.05);
+            }
+            10% {
+                transform: translate(80px, -150px) rotate(60deg) scale(0.95);
+            }
+            15% {
+                transform: translate(180px, -280px) rotate(70deg) scale(0.85);
+            }
+            20% {
+                transform: translate(300px, -400px) rotate(80deg) scale(0.7);
+                opacity: 0.9;
+            }
+            25% {
+                transform: translate(420px, -480px) rotate(100deg) scale(0.6);
+                opacity: 0.8;
+            }
+            30% {
+                transform: translate(520px, -500px) rotate(120deg) scale(0.55);
+                opacity: 0.7;
+            }
+            35% {
+                transform: translate(600px, -480px) rotate(140deg) scale(0.6);
+                opacity: 0.8;
+            }
+            40% {
+                transform: translate(650px, -420px) rotate(160deg) scale(0.65);
+            }
+            45% {
+                transform: translate(670px, -320px) rotate(180deg) scale(0.7);
+                opacity: 0.85;
+            }
+            50% {
+                transform: translate(650px, -200px) rotate(200deg) scale(0.75);
+            }
+            55% {
+                transform: translate(600px, -100px) rotate(220deg) scale(0.8);
+                opacity: 0.9;
+            }
+            60% {
+                transform: translate(500px, -40px) rotate(230deg) scale(0.85);
+            }
+            65% {
+                transform: translate(350px, -10px) rotate(240deg) scale(0.9);
+            }
+            70% {
+                transform: translate(180px, -5px) rotate(250deg) scale(0.95);
+            }
+            75% {
+                transform: translate(20px, -20px) rotate(260deg) scale(0.98);
+            }
+            80% {
+                transform: translate(-80px, -60px) rotate(280deg) scale(1);
+            }
+            85% {
+                transform: translate(-120px, -100px) rotate(300deg) scale(1.02);
+            }
+            90% {
+                transform: translate(-80px, -80px) rotate(330deg) scale(1.05);
+            }
+            95% {
+                transform: translate(-20px, -40px) rotate(380deg) scale(1.02);
+            }
+            100% {
+                transform: translate(0, 0) rotate(405deg) scale(1);
+                opacity: 1;
+            }
+        }
+
+        .step-card {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            height: 100%;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 2px solid #e5e7eb;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .step-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+            border-color: var(--primary-blue);
+        }
+
+        .step-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .step-number {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .step-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .metric-badge {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05));
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            border-radius: 10px;
+            padding: 14px;
+            margin-top: auto;
+        }
+
+        .metric-badge i {
+            color: var(--accent-green);
+            font-size: 18px;
+        }
+
+        .feature-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .feature-list li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: var(--text-gray);
+        }
+
+        .feature-list li i {
+            position: absolute;
+            left: 0;
+            top: 10px;
+            color: var(--accent-green);
+            font-size: 14px;
+        }
+
+        .alert-custom {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            border-left: 4px solid #f59e0b;
+            border-radius: 12px;
+            padding: 24px;
+            position: relative;
+        }
+
+        .alert-custom i {
+            font-size: 24px;
+            color: #f59e0b;
+            margin-right: 12px;
+        }
+
+        .btn-gradient {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            border: none;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+        }
+
+        .step-card .btn-gradient,
+        .step-card .btn {
+            margin-top: 1rem !important;
+        }
+
+        /* Ensure minimum spacing between content and button */
+        .step-card .metric-badge {
+            margin-bottom: 0;
+        }
+
+        /* Add some breathing room at the bottom of cards */
+        .step-card {
+            padding-bottom: 24px;
+        }
+
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+            color: white;
+        }
+
+        .btn-gradient i {
+            margin-left: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .btn-gradient:hover i {
+            transform: translateX(4px);
+        }
+
+        .critical-card {
+            background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+            border: 3px solid var(--warning-red);
+            position: relative;
+        }
+
+        .critical-card::before {
+            background: linear-gradient(90deg, var(--warning-red), #dc2626);
+        }
+
+        .critical-badge {
+            background: var(--warning-red);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+            20%, 40%, 60%, 80% { transform: translateX(5px); }
+        }
+
+        .critical-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 40px rgba(239, 68, 68, 0.4) !important;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(37, 99, 235, 0.5), 0 0 10px rgba(37, 99, 235, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(37, 99, 235, 0.8), 0 0 30px rgba(37, 99, 235, 0.5); }
+        }
+
+        @keyframes rotateSubtle {
+            0% { transform: rotate(0deg); }
+            25% { transform: rotate(5deg); }
+            75% { transform: rotate(-5deg); }
+            100% { transform: rotate(0deg); }
+        }
+
+        .step-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        .step-card:nth-child(1) { animation-delay: 0.1s; }
+        .step-card:nth-child(2) { animation-delay: 0.2s; }
+        .step-card:nth-child(3) { animation-delay: 0.3s; }
+        .step-card:nth-child(4) { animation-delay: 0.4s; }
+        .step-card:nth-child(5) { animation-delay: 0.5s; }
+        .step-card:nth-child(6) { animation-delay: 0.6s; }
+        .step-card:nth-child(7) { animation-delay: 0.7s; }
+        .step-card:nth-child(8) { animation-delay: 0.8s; }
+
+        .step-number {
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover .step-number {
+            transform: rotate(360deg) scale(1.1);
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        .step-card h3 i {
+            transition: transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .step-card:hover h3 i {
+            animation: bounce 1s ease;
+        }
+
+        .step-badge {
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover .step-badge {
+            animation: rotateSubtle 1s ease-in-out;
+        }
+
+        .metric-badge {
+            transition: all 0.4s ease;
+        }
+
+        .step-card:hover .metric-badge {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1));
+        }
+
+        .intro-card {
+            animation: fadeInScale 0.8s ease-out;
+        }
+
+        .stat-number {
+            transition: all 0.3s ease;
+        }
+
+        .stat-item:hover .stat-number {
+            transform: scale(1.15);
+        }
+
+        .stats-row {
+            animation: fadeInUp 0.8s ease-out 0.3s backwards;
+        }
+
+        .hero-content {
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .hero-icon {
+            animation: float 3s ease-in-out infinite, fadeInScale 1s ease-out;
+        }
+
+        .btn-gradient {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-gradient::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .btn-gradient:active::after {
+            width: 300px;
+            height: 300px;
+        }
+
+        .section-title {
+            animation: fadeInUp 0.8s ease-out 0.5s backwards;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            animation: expandWidth 1s ease-out 1s forwards;
+        }
+
+        @keyframes expandWidth {
+            to { width: 100px; }
+        }
+
+        .feature-list li {
+            transition: all 0.3s ease;
+        }
+
+        .step-card:hover .feature-list li {
+            transform: translateX(5px);
+        }
+
+        .feature-list li:hover {
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        .alert-custom {
+            animation: fadeInUp 0.8s ease-out 0.4s backwards;
+            transition: all 0.3s ease;
+        }
+
+        .alert-custom:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 16px rgba(245, 158, 11, 0.2);
+        }
+
+        .intro-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 36px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 30px;
+        }
+
+        .stats-row {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.05));
+            border-radius: 16px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .stat-number {
+            font-size: 42px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .intro-card:last-child {
+            animation-delay: 1s;
+        }
+
+        .intro-card .rounded-circle {
+            transition: all 0.3s ease;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .intro-card .rounded-circle:hover {
+            transform: scale(1.2) rotate(360deg);
+            animation: none;
+        }
+
+        .progress-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--border-gray);
+            transition: all 0.3s ease;
+        }
+
+        .progress-dot.active {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-purple));
+            box-shadow: 0 0 10px rgba(37, 99, 235, 0.5);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .badge {
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 4px 8px rgba(37, 99, 235, 0.3);
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        .step-card:hover::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 16px;
+            box-shadow: 0 0 40px rgba(37, 99, 235, 0.3);
+            animation: pulse 1.5s ease-in-out infinite;
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+        .stat-item:nth-child(1) {
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+
+        .stat-item:nth-child(2) {
+            animation: fadeInUp 1s ease-out 0.6s backwards;
+        }
+
+        .stat-item:nth-child(3) {
+            animation: fadeInUp 1s ease-out 0.7s backwards;
+        }
+
+        .stat-item:nth-child(4) {
+            animation: fadeInUp 1s ease-out 0.8s backwards;
+        }
+
+        @keyframes loadBar {
+            from {
+                transform: scaleX(0);
+            }
+            to {
+                transform: scaleX(1);
+            }
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--secondary-purple));
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        .stat-item:hover::after {
+            animation: loadBar 0.6s ease-out forwards;
+        }
+
+        @media (max-width: 768px) {
+            .hero-header {
+                padding: 60px 0 80px;
+            }
+
+            .section-title {
+                font-size: 28px;
+            }
+
+            .step-card {
+                padding: 24px;
+            }
+
+            .step-card:hover::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-header">
+        <div class="container hero-content">
+            <div class="text-center">
+                <div class="hero-icon">
+                    <i class="bi bi-rocket-takeoff"></i>
+                </div>
+                <h1 class="display-3 fw-bold mb-3">BuyGoods Vendor Offer Guide</h1>
+                <p class="lead mb-4" style="font-size: 1.3rem; opacity: 0.95;">
+                    Complete step-by-step visual guide to structuring high-converting product offers
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <span class="badge bg-white text-primary px-4 py-2" style="font-size: 14px;">
+                        <i class="bi bi-bar-chart-fill me-2"></i>7 Complete Steps
+                    </span>
+                    <span class="badge bg-white text-primary px-4 py-2" style="font-size: 14px;">
+                        <i class="bi bi-graph-up me-2"></i>Industry Benchmarks
+                    </span>
+                    <span class="badge bg-white text-primary px-4 py-2" style="font-size: 14px;">
+                        <i class="bi bi-shield-check me-2"></i>Legal Compliance
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" style="margin-top: -50px; position: relative; z-index: 10;">
+        <div class="intro-card">
+            <h2 class="h3 fw-bold mb-4">
+                <i class="bi bi-book-fill text-primary me-2"></i>
+                Welcome to Your Complete Funnel Guide
+            </h2>
+            <p class="text-muted mb-3">
+                This educational guide shows you exactly how to structure a professional sales funnel on BuyGoods. Each step includes visual examples, best practices, conversion metrics, and common mistakes to avoid.
+            </p>
+            <p class="text-muted mb-4">
+                Follow this proven 7-step funnel structure to maximize your revenue per customer while maintaining high customer satisfaction.
+            </p>
+
+            <div class="alert-custom d-flex align-items-start">
+                <i class="bi bi-exclamation-circle-fill flex-shrink-0"></i>
+                <div>
+                    <strong class="d-block mb-2">Important:</strong>
+                    This is an educational guide with placeholder content. When building your actual offers, replace all placeholders with your real product information, images, and copy.
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-row">
+            <div class="row">
+                <div class="col-md-3 col-6 mb-3 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">7</div>
+                        <div class="stat-label">Funnel Steps</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6 mb-3 mb-md-0">
+                    <div class="stat-item">
+                        <div class="stat-number">60-120%</div>
+                        <div class="stat-label">AOV Increase</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">15-25%</div>
+                        <div class="stat-label">Refund Reduction</div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-6">
+                    <div class="stat-item">
+                        <div class="stat-number">2-5%</div>
+                        <div class="stat-label">VSL Conversion</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title text-center mb-5">
+            <i class="bi bi-diagram-3-fill me-2"></i>The Complete Funnel Structure
+        </h2>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number">1</div>
+                        <span class="step-badge ms-auto">STEP 1 OF 7</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-play-circle text-primary me-2"></i>VSL Page
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Video Sales Letter page where you present your product through a compelling 15-20 minute video presentation.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Video player placement</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Timed button reveals</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Product display structure</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Trust elements</li>
+                    </ul>
+                    <div class="metric-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-graph-up-arrow me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Typical Conversion:</strong> 2-5% of viewers
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step1-vsl.html" class="btn-gradient w-100 text-center mt-3">
+                        View VSL Guide<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number">2</div>
+                        <span class="step-badge ms-auto">STEP 2 OF 7</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-cart-check text-primary me-2"></i>DTC/Checkout Page
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Direct-to-checkout page displaying all package options with pricing psychology and optimized conversion elements.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>3-tier pricing structure</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Package positioning</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Order form optimization</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Trust badges</li>
+                    </ul>
+                    <div class="metric-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-trophy-fill me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Best Value:</strong> Sells 50-60% of the time
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step2-dtc.html" class="btn-gradient w-100 text-center mt-3">
+                        View Checkout Guide<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number">3</div>
+                        <span class="step-badge ms-auto">STEP 3 OF 7</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-plus-circle text-primary me-2"></i>Upsell 1 <span style="font-size: 0.85em; color: var(--text-gray); font-weight: 500;">(same product, better deal)</span>
+                    </h3>
+                    <p class="text-muted mb-3">
+                        First upsell offering additional bottles of the same product at a discounted rate immediately after checkout.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>VIP upgrade messaging</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Discount pricing structure</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Urgency elements</li>
+                        <li><i class="bi bi-check-circle-fill"></i>One-click acceptance</li>
+                    </ul>
+                    <div class="metric-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-percent me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Acceptance:</strong> 20-35% properly positioned
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step3-upsell1.html" class="btn-gradient w-100 text-center mt-3">
+                        View Upsell 1 Guide<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number">4</div>
+                        <span class="step-badge ms-auto">STEP 4 OF 7</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-arrow-down-circle text-primary me-2"></i>Downsell 1 <span style="font-size: 0.85em; color: var(--text-gray); font-weight: 500;">(smaller quantity, better price)</span>
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Recovery offer presenting a smaller quantity option for customers who declined the first upsell.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Last chance messaging</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Reduced quantity offer</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Better per-unit discount</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Simplified decision</li>
+                    </ul>
+                    <div class="metric-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-arrow-repeat me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Recovery:</strong> 15-25% of declined accept
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step4-downsell1.html" class="btn-gradient w-100 text-center mt-3">
+                        View Downsell 1 Guide<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number">5</div>
+                        <span class="step-badge ms-auto">STEP 5 OF 7</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-box-seam text-primary me-2"></i>Upsell 2 <span style="font-size: 0.85em; color: var(--text-gray); font-weight: 500;">(different product)</span>
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Cross-sell offer introducing a different but complementary product that enhances the main purchase.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Product pairing strategy</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Combination benefits</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Bundle pricing</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Enhanced results messaging</li>
+                    </ul>
+                    <div class="metric-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-lightning-fill me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Acceptance:</strong> 15-30% for matched products
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step5-upsell2.html" class="btn-gradient w-100 text-center mt-3">
+                        View Upsell 2 Guide<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number">6</div>
+                        <span class="step-badge ms-auto">STEP 6 OF 7</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-gift text-primary me-2"></i>Downsell 2 <span style="font-size: 0.85em; color: var(--text-gray); font-weight: 500;">(different offer with the different product)</span>
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Final recovery offer with a smaller version or trial of the complementary product at the lowest price.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Final opportunity messaging</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Trial or starter size</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Absolute best price</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Last call-to-action</li>
+                    </ul>
+                    <div class="metric-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-cursor-fill me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Final Recovery:</strong> 10-20% take last offer
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step6-downsell2.html" class="btn-gradient w-100 text-center mt-3">
+                        View Downsell 2 Guide<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number">7</div>
+                        <span class="step-badge ms-auto">STEP 7 OF 7</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-check-circle text-primary me-2"></i>Thank You Page
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Order confirmation page that sets proper expectations and reduces refund rates through clear communication.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Order confirmation</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Email notification notice</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Delivery timeline</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Support information</li>
+                    </ul>
+                    <div class="metric-badge">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-shield-check me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Refund Reduction:</strong> 15-25% with proper page
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step7-thankyou.html" class="btn-gradient w-100 text-center mt-3">
+                        View Thank You Guide<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card critical-card">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number" style="background: var(--warning-red);">
+                            <i class="bi bi-exclamation-triangle-fill"></i>
+                        </div>
+                        <span class="step-badge critical-badge ms-auto">CRITICAL - LEGAL</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-file-earmark-lock text-danger me-2"></i>Footer Requirements
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Essential legal compliance elements required on EVERY page to avoid account suspension and legal issues.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Privacy Policy link</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Terms & Conditions</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Refund Policy</li>
+                        <li><i class="bi bi-check-circle-fill"></i>FDA disclaimers</li>
+                    </ul>
+                    <div class="metric-badge" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.1), rgba(239, 68, 68, 0.05)); border-color: rgba(239, 68, 68, 0.2);">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-exclamation-octagon-fill me-2" style="color: var(--warning-red);"></i>
+                            <small class="text-muted">
+                                <strong style="color: var(--warning-red);">Warning:</strong> Can result in suspension
+                            </small>
+                        </div>
+                    </div>
+                    <a href="step8-footer.html" class="btn w-100 text-center mt-3" style="background: var(--warning-red); color: white; padding: 14px; border-radius: 10px; font-weight: 600; text-decoration: none;">
+                        View Footer Requirements<i class="bi bi-arrow-right ms-2"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(16, 185, 129, 0.05)); border-color: var(--accent-green);">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number" style="background: linear-gradient(135deg, var(--accent-green), #059669);">
+                            <i class="bi bi-play-circle-fill"></i>
+                        </div>
+                        <span class="step-badge ms-auto" style="background: var(--accent-green);">VSL DEMO</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-film text-success me-2"></i>Advanced VSL Example
+                    </h3>
+                    <p class="text-muted mb-3">
+                        See a fully animated VSL page with countdown timers, exit-intent popups, social proof counters, and professional animations.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Animated background particles</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Countdown timer & scarcity</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Exit-intent popup</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Sticky CTA bar</li>
+                    </ul>
+                    <div class="metric-badge" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.1)); border-color: rgba(16, 185, 129, 0.3);">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-stars me-2"></i>
+                            <small class="text-muted">
+                                <strong class="text-success">Advanced:</strong> Professional animations
+                            </small>
+                        </div>
+                    </div>
+                    <a href="example-vsl.html" target="_blank" rel="noopener noreferrer" class="btn-gradient w-100 text-center mt-3" style="background: linear-gradient(135deg, var(--accent-green), #059669);">
+                        View VSL Demo<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-xl-4">
+                <div class="step-card" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(124, 58, 237, 0.05)); border-color: var(--secondary-purple);">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="step-number" style="background: linear-gradient(135deg, var(--secondary-purple), #6d28d9);">
+                            <i class="bi bi-file-text-fill"></i>
+                        </div>
+                        <span class="step-badge ms-auto" style="background: var(--secondary-purple);">TSL DEMO</span>
+                    </div>
+                    <h3 class="h4 fw-bold mb-3">
+                        <i class="bi bi-newspaper" style="color: var(--secondary-purple);" class="me-2"></i>Text Sales Letter Example
+                    </h3>
+                    <p class="text-muted mb-3">
+                        Long-form text-based sales page with compelling copy, testimonials, FAQ section, and multiple CTAs throughout.
+                    </p>
+                    <ul class="feature-list mb-3">
+                        <li><i class="bi bi-check-circle-fill"></i>Long-form persuasive copy</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Multiple testimonials</li>
+                        <li><i class="bi bi-check-circle-fill"></i>FAQ section</li>
+                        <li><i class="bi bi-check-circle-fill"></i>Strategic CTA placement</li>
+                    </ul>
+                    <div class="metric-badge" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.2), rgba(124, 58, 237, 0.1)); border-color: rgba(124, 58, 237, 0.3);">
+                        <div class="d-flex align-items-center">
+                            <i class="bi bi-book me-2"></i>
+                            <small class="text-muted">
+                                <strong style="color: var(--secondary-purple);">Alternative:</strong> Text-based approach
+                            </small>
+                        </div>
+                    </div>
+                    <a href="example-tsl.html" target="_blank" rel="noopener noreferrer" class="btn-gradient w-100 text-center mt-3" style="background: linear-gradient(135deg, var(--secondary-purple), #6d28d9);">
+                        View TSL Demo<i class="bi bi-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="intro-card mt-5 mb-5">
+            <h2 class="h3 fw-bold mb-4">
+                <i class="bi bi-lightbulb-fill text-warning me-2"></i>
+                How to Use This Guide
+            </h2>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-weight: 700;">1</div>
+                        </div>
+                        <div class="ms-3">
+                            <strong>Study Each Step:</strong>
+                            <p class="text-muted mb-0">Click through each step to understand the structure, requirements, and best practices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-weight: 700;">2</div>
+                        </div>
+                        <div class="ms-3">
+                            <strong>Note the Metrics:</strong>
+                            <p class="text-muted mb-0">Pay attention to conversion rates and benchmarks to set realistic expectations.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-weight: 700;">3</div>
+                        </div>
+                        <div class="ms-3">
+                            <strong>Avoid Common Mistakes:</strong>
+                            <p class="text-muted mb-0">Each page includes a section on mistakes to avoid based on real vendor data.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="d-flex">
+                        <div class="flex-shrink-0">
+                            <div class="rounded-circle bg-primary text-white d-flex align-items-center justify-content-center" style="width: 32px; height: 32px; font-weight: 700;">4</div>
+                        </div>
+                        <div class="ms-3">
+                            <strong>Replace Placeholders:</strong>
+                            <p class="text-muted mb-0">When building your funnel, replace all [ PLACEHOLDER ] elements with your actual content.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function animateCounter(element, target, duration = 2000) {
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    if (target.toString().includes('%')) {
+                        element.textContent = Math.floor(current) + '%';
+                    } else if (target.toString().includes('-')) {
+                        element.textContent = target;
+                    } else {
+                        element.textContent = Math.floor(current);
+                    }
+                }
+            }, 16);
+        }
+
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+
+                    if (entry.target.classList.contains('stat-number')) {
+                        const text = entry.target.textContent.trim();
+                        if (!text.includes('-')) {
+                            const num = parseInt(text);
+                            if (!isNaN(num)) {
+                                entry.target.textContent = '0';
+                                animateCounter(entry.target, num);
+                            }
+                        }
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const statNumbers = document.querySelectorAll('.stat-number');
+            statNumbers.forEach(stat => observer.observe(stat));
+
+            const criticalCard = document.querySelector('.critical-card');
+            if (criticalCard) {
+                let isHovering = false;
+
+                criticalCard.addEventListener('mouseenter', () => {
+                    isHovering = true;
+                });
+
+                criticalCard.addEventListener('mouseleave', () => {
+                    isHovering = false;
+                });
+
+                setInterval(() => {
+                    if (!isHovering) {
+                        criticalCard.style.boxShadow = '0 0 30px rgba(239, 68, 68, 0.3)';
+                        setTimeout(() => {
+                            if (!isHovering) {
+                                criticalCard.style.boxShadow = '0 20px 40px rgba(239, 68, 68, 0.15)';
+                            }
+                        }, 500);
+                    }
+                }, 3000);
+            }
+
+            let lastScrollY = window.scrollY;
+            const hero = document.querySelector('.hero-header');
+
+            window.addEventListener('scroll', () => {
+                const scrollY = window.scrollY;
+                if (hero && scrollY < 500) {
+                    hero.style.transform = `translateY(${scrollY * 0.5}px)`;
+                    hero.style.opacity = 1 - (scrollY / 500);
+                }
+                lastScrollY = scrollY;
+            });
+
+            const cards = document.querySelectorAll('.step-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transition = 'all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+                });
+            });
+
+            const badges = document.querySelectorAll('.step-badge');
+            const badgeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animation = 'pulse 1s ease-in-out';
+                        setTimeout(() => {
+                            entry.target.style.animation = '';
+                        }, 1000);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            badges.forEach(badge => badgeObserver.observe(badge));
+
+            const heroTitle = document.querySelector('.hero-header h1');
+            if (heroTitle) {
+                const text = heroTitle.textContent;
+                heroTitle.textContent = '';
+                heroTitle.style.opacity = '1';
+
+                let i = 0;
+                const typeWriter = () => {
+                    if (i < text.length) {
+                        heroTitle.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 50);
+                    }
+                };
+
+                setTimeout(typeWriter, 500);
+            }
+
+            const introCards = document.querySelectorAll('.intro-card');
+            introCards.forEach(card => {
+                card.style.position = 'relative';
+                card.style.overflow = 'hidden';
+            });
+        });
+
+        const heroSection = document.querySelector('.hero-header');
+        if (heroSection) {
+            heroSection.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+
+                heroSection.style.backgroundPosition = `${50 + x * 10}% ${50 + y * 10}%`;
+            });
+        }
+    </script>
+</body>
+</html>
