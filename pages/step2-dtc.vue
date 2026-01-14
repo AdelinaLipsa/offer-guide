@@ -234,19 +234,33 @@
 
         <!-- Section 5: Checklist -->
         <ContentCard id="checklist">
-          <SectionHeader :number="5" title="Required Elements Checklist" />
+          <SectionHeader :number="5" title="Required Elements" />
 
-          <div class="grid md:grid-cols-2 gap-3">
-            <ChecklistItem text="3 Package Options: Basic, Best Value (highlighted), Premium" />
-            <ChecklistItem text="Clear Pricing: Show per-bottle price and total savings" />
-            <ChecklistItem text="Product Images: High-quality images for each package" />
-            <ChecklistItem text="Highlight Best Value: Visual emphasis on recommended package" />
-            <ChecklistItem text="Savings Badges: Show dollar amount saved on bulk packages" />
-            <ChecklistItem text="Package Benefits: List what's included in each option" />
-            <ChecklistItem text="Simple Order Form: Minimal fields, clear labels" />
-            <ChecklistItem text="Trust Badges: Security, guarantee, shipping, reviews" />
-            <ChecklistItem text="Money-Back Guarantee: Prominently displayed with terms" />
-            <ChecklistItem text="Clear CTA Button: Action-oriented text" />
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+              <p class="text-charcoal-600"><strong class="text-navy-900">3 Package Options</strong> — Basic, Best Value (highlighted), Premium</p>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+              <p class="text-charcoal-600"><strong class="text-navy-900">Clear Pricing</strong> — Show per-bottle price and total savings</p>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+              <p class="text-charcoal-600"><strong class="text-navy-900">Product Images</strong> — High-quality images for each package</p>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
+              <p class="text-charcoal-600"><strong class="text-navy-900">Highlight Best Value</strong> — Visual emphasis on recommended package</p>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">5</span>
+              <p class="text-charcoal-600"><strong class="text-navy-900">Savings Badges</strong> — Show dollar amount saved on bulk packages</p>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">6</span>
+              <p class="text-charcoal-600"><strong class="text-navy-900">Trust Badges</strong> — Security, guarantee, shipping icons</p>
+            </div>
           </div>
         </ContentCard>
 
@@ -254,13 +268,33 @@
         <ContentCard>
           <SectionHeader :number="6" title="Best Practices" />
 
-          <div class="grid md:grid-cols-2 gap-3">
-            <ChecklistItem text="Mobile-First Design: 60%+ of orders come from mobile" />
-            <ChecklistItem text="One-Click Package Selection: Don't make customers navigate" />
-            <ChecklistItem text="Show Savings Clearly: '$120 savings' is more compelling" />
-            <ChecklistItem text="Add Bonuses to Middle Tier: Increase perceived value" />
-            <ChecklistItem text="Minimize Form Fields: Only ask for essentials" />
-            <ChecklistItem text="Display Multiple Payment Options: Credit card, PayPal" />
+          <div class="bg-success/5 border border-success/20 rounded-lg p-5">
+            <ul class="grid md:grid-cols-2 gap-4">
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:star" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span class="text-charcoal-600"><strong>Mobile-First Design</strong> — 60%+ of orders come from mobile</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:star" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span class="text-charcoal-600"><strong>One-Click Selection</strong> — Don't make customers navigate</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:star" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span class="text-charcoal-600"><strong>Show Savings Clearly</strong> — "$120 savings" is more compelling</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:star" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span class="text-charcoal-600"><strong>Add Bonuses</strong> — Increase perceived value of middle tier</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:star" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span class="text-charcoal-600"><strong>Minimize Fields</strong> — Only ask for essential information</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <Icon name="lucide:star" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                <span class="text-charcoal-600"><strong>Multiple Payments</strong> — Credit card, PayPal options</span>
+              </li>
+            </ul>
           </div>
         </ContentCard>
 
@@ -382,11 +416,10 @@ useSeoMeta({
 .logo-shadow {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 200px;
-  width: auto;
-  opacity: 0.08;
+  bottom: 0;
+  width: 400px;
+  height: auto;
+  opacity: 0.06;
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -399,8 +432,8 @@ useSeoMeta({
     bottom: 12px;
   }
   .logo-shadow {
-    height: 140px;
-    opacity: 0.06;
+    width: 250px;
+    opacity: 0.05;
   }
 }
 

@@ -56,15 +56,14 @@ defineProps<{
   z-index: 2;
 }
 
-/* Shadow logo - fixed size, left side */
+/* Shadow logo - large watermark behind main logo */
 .logo-shadow {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 200px;
-  width: auto;
-  opacity: 0.08;
+  bottom: 0;
+  width: 400px;
+  height: auto;
+  opacity: 0.06;
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -77,8 +76,8 @@ defineProps<{
     bottom: 12px;
   }
   .logo-shadow {
-    height: 140px;
-    opacity: 0.06;
+    width: 250px;
+    opacity: 0.05;
   }
 }
 

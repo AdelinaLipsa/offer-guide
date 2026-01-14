@@ -35,22 +35,19 @@
 
       <div class="content-width py-10">
         <!-- Quick Jump Navigation -->
-        <div class="sticky top-0 z-10 bg-surface-secondary/95 backdrop-blur-sm py-3 mb-8 border-b border-border">
-          <div class="flex flex-wrap gap-2 text-sm">
-            <span class="text-charcoal-500 font-medium">Jump to:</span>
-            <a href="#critical-warning" class="text-accent hover:underline">Critical Warning</a>
-            <span class="text-charcoal-400">•</span>
-            <a href="#why-compliance" class="text-accent hover:underline">Why Compliance</a>
-            <span class="text-charcoal-400">•</span>
-            <a href="#footer-example" class="text-accent hover:underline">Footer Example</a>
-            <span class="text-charcoal-400">•</span>
-            <a href="#checklist" class="text-accent hover:underline">Checklist</a>
-            <span class="text-charcoal-400">•</span>
-            <a href="#legal-pages" class="text-accent hover:underline">Legal Pages</a>
-            <span class="text-charcoal-400">•</span>
-            <a href="#disclaimers" class="text-accent hover:underline">Disclaimers</a>
-            <span class="text-charcoal-400">•</span>
-            <a href="#consequences" class="text-accent hover:underline">Consequences</a>
+        <div class="bg-surface border border-border rounded-lg p-4 mb-8 sticky top-4 z-20">
+          <div class="flex items-center gap-2 mb-3">
+            <Icon name="lucide:compass" class="w-4 h-4 text-accent" />
+            <span class="text-sm font-semibold text-navy-900">Quick Navigation</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="#critical-warning" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Critical Warning</a>
+            <a href="#why-compliance" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Why Compliance</a>
+            <a href="#footer-example" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Footer Example</a>
+            <a href="#checklist" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Checklist</a>
+            <a href="#legal-pages" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Legal Pages</a>
+            <a href="#disclaimers" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Disclaimers</a>
+            <a href="#consequences" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Consequences</a>
           </div>
         </div>
 
@@ -162,36 +159,76 @@
             Every single one of these MUST be present on ALL pages:
           </p>
 
-          <div class="grid md:grid-cols-2 gap-3">
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Privacy Policy Link:</strong> How customer data is collected, stored, and used</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-error text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+              <div>
+                <p class="font-semibold text-navy-900">Privacy Policy Link</p>
+                <p class="text-sm text-charcoal-600">How customer data is collected, stored, and used</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Terms & Conditions Link:</strong> Legal agreement between you and customers</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-error text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+              <div>
+                <p class="font-semibold text-navy-900">Terms & Conditions Link</p>
+                <p class="text-sm text-charcoal-600">Legal agreement between you and customers</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Refund/Return Policy Link:</strong> Clear explanation of refund process and timeframes</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-error text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+              <div>
+                <p class="font-semibold text-navy-900">Refund/Return Policy Link</p>
+                <p class="text-sm text-charcoal-600">Clear explanation of refund process and timeframes</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Contact Information:</strong> Email, phone, and physical business address</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-error text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
+              <div>
+                <p class="font-semibold text-navy-900">Contact Information</p>
+                <p class="text-sm text-charcoal-600">Email, phone, and physical business address</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Physical Address:</strong> Real street address (not P.O. Box) where business operates</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-error text-white rounded-full flex items-center justify-center text-sm font-bold">5</span>
+              <div>
+                <p class="font-semibold text-navy-900">Physical Address</p>
+                <p class="text-sm text-charcoal-600">Real street address (not P.O. Box) where business operates</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>FDA Disclaimer:</strong> Required for all supplement/health products</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-warning text-white rounded-full flex items-center justify-center text-sm font-bold">6</span>
+              <div>
+                <p class="font-semibold text-navy-900">FDA Disclaimer</p>
+                <p class="text-sm text-charcoal-600">Required for all supplement/health products</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Results Disclaimer:</strong> "Results may vary" and testimonial disclaimer</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-warning text-white rounded-full flex items-center justify-center text-sm font-bold">7</span>
+              <div>
+                <p class="font-semibold text-navy-900">Results Disclaimer</p>
+                <p class="text-sm text-charcoal-600">"Results may vary" and testimonial disclaimer</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Copyright Notice:</strong> © Year, Company Name, All Rights Reserved</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-charcoal-500 text-white rounded-full flex items-center justify-center text-sm font-bold">8</span>
+              <div>
+                <p class="font-semibold text-navy-900">Copyright Notice</p>
+                <p class="text-sm text-charcoal-600">© Year, Company Name, All Rights Reserved</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Affiliate Disclosure:</strong> If using affiliate links or partners</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-charcoal-500 text-white rounded-full flex items-center justify-center text-sm font-bold">9</span>
+              <div>
+                <p class="font-semibold text-navy-900">Affiliate Disclosure</p>
+                <p class="text-sm text-charcoal-600">If using affiliate links or partners</p>
+              </div>
             </div>
-            <div class="bg-error/5 border-2 border-error/30 rounded-lg p-4">
-              <p class="text-navy-900"><strong>Medical Disclaimer:</strong> Not medical advice, consult physician</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-charcoal-500 text-white rounded-full flex items-center justify-center text-sm font-bold">10</span>
+              <div>
+                <p class="font-semibold text-navy-900">Medical Disclaimer</p>
+                <p class="text-sm text-charcoal-600">Not medical advice, consult physician</p>
+              </div>
             </div>
           </div>
         </ContentCard>
@@ -513,46 +550,76 @@
             Follow these steps to ensure full compliance:
           </p>
 
-          <div class="grid md:grid-cols-2 gap-3">
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 1:</strong> Create complete Privacy Policy (use lawyer or quality template service)</p>
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-success text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+              <div>
+                <p class="font-semibold text-navy-900">Create Privacy Policy</p>
+                <p class="text-sm text-charcoal-600">Use lawyer or quality template service</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 2:</strong> Create complete Terms & Conditions document</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-success text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+              <div>
+                <p class="font-semibold text-navy-900">Create Terms & Conditions</p>
+                <p class="text-sm text-charcoal-600">Complete legal document</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 3:</strong> Create detailed Refund Policy matching your actual policy</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-success text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+              <div>
+                <p class="font-semibold text-navy-900">Create Refund Policy</p>
+                <p class="text-sm text-charcoal-600">Detailed policy matching your actual policy</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 4:</strong> Set up dedicated contact page with all information</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-success text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
+              <div>
+                <p class="font-semibold text-navy-900">Set Up Contact Page</p>
+                <p class="text-sm text-charcoal-600">Dedicated page with all information</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 5:</strong> Add footer to EVERY page (VSL, checkout, upsells, downsells, thank you)</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">5</span>
+              <div>
+                <p class="font-semibold text-navy-900">Add Footer to Every Page</p>
+                <p class="text-sm text-charcoal-600">VSL, checkout, upsells, downsells, thank you</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 6:</strong> Include FDA disclaimer if selling supplements/health products</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">6</span>
+              <div>
+                <p class="font-semibold text-navy-900">Include FDA Disclaimer</p>
+                <p class="text-sm text-charcoal-600">Required for supplements/health products</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 7:</strong> Add results disclaimer near all testimonials and claims</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">7</span>
+              <div>
+                <p class="font-semibold text-navy-900">Add Results Disclaimer</p>
+                <p class="text-sm text-charcoal-600">Near all testimonials and claims</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 8:</strong> Verify all links work and go to correct pages</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-charcoal-500 text-white rounded-full flex items-center justify-center text-sm font-bold">8</span>
+              <div>
+                <p class="font-semibold text-navy-900">Verify All Links</p>
+                <p class="text-sm text-charcoal-600">Test that all links go to correct pages</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 9:</strong> Test footer displays properly on mobile devices</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-charcoal-500 text-white rounded-full flex items-center justify-center text-sm font-bold">9</span>
+              <div>
+                <p class="font-semibold text-navy-900">Test Mobile Display</p>
+                <p class="text-sm text-charcoal-600">Footer displays properly on all devices</p>
+              </div>
             </div>
-            <div class="flex items-start gap-3 bg-success/5 border-l-4 border-success p-4">
-              <Icon name="lucide:check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Step 10:</strong> Have legal professional review before launch (recommended)</p>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-charcoal-500 text-white rounded-full flex items-center justify-center text-sm font-bold">10</span>
+              <div>
+                <p class="font-semibold text-navy-900">Legal Review</p>
+                <p class="text-sm text-charcoal-600">Have professional review before launch</p>
+              </div>
             </div>
           </div>
         </ContentCard>
@@ -566,34 +633,34 @@
             <p class="text-navy-900">Legal compliance is not optional and not something to "fix later." Get it right from day one.</p>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-3 mb-8">
-            <div class="flex items-start gap-3 bg-error/5 border-l-4 border-error p-4">
-              <Icon name="lucide:alert-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Every Page Needs Footer:</strong> VSL, checkout, all upsells, all downsells, thank you page - no exceptions</p>
+          <div class="space-y-3 mb-8">
+            <div class="flex items-center gap-3 p-4 bg-error/5 rounded-lg border border-error/20">
+              <Icon name="lucide:x" class="w-5 h-5 text-error flex-shrink-0" />
+              <p class="text-navy-900"><strong>Every Page Needs Footer</strong> — VSL, checkout, all upsells, all downsells, thank you page - no exceptions</p>
             </div>
-            <div class="flex items-start gap-3 bg-error/5 border-l-4 border-error p-4">
-              <Icon name="lucide:alert-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Links Must Work:</strong> Test every link. Broken policy links = compliance violation</p>
+            <div class="flex items-center gap-3 p-4 bg-error/5 rounded-lg border border-error/20">
+              <Icon name="lucide:x" class="w-5 h-5 text-error flex-shrink-0" />
+              <p class="text-navy-900"><strong>Links Must Work</strong> — Test every link. Broken policy links = compliance violation</p>
             </div>
-            <div class="flex items-start gap-3 bg-error/5 border-l-4 border-error p-4">
-              <Icon name="lucide:alert-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Keep Current:</strong> Update copyright year, review policies annually</p>
+            <div class="flex items-center gap-3 p-4 bg-warning/5 rounded-lg border border-warning/20">
+              <Icon name="lucide:clock" class="w-5 h-5 text-warning flex-shrink-0" />
+              <p class="text-navy-900"><strong>Keep Current</strong> — Update copyright year, review policies annually</p>
             </div>
-            <div class="flex items-start gap-3 bg-error/5 border-l-4 border-error p-4">
-              <Icon name="lucide:alert-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Match Your Practices:</strong> Policies must reflect what you actually do, not generic templates</p>
+            <div class="flex items-center gap-3 p-4 bg-warning/5 rounded-lg border border-warning/20">
+              <Icon name="lucide:file-edit" class="w-5 h-5 text-warning flex-shrink-0" />
+              <p class="text-navy-900"><strong>Match Your Practices</strong> — Policies must reflect what you actually do, not generic templates</p>
             </div>
-            <div class="flex items-start gap-3 bg-error/5 border-l-4 border-error p-4">
-              <Icon name="lucide:alert-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Get Legal Review:</strong> Invest in a lawyer reviewing your policies. Cheaper than FTC fines.</p>
+            <div class="flex items-center gap-3 p-4 bg-accent/5 rounded-lg border border-accent/20">
+              <Icon name="lucide:scale" class="w-5 h-5 text-accent flex-shrink-0" />
+              <p class="text-navy-900"><strong>Get Legal Review</strong> — Invest in a lawyer reviewing your policies. Cheaper than FTC fines.</p>
             </div>
-            <div class="flex items-start gap-3 bg-error/5 border-l-4 border-error p-4">
-              <Icon name="lucide:alert-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Monitor Changes:</strong> FTC and FDA update requirements. Stay informed.</p>
+            <div class="flex items-center gap-3 p-4 bg-accent/5 rounded-lg border border-accent/20">
+              <Icon name="lucide:eye" class="w-5 h-5 text-accent flex-shrink-0" />
+              <p class="text-navy-900"><strong>Monitor Changes</strong> — FTC and FDA update requirements. Stay informed.</p>
             </div>
-            <div class="flex items-start gap-3 bg-error/5 border-l-4 border-error p-4 md:col-span-2">
-              <Icon name="lucide:alert-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
-              <p class="text-navy-900"><strong>Document Everything:</strong> Keep records of when policies were posted and updated</p>
+            <div class="flex items-center gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <Icon name="lucide:folder" class="w-5 h-5 text-charcoal-500 flex-shrink-0" />
+              <p class="text-navy-900"><strong>Document Everything</strong> — Keep records of when policies were posted and updated</p>
             </div>
           </div>
 
@@ -759,15 +826,14 @@ useSeoMeta({
   z-index: 2;
 }
 
-/* Shadow logo - full height, left side */
+/* Shadow logo - large watermark behind main logo */
 .logo-shadow {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 200px;
-  width: auto;
-  opacity: 0.08;
+  bottom: 0;
+  width: 400px;
+  height: auto;
+  opacity: 0.06;
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -780,8 +846,8 @@ useSeoMeta({
     bottom: 12px;
   }
   .logo-shadow {
-    height: 140px;
-    opacity: 0.06;
+    width: 250px;
+    opacity: 0.05;
   }
 }
 

@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar :breadcrumbs="['Step 3: Upsell 1']" />
-    <Sidebar :current-step="3" />
+    <Sidebar :current-step="2" />
 
     <div class="page-content">
       <!-- Enhanced Header -->
@@ -758,15 +758,14 @@ useSeoMeta({
   z-index: 2;
 }
 
-/* Shadow logo - fixed size, left side */
+/* Shadow logo - large watermark behind main logo */
 .logo-shadow {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 200px;
-  width: auto;
-  opacity: 0.08;
+  bottom: 0;
+  width: 400px;
+  height: auto;
+  opacity: 0.06;
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -779,8 +778,8 @@ useSeoMeta({
     bottom: 12px;
   }
   .logo-shadow {
-    height: 140px;
-    opacity: 0.06;
+    width: 250px;
+    opacity: 0.05;
   }
 }
 

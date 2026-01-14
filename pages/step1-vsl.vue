@@ -253,15 +253,63 @@
             Every VSL page must include these essential elements:
           </p>
 
-          <div class="grid md:grid-cols-2 gap-3">
-            <ChecklistItem label="Compelling Headline" text="Promise a specific benefit or solution" />
-            <ChecklistItem label="Video Player" text="Prominently placed at top of page, auto-play enabled" />
-            <ChecklistItem label="Timed Buy Buttons" text="Appear only after video completes (prevents skipping)" />
-            <ChecklistItem label="Product Visuals" text="High-quality images of your product bottles/packages" />
-            <ChecklistItem label="Package Options" text="Display 1, 3, and 6 bottle options clearly" />
-            <ChecklistItem label="Trust Indicators" text="Money-back guarantee, secure checkout badges" />
-            <ChecklistItem label="Scientific References" text="Studies, trials, expert endorsements" />
-            <ChecklistItem label="Scarcity/Urgency" text="Limited stock or time-based offers (optional but effective)" />
+          <div class="grid md:grid-cols-2 gap-4">
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
+              <div>
+                <p class="font-semibold text-navy-900">Compelling Headline</p>
+                <p class="text-sm text-charcoal-600">Promise a specific benefit or solution</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
+              <div>
+                <p class="font-semibold text-navy-900">Video Player</p>
+                <p class="text-sm text-charcoal-600">Prominently placed at top of page, auto-play enabled</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
+              <div>
+                <p class="font-semibold text-navy-900">Timed Buy Buttons</p>
+                <p class="text-sm text-charcoal-600">Appear only after video completes (prevents skipping)</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">4</span>
+              <div>
+                <p class="font-semibold text-navy-900">Product Visuals</p>
+                <p class="text-sm text-charcoal-600">High-quality images of your product bottles/packages</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">5</span>
+              <div>
+                <p class="font-semibold text-navy-900">Package Options</p>
+                <p class="text-sm text-charcoal-600">Display 1, 3, and 6 bottle options clearly</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">6</span>
+              <div>
+                <p class="font-semibold text-navy-900">Trust Indicators</p>
+                <p class="text-sm text-charcoal-600">Money-back guarantee, secure checkout badges</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold">7</span>
+              <div>
+                <p class="font-semibold text-navy-900">Scientific References</p>
+                <p class="text-sm text-charcoal-600">Studies, trials, expert endorsements</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-4 bg-surface-tertiary rounded-lg border border-border">
+              <span class="flex-shrink-0 w-7 h-7 bg-charcoal-400 text-white rounded-full flex items-center justify-center text-sm font-bold">8</span>
+              <div>
+                <p class="font-semibold text-navy-900">Scarcity/Urgency</p>
+                <p class="text-sm text-charcoal-600">Limited stock or time-based offers (optional)</p>
+              </div>
+            </div>
           </div>
 
           <!-- Pro Tip -->
@@ -683,35 +731,71 @@
 
           <div class="grid md:grid-cols-2 gap-6">
             <!-- Best Practices -->
-            <div>
+            <div class="bg-success/5 border border-success/20 rounded-lg p-5">
               <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
-                <Icon name="lucide:check-circle" class="w-5 h-5 text-success" />
-                Best Practices
+                <Icon name="lucide:thumbs-up" class="w-5 h-5 text-success" />
+                Do This
               </h4>
-              <div class="space-y-2">
-                <ChecklistItem label="Professional Production" text="Invest in good audio/video quality" />
-                <ChecklistItem label="Add Captions" text="85% watch without sound initially" />
-                <ChecklistItem label="Test Button Timing" text="Try 80%, 85%, 90% completion" />
-                <ChecklistItem label="Optimize for Mobile" text="60%+ of traffic is mobile" />
-                <ChecklistItem label="A/B Test Headlines" text="Can change conversion by 50%+" />
-                <ChecklistItem label="Keep Page Simple" text="No distractions from video" />
-              </div>
+              <ul class="space-y-3 text-charcoal-600">
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:arrow-right" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Professional Production</strong> — Invest in good audio/video quality</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:arrow-right" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Add Captions</strong> — 85% watch without sound initially</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:arrow-right" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Test Button Timing</strong> — Try 80%, 85%, 90% completion</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:arrow-right" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Optimize for Mobile</strong> — 60%+ of traffic is mobile</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:arrow-right" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>A/B Test Headlines</strong> — Can change conversion by 50%+</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:arrow-right" class="w-4 h-4 text-success mt-0.5 flex-shrink-0" />
+                  <span><strong>Keep Page Simple</strong> — No distractions from video</span>
+                </li>
+              </ul>
             </div>
 
             <!-- Common Mistakes -->
-            <div>
+            <div class="bg-error/5 border border-error/20 rounded-lg p-5">
               <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
-                <Icon name="lucide:x-circle" class="w-5 h-5 text-error" />
-                Common Mistakes
+                <Icon name="lucide:thumbs-down" class="w-5 h-5 text-error" />
+                Avoid This
               </h4>
-              <div class="space-y-2">
-                <ChecklistItem variant="cross" label="Showing Button Early" text="If they can skip to price, they will" />
-                <ChecklistItem variant="cross" label="Video Too Long" text="Beyond 60 min, drop-off skyrockets" />
-                <ChecklistItem variant="cross" label="No Mobile Testing" text="Broken mobile = 60% revenue lost" />
-                <ChecklistItem variant="cross" label="Weak Hook" text="First 30 sec determines if they stay" />
-                <ChecklistItem variant="cross" label="Too Many Options" text="More than 3 causes decision paralysis" />
-                <ChecklistItem variant="cross" label="Poor Video Quality" text="Signals 'scam' to viewers" />
-              </div>
+              <ul class="space-y-3 text-charcoal-600">
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:x" class="w-4 h-4 text-error mt-0.5 flex-shrink-0" />
+                  <span><strong>Showing Button Early</strong> — If they can skip to price, they will</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:x" class="w-4 h-4 text-error mt-0.5 flex-shrink-0" />
+                  <span><strong>Video Too Long</strong> — Beyond 60 min, drop-off skyrockets</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:x" class="w-4 h-4 text-error mt-0.5 flex-shrink-0" />
+                  <span><strong>No Mobile Testing</strong> — Broken mobile = 60% revenue lost</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:x" class="w-4 h-4 text-error mt-0.5 flex-shrink-0" />
+                  <span><strong>Weak Hook</strong> — First 30 sec determines if they stay</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:x" class="w-4 h-4 text-error mt-0.5 flex-shrink-0" />
+                  <span><strong>Too Many Options</strong> — More than 3 causes decision paralysis</span>
+                </li>
+                <li class="flex items-start gap-2">
+                  <Icon name="lucide:x" class="w-4 h-4 text-error mt-0.5 flex-shrink-0" />
+                  <span><strong>Poor Video Quality</strong> — Signals 'scam' to viewers</span>
+                </li>
+              </ul>
             </div>
           </div>
         </ContentCard>
@@ -903,15 +987,14 @@ const calculatedResults = computed(() => {
   z-index: 2;
 }
 
-/* Shadow logo - fixed size, left side */
+/* Shadow logo - large watermark behind main logo */
 .logo-shadow {
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 200px;
-  width: auto;
-  opacity: 0.08;
+  bottom: 0;
+  width: 400px;
+  height: auto;
+  opacity: 0.06;
   pointer-events: none;
   user-select: none;
   z-index: 1;
@@ -924,8 +1007,8 @@ const calculatedResults = computed(() => {
     bottom: 12px;
   }
   .logo-shadow {
-    height: 140px;
-    opacity: 0.06;
+    width: 250px;
+    opacity: 0.05;
   }
 }
 
