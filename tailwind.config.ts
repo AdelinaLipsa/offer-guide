@@ -23,39 +23,63 @@ export default {
     },
     extend: {
       colors: {
-        'primary-blue': '#2563eb',
-        'secondary-purple': '#7c3aed',
-        'accent-green': '#10b981',
-        'text-dark': '#1f2937',
-        'text-gray': '#6b7280',
-        'border-gray': '#e5e7eb',
-        'bg-light': '#f9fafb',
-        'warning-red': '#ef4444',
+        'navy': {
+          900: '#0f172a',
+          800: '#1e293b',
+          700: '#334155',
+        },
+        'charcoal': {
+          600: '#475569',
+          500: '#64748b',
+        },
+        'surface': {
+          DEFAULT: '#ffffff',
+          secondary: '#f8fafc',
+          tertiary: '#f1f5f9',
+        },
+        'accent': {
+          DEFAULT: '#4f46e5',
+          hover: '#4338ca',
+          light: '#eef2ff',
+        },
+        'success': {
+          DEFAULT: '#059669',
+          light: '#ecfdf5',
+        },
+        'error': {
+          DEFAULT: '#dc2626',
+          light: '#fef2f2',
+        },
+        'warning': {
+          DEFAULT: '#d97706',
+          light: '#fffbeb',
+        },
+        'border': {
+          DEFAULT: '#e2e8f0',
+          strong: '#cbd5e1',
+        },
       },
       fontFamily: {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       fontSize: {
-        'base': ['17px', '1.7'],
-        'lg': ['20px', '1.6'],
-        'xl': ['22px', '1.5'],
-        '2xl': ['28px', '1.4'],
-        '3xl': ['32px', '1.3'],
-        '4xl': ['42px', '1.2'],
-        '5xl': ['48px', '1.1'],
-        '6xl': ['64px', '1'],
+        'xs': ['12px', '1.5'],
+        'sm': ['14px', '1.5'],
+        'base': ['16px', '1.6'],
+        'lg': ['18px', '1.6'],
+        'xl': ['20px', '1.5'],
+        '2xl': ['24px', '1.4'],
+        '3xl': ['30px', '1.3'],
+        '4xl': ['36px', '1.2'],
       },
       spacing: {
         '18': '4.5rem',
-        '88': '22rem',
-        '112': '28rem',
-        '128': '32rem',
       },
-      animation: {
-        'gradient-shift': 'gradientShift 15s ease infinite',
-        'shimmer': 'shimmerMove 8s linear infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'rocket-fly': 'rocketFly 12s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite',
+      borderRadius: {
+        'DEFAULT': '6px',
+      },
+      boxShadow: {
+        'card': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
       },
     },
   },

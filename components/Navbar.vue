@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="container-fluid">
       <NuxtLink to="/" class="navbar-brand">
-        <span class="brand-icon">🚀</span>
+        <Icon name="lucide:layout-grid" class="brand-icon" />
         BuyGoods Vendor Guide
       </NuxtLink>
       <nav v-if="breadcrumbs && breadcrumbs.length" aria-label="breadcrumb" class="breadcrumb-nav">
@@ -37,13 +37,13 @@ defineProps<{
   top: 0;
   height: 56px;
   background: white;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e2e8f0;
   z-index: 1000;
 }
 
 .container-fluid {
   max-width: 100%;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   height: 100%;
   display: flex;
   align-items: center;
@@ -54,18 +54,20 @@ defineProps<{
   display: flex;
   align-items: center;
   font-weight: 600;
-  color: #2563eb;
+  color: #0f172a;
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: 1rem;
 }
 
 .navbar-brand:hover {
-  color: #1d4ed8;
+  color: #4f46e5;
 }
 
 .brand-icon {
+  width: 20px;
+  height: 20px;
   margin-right: 0.5rem;
-  font-size: 24px;
+  color: #4f46e5;
 }
 
 .breadcrumb-nav {
@@ -88,16 +90,17 @@ defineProps<{
 
 .breadcrumb-item {
   font-size: 0.875rem;
+  color: #64748b;
 }
 
 .breadcrumb-item + .breadcrumb-item::before {
   content: '/';
   padding: 0 0.5rem;
-  color: #6b7280;
+  color: #cbd5e1;
 }
 
 .breadcrumb-item a {
-  color: #2563eb;
+  color: #4f46e5;
   text-decoration: none;
 }
 
@@ -106,6 +109,6 @@ defineProps<{
 }
 
 .breadcrumb-item.active {
-  color: #6b7280;
+  color: #64748b;
 }
 </style>

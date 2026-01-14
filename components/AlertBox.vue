@@ -1,49 +1,25 @@
 <template>
   <div
-    class="rounded-lg p-6"
-    :class="[
-      alertClasses,
-      customClass
-    ]"
+    class="rounded-md p-4 border-l-4"
+    :class="[alertClasses, customClass]"
   >
-    <p
-      v-if="title"
-      class="font-bold text-lg mb-2"
-      :class="titleColorClass"
-    >
-      {{ title }}
-    </p>
-    <div :class="contentColorClass">
-      <slot>
-        <p v-if="message" class="leading-relaxed">{{ message }}</p>
-      </slot>
+    <div class="flex items-start">
+      <Icon :name="iconName" class="w-5 h-5 flex-shrink-0 mr-3 mt-0.5" :class="iconClass" />
+      <div>
+        <p v-if="title" class="font-semibold text-navy-900 mb-1">{{ title }}</p>
+        <div class="text-charcoal-600 text-sm">
+          <slot>
+            <p v-if="message" class="leading-relaxed">{{ message }}</p>
+          </slot>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-/**
- * AlertBox - Color-coded alert/message boxes
- *
- * @prop {'success' | 'warning' | 'error' | 'info'} variant - The alert style variant
- * @prop {string} title - Optional title for the alert
- * @prop {string} message - Message text (can also use default slot)
- * @prop {string} customClass - Additional custom classes
- *
- * @example
- * <AlertBox variant="success" title="Why VSL Works:" message="Video presentations convert 2-5%..." />
- *
- * @example with slot
- * <AlertBox variant="warning" title="Warning:">
- *   <p>These mistakes are common...</p>
- * </AlertBox>
- *
- * @example variants
- * - success: Green box for tips and positive info
- * - warning: Yellow box for cautions
- * - error: Red box for warnings and mistakes
- * - info: Blue box for additional information
- */
+import { computed } from 'vue'
+
 const props = withDefaults(
   defineProps<{
     variant: 'success' | 'warning' | 'error' | 'info'
@@ -59,23 +35,45 @@ const props = withDefaults(
 const alertClasses = computed(() => {
   switch (props.variant) {
     case 'success':
-      return 'bg-green-50 border-l-4 border-green-500'
+      return 'bg-success-light border-success'
     case 'warning':
-      return 'bg-yellow-50 border-l-4 border-yellow-500'
+      return 'bg-warning-light border-warning'
     case 'error':
-      return 'bg-red-50 border-l-4 border-red-500'
+      return 'bg-error-light border-error'
     case 'info':
-      return 'bg-blue-50 border-l-4 border-blue-500'
+      return 'bg-accent-light border-accent'
     default:
-      return 'bg-gray-50 border-l-4 border-gray-500'
+      return 'bg-surface-tertiary border-border-strong'
   }
 })
 
-const titleColorClass = computed(() => {
-  return 'text-gray-900'
+const iconName = computed(() => {
+  switch (props.variant) {
+    case 'success':
+      return 'lucide:check-circle'
+    case 'warning':
+      return 'lucide:alert-triangle'
+    case 'error':
+      return 'lucide:x-circle'
+    case 'info':
+      return 'lucide:info'
+    default:
+      return 'lucide:info'
+  }
 })
 
-const contentColorClass = computed(() => {
-  return 'text-gray-700'
+const iconClass = computed(() => {
+  switch (props.variant) {
+    case 'success':
+      return 'text-success'
+    case 'warning':
+      return 'text-warning'
+    case 'error':
+      return 'text-error'
+    case 'info':
+      return 'text-accent'
+    default:
+      return 'text-charcoal-500'
+  }
 })
 </script>

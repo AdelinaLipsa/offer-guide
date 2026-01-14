@@ -1,589 +1,678 @@
 <template>
   <div>
-    <Navbar :breadcrumbs="['Step 4: Upsell 2']" />
-    <Sidebar :current-step="4" />
+    <Navbar :breadcrumbs="['Step 5: Upsell 2']" />
+    <Sidebar :current-step="5" />
 
     <div class="page-content">
+      <!-- Enhanced Header -->
       <div class="header">
-        <div class="step-badge">STEP 4 OF 7</div>
-        <h1>Upsell 2: Complementary Product</h1>
-        <p>Cross-sell a different product that enhances the main purchase</p>
-      </div>
+        <!-- Logo Shadow (larger, blurred, behind) -->
+        <img src="/bg-logo-white.png" alt="" class="logo-shadow" aria-hidden="true" />
+        <!-- Logo Main (visible, on top) -->
+        <img src="/bg-logo-white.png" alt="" class="logo-main" aria-hidden="true" />
+        <div class="header-content">
+          <div class="step-badge">STEP 5 OF 8</div>
+          <h1>Upsell 2: Complementary Product</h1>
+          <p>Cross-sell a different product that enhances the main purchase</p>
+        </div>
 
-      <div class="container mx-auto px-4 py-12" style="max-width: 90%;">
-      <!-- Section 1: What is Upsell 2? -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">1</span>
-          What is Upsell 2?
-        </h2>
-        <p class="text-gray-700 text-lg mb-4 leading-relaxed">
-          After handling the quantity upsells/downsells for your MAIN product, now you introduce a DIFFERENT but complementary product. This is your cross-sell opportunity - offering something that works alongside or enhances the product they just purchased.
-        </p>
-        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-          The key is that this product should have a logical connection to the first product. For example: if they bought a metabolism supplement, offer a sleep supplement. If they bought joint support, offer a mobility cream.
-        </p>
-
-        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">Cross-Sell Strategy:</p>
-          <p class="text-gray-700 leading-relaxed">
-            This is about product pairing. The complementary product should enhance results, address a related problem, or complete a "system." Acceptance rates of 15-30% are typical when products are well-matched.
-          </p>
+        <!-- Quick Stats Bar -->
+        <div class="flex flex-wrap justify-center gap-6 mt-8">
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:trending-up" class="w-4 h-4" />
+            <span class="text-sm">15-30% Accept Rate</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:dollar-sign" class="w-4 h-4" />
+            <span class="text-sm">$37-67 Sweet Spot</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:layers" class="w-4 h-4" />
+            <span class="text-sm">Different Product</span>
+          </div>
         </div>
       </div>
 
-      <!-- Section 2: Visual Structure -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">2</span>
-          Visual Structure
-        </h2>
-        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-          Here's how your Upsell 2 page should look:
-        </p>
+      <div class="content-width py-10">
 
-        <!-- Upsell Preview -->
-        <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-10 text-center">
-          <h3 class="text-4xl font-bold text-gray-900 mb-6">
-            Wait! Supercharge Your Results With This...
-          </h3>
-
-          <div class="bg-gradient-to-r from-purple-600 to-purple-700 text-white inline-block px-8 py-3 rounded-lg text-xl font-bold mb-6">
-            ✨ PERFECT COMPLEMENT ✨
+        <!-- Quick Jump Navigation -->
+        <div class="bg-surface border border-border rounded-lg p-4 mb-8 sticky top-4 z-20">
+          <div class="flex items-center gap-2 mb-3">
+            <Icon name="lucide:compass" class="w-4 h-4 text-accent" />
+            <span class="text-sm font-semibold text-navy-900">Quick Navigation</span>
           </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="#overview" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Overview</a>
+            <a href="#structure" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Visual Structure</a>
+            <a href="#checklist" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Checklist</a>
+            <a href="#pairing" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Product Pairing</a>
+            <a href="#pricing" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Pricing</a>
+            <a href="#messaging" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Messaging</a>
+            <a href="#best-practices" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Best Practices</a>
+            <a href="#metrics" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Metrics</a>
+          </div>
+        </div>
 
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Customers who combine [Main Product] with [Complementary Product] report 2X faster results. Add this to your order now for maximum benefits!
+        <!-- Section 1: What is Upsell 2? -->
+        <ContentCard id="overview">
+          <SectionHeader :number="1" title="What is Upsell 2?" />
+          <p class="text-charcoal-600 leading-relaxed mb-4">
+            After handling the quantity upsells/downsells for your MAIN product, now you introduce a DIFFERENT but complementary product. This is your cross-sell opportunity - offering something that works alongside or enhances the product they just purchased.
+          </p>
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            The key is that this product should have a logical connection to the first product. For example: if they bought a metabolism supplement, offer a sleep supplement. If they bought joint support, offer a mobility cream.
           </p>
 
-          <!-- Product Combination -->
-          <div class="flex justify-center items-center gap-6 mb-8 flex-wrap">
-            <div class="bg-white border-2 border-gray-300 rounded-xl p-6 w-56 opacity-70">
-              <div class="text-sm text-gray-600 font-semibold mb-2">YOUR ORDER:</div>
-              <div class="bg-gray-100 h-40 flex items-center justify-center rounded-lg text-gray-500 text-sm mb-3 border-2 border-gray-300">
-                [ MAIN PRODUCT<br/>IMAGE ]
+          <!-- Key Benefits Grid -->
+          <div class="grid md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-success-light border border-success/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:zap" class="w-5 h-5 text-success" />
+                <span class="font-semibold text-navy-900">Enhanced Results</span>
               </div>
-              <div class="font-semibold text-gray-900">Main Product Name</div>
-              <div class="text-sm text-gray-600">3 Bottles</div>
+              <p class="text-sm text-charcoal-600">2X faster results when products are combined</p>
             </div>
-
-            <div class="text-5xl font-bold text-purple-600">+</div>
-
-            <div class="bg-white border-4 border-purple-600 rounded-xl p-6 w-56 shadow-lg shadow-purple-600/20">
-              <div class="text-sm text-purple-600 font-semibold mb-2">ADD THIS:</div>
-              <div class="bg-gray-100 h-40 flex items-center justify-center rounded-lg text-gray-500 text-sm mb-3 border-2 border-gray-300">
-                [ COMPLEMENTARY<br/>PRODUCT IMAGE ]
+            <div class="bg-accent-light border border-accent/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:puzzle" class="w-5 h-5 text-accent" />
+                <span class="font-semibold text-navy-900">Complete Solution</span>
               </div>
-              <div class="font-semibold text-gray-900">Complementary Product</div>
-              <div class="text-sm text-purple-600 font-semibold">3 Bottles</div>
+              <p class="text-sm text-charcoal-600">Address all aspects of the problem</p>
+            </div>
+            <div class="bg-warning-light border border-warning/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:gift" class="w-5 h-5 text-warning" />
+                <span class="font-semibold text-navy-900">Bundle Savings</span>
+              </div>
+              <p class="text-sm text-charcoal-600">Special pricing only when combined</p>
             </div>
           </div>
 
-          <!-- Offer Box -->
-          <div class="bg-gradient-to-br from-purple-50 to-purple-50 border-4 border-purple-600 rounded-xl p-8 mb-6">
-            <h3 class="text-2xl font-bold text-purple-600 mb-6">
-              The Perfect Combination For Maximum Results
+          <AlertBox variant="success" title="Cross-Sell Strategy">
+            This is about product pairing. The complementary product should enhance results, address a related problem, or complete a "system." Acceptance rates of 15-30% are typical when products are well-matched.
+          </AlertBox>
+        </ContentCard>
+
+        <!-- Section 2: Visual Structure -->
+        <ContentCard id="structure">
+          <SectionHeader :number="2" title="Visual Structure" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Here's how your Upsell 2 page should look. Focus on showing how the products complement each other:
+          </p>
+
+          <!-- Upsell Preview -->
+          <div class="bg-surface-tertiary border border-border rounded-lg p-6">
+            <h3 class="text-navy-900 font-semibold text-lg text-center mb-6">Cross-Sell Page Layout Preview</h3>
+
+            <!-- Headline -->
+            <h3 class="text-2xl text-navy-900 font-bold text-center mb-4">
+              Wait! Supercharge Your Results With This...
             </h3>
 
-            <!-- Benefits Grid -->
-            <div class="grid md:grid-cols-3 gap-4 mb-8">
-              <div class="bg-white border-2 border-gray-300 rounded-lg p-5 text-center">
-                <div class="text-4xl mb-3">⚡</div>
-                <strong class="text-gray-900 block">2X Faster Results</strong>
-                <p class="text-sm text-gray-600 mt-2">When used together</p>
-              </div>
-              <div class="bg-white border-2 border-gray-300 rounded-lg p-5 text-center">
-                <div class="text-4xl mb-3">🎯</div>
-                <strong class="text-gray-900 block">Complete Solution</strong>
-                <p class="text-sm text-gray-600 mt-2">Addresses all aspects</p>
-              </div>
-              <div class="bg-white border-2 border-gray-300 rounded-lg p-5 text-center">
-                <div class="text-4xl mb-3">💪</div>
-                <strong class="text-gray-900 block">Enhanced Benefits</strong>
-                <p class="text-sm text-gray-600 mt-2">Synergistic effect</p>
+            <!-- Perfect Complement Badge -->
+            <div class="text-center mb-4">
+              <div class="inline-flex items-center gap-2 bg-accent text-white px-6 py-2 rounded-lg text-sm font-bold">
+                <Icon name="lucide:sparkles" class="w-4 h-4" />
+                PERFECT COMPLEMENT
+                <Icon name="lucide:sparkles" class="w-4 h-4" />
               </div>
             </div>
 
-            <!-- Price Display -->
-            <div class="bg-white rounded-lg p-6 mb-6">
-              <div class="text-lg text-gray-600 mb-2">Add to Your Order Today:</div>
-              <div class="text-6xl font-bold text-purple-600 my-3">$67</div>
-              <div class="text-lg text-gray-600">3 Bottles of [Complementary Product]</div>
+            <!-- Description -->
+            <p class="text-charcoal-600 max-w-2xl mx-auto mb-6 text-center">
+              Customers who combine [Main Product] with [Complementary Product] report 2X faster results. Add this to your order now for maximum benefits!
+            </p>
+
+            <!-- Product Combination -->
+            <div class="flex justify-center items-center gap-4 mb-6 flex-wrap">
+              <div class="bg-white border border-border rounded-lg p-4 w-44 text-center opacity-70">
+                <div class="text-xs text-charcoal-500 font-medium mb-2">YOUR ORDER:</div>
+                <div class="bg-surface-tertiary h-32 flex items-center justify-center rounded mb-2">
+                  <Icon name="lucide:package" class="w-8 h-8 text-charcoal-400" />
+                </div>
+                <div class="font-semibold text-navy-900 text-sm">Main Product</div>
+                <div class="text-xs text-charcoal-500">3 Bottles</div>
+              </div>
+
+              <div class="text-3xl font-bold text-accent">+</div>
+
+              <div class="bg-white border-2 border-accent rounded-lg p-4 w-44 text-center">
+                <div class="text-xs text-accent font-medium mb-2">ADD THIS:</div>
+                <div class="bg-accent-light h-32 flex items-center justify-center rounded mb-2">
+                  <Icon name="lucide:packages" class="w-8 h-8 text-accent" />
+                </div>
+                <div class="font-semibold text-navy-900 text-sm">Complementary Product</div>
+                <div class="text-xs text-accent font-semibold">3 Bottles</div>
+              </div>
             </div>
 
-            <!-- Value Stack -->
-            <div class="bg-white border-2 border-gray-300 rounded-lg p-6 mb-6">
-              <h4 class="text-gray-900 font-semibold mb-4">What You Get:</h4>
-              <div class="space-y-3">
-                <div class="flex justify-between py-3 border-b border-gray-200">
-                  <span class="text-gray-700">3 Bottles of [Complementary Product]</span>
-                  <span class="text-gray-600">$147 value</span>
+            <!-- Offer Box -->
+            <div class="bg-white border-2 border-accent rounded-xl p-6 mb-6">
+              <h4 class="text-accent font-bold text-lg mb-4 text-center">The Perfect Combination For Maximum Results</h4>
+
+              <!-- Benefits Grid -->
+              <div class="grid grid-cols-3 gap-3 mb-6">
+                <div class="bg-surface-tertiary border border-border rounded-lg p-3 text-center">
+                  <Icon name="lucide:zap" class="w-6 h-6 text-accent mx-auto mb-2" />
+                  <strong class="text-navy-900 text-sm block">2X Faster</strong>
+                  <p class="text-xs text-charcoal-500">Results</p>
                 </div>
-                <div class="flex justify-between py-3 border-b border-gray-200">
-                  <span class="text-gray-700">FREE Combination Guide (PDF)</span>
-                  <span class="text-gray-600">$29 value</span>
+                <div class="bg-surface-tertiary border border-border rounded-lg p-3 text-center">
+                  <Icon name="lucide:target" class="w-6 h-6 text-success mx-auto mb-2" />
+                  <strong class="text-navy-900 text-sm block">Complete</strong>
+                  <p class="text-xs text-charcoal-500">Solution</p>
                 </div>
-                <div class="flex justify-between py-3 border-b border-gray-200">
-                  <span class="text-gray-700">FREE Shipping (combined order)</span>
-                  <span class="text-gray-600">$12 value</span>
+                <div class="bg-surface-tertiary border border-border rounded-lg p-3 text-center">
+                  <Icon name="lucide:shield-check" class="w-6 h-6 text-warning mx-auto mb-2" />
+                  <strong class="text-navy-900 text-sm block">Enhanced</strong>
+                  <p class="text-xs text-charcoal-500">Benefits</p>
                 </div>
-                <div class="flex justify-between font-bold text-xl text-purple-600">
+              </div>
+
+              <!-- Price Display -->
+              <div class="bg-accent text-white p-4 rounded-lg mb-4 text-center">
+                <div class="text-sm mb-1">Add to Your Order Today:</div>
+                <div class="text-4xl font-bold my-2">$67</div>
+                <div class="text-sm opacity-90">3 Bottles - 64% OFF Retail</div>
+              </div>
+
+              <!-- Value Stack -->
+              <div class="space-y-2 text-sm">
+                <div class="flex justify-between py-2 border-b border-border">
+                  <span class="text-charcoal-600">3 Bottles of [Complementary Product]</span>
+                  <span class="text-charcoal-500">$147 value</span>
+                </div>
+                <div class="flex justify-between py-2 border-b border-border">
+                  <span class="text-charcoal-600">FREE Combination Guide (PDF)</span>
+                  <span class="text-charcoal-500">$29 value</span>
+                </div>
+                <div class="flex justify-between py-2 border-b border-border">
+                  <span class="text-charcoal-600">FREE Shipping (combined order)</span>
+                  <span class="text-charcoal-500">$12 value</span>
+                </div>
+                <div class="flex justify-between font-bold text-accent pt-2">
                   <span>Your Price Today:</span>
                   <span>$67</span>
                 </div>
               </div>
             </div>
 
-            <!-- Features List -->
-            <ul class="text-left max-w-lg mx-auto space-y-3 mb-6">
-              <li class="flex items-start">
-                <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-                <span class="text-gray-700">Ships with your current order</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-                <span class="text-gray-700">Same 60-day money-back guarantee</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-                <span class="text-gray-700">One-click add to order</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-                <span class="text-gray-700">Special bundle pricing (64% off)</span>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Customer Testimonial -->
-          <div class="bg-blue-50 border-2 border-blue-600 rounded-lg p-5 mb-8">
-            <div class="font-semibold text-gray-900 mb-3">
-              💬 What Customers Say:
+            <!-- Testimonial -->
+            <div class="bg-accent-light border border-accent/20 rounded-lg p-4 mb-6">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:message-square" class="w-4 h-4 text-accent" />
+                <span class="font-semibold text-navy-900">What Customers Say:</span>
+              </div>
+              <p class="text-sm text-charcoal-600 italic">
+                "I was skeptical, but combining these two products gave me results in just 3 weeks. I wish I'd bought both from the start!" - Sarah M.
+              </p>
             </div>
-            <p class="italic text-gray-600 m-0">
-              "I was skeptical, but combining these two products gave me results in just 3 weeks. I wish I'd bought both from the start!" - Sarah M.
-            </p>
-          </div>
 
-          <!-- CTA Buttons -->
-          <div class="flex gap-4 flex-wrap justify-center">
-            <div class="flex-1 min-w-[250px] bg-gradient-to-r from-purple-600 to-purple-700 text-white p-5 rounded-lg text-xl font-bold">
-              [ BUTTON: "YES! Add [Product] For $67" ]
-            </div>
-            <div class="flex-1 min-w-[250px] bg-white text-gray-600 p-5 border-2 border-gray-300 rounded-lg text-base font-semibold">
-              [ LINK: "No thanks, I don't need enhanced results" ]
+            <!-- CTA Buttons -->
+            <div class="flex flex-col md:flex-row gap-3">
+              <div class="flex-1 bg-accent text-white px-6 py-4 rounded-lg font-bold text-center">
+                <Icon name="lucide:check" class="w-4 h-4 inline mr-2" />
+                YES! Add [Product] For $67
+              </div>
+              <div class="flex-1 bg-white text-charcoal-500 px-6 py-4 border border-border rounded-lg text-center text-sm">
+                No thanks, I don't need enhanced results
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </ContentCard>
 
-      <!-- Section 3: Required Elements Checklist -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">3</span>
-          Required Elements Checklist
-        </h2>
+        <!-- Section 3: Required Elements - Numbered Steps -->
+        <ContentCard id="checklist">
+          <SectionHeader :number="3" title="Required Page Elements" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Every Upsell 2 page must include these essential elements:
+          </p>
 
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Visual Product Pairing:</strong>
-            <span class="text-gray-700"> Show both products side by side with "+" symbol</span>
+          <div class="space-y-3">
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+              <div>
+                <strong class="text-navy-900">Visual Product Pairing</strong>
+                <p class="text-sm text-charcoal-600">Show both products side by side with '+' symbol</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+              <div>
+                <strong class="text-navy-900">Perfect Complement Positioning</strong>
+                <p class="text-sm text-charcoal-600">Frame as completing the solution</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+              <div>
+                <strong class="text-navy-900">Benefit Comparison</strong>
+                <p class="text-sm text-charcoal-600">Show how combination delivers better results</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+              <div>
+                <strong class="text-navy-900">Social Proof</strong>
+                <p class="text-sm text-charcoal-600">Testimonial about using both products together</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">5</span>
+              <div>
+                <strong class="text-navy-900">Clear Pricing & Value Stack</strong>
+                <p class="text-sm text-charcoal-600">Single price point with what's included</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">6</span>
+              <div>
+                <strong class="text-navy-900">Enhanced Results Claim</strong>
+                <p class="text-sm text-charcoal-600">'2X faster' or similar quantified benefit</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">7</span>
+              <div>
+                <strong class="text-navy-900">Strong Yes / Weak No Buttons</strong>
+                <p class="text-sm text-charcoal-600">Frame decline as missing enhanced results</p>
+              </div>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">"Perfect Complement" Positioning:</strong>
-            <span class="text-gray-700"> Frame as completing the solution</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Benefit Comparison:</strong>
-            <span class="text-gray-700"> Show how combination delivers better results</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Social Proof:</strong>
-            <span class="text-gray-700"> Testimonial about using both products together</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Complementary Product Image:</strong>
-            <span class="text-gray-700"> High-quality image of the new product</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Clear Pricing:</strong>
-            <span class="text-gray-700"> Single price point for the bundle</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Value Stack:</strong>
-            <span class="text-gray-700"> Show what's included and total value vs. price</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Enhanced Results Claim:</strong>
-            <span class="text-gray-700"> "2X faster" or similar quantified benefit</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Bundle Savings:</strong>
-            <span class="text-gray-700"> Show discount percentage</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Strong Yes Button:</strong>
-            <span class="text-gray-700"> Include product name and price</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Weak No Button:</strong>
-            <span class="text-gray-700"> Frame decline as missing enhanced results</span>
-          </div>
-        </div>
-      </div>
 
-      <!-- Section 4: Product Pairing Strategy -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">4</span>
-          Product Pairing Strategy
-        </h2>
+          <!-- Pro Tip -->
+          <div class="mt-6 bg-accent-light border border-accent/20 rounded-lg p-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="lucide:lightbulb" class="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <strong class="text-navy-900">Pro Tip:</strong>
+                <p class="text-charcoal-600 text-sm mt-1">Add a free PDF guide on "how to use them together" to increase perceived value and conversion rates.</p>
+              </div>
+            </div>
+          </div>
+        </ContentCard>
 
-        <div class="overflow-x-auto mb-6">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr class="bg-gray-50">
-                <th class="p-4 text-left font-semibold text-gray-900 border-b border-gray-200">Main Product Type</th>
-                <th class="p-4 text-left font-semibold text-gray-900 border-b border-gray-200">Complementary Product Ideas</th>
-                <th class="p-4 text-left font-semibold text-gray-900 border-b border-gray-200">Pairing Logic</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Weight Loss Supplement</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Sleep Support, Energy Booster, Appetite Control</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Sleep affects metabolism; energy helps exercise</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Joint Support</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Topical Pain Cream, Mobility Support, Inflammation Aid</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Internal + external approach = comprehensive relief</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Brain Health</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Sleep Support, Stress Relief, Focus Enhancement</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Sleep and stress directly impact cognitive function</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Digestive Health</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Probiotic, Enzyme Blend, Detox Support</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">Complete gut health system</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-gray-700">Skin Care Serum</td>
-                <td class="p-4 text-gray-700">Collagen Supplement, Night Cream, Eye Treatment</td>
-                <td class="p-4 text-gray-700">Internal + external beauty approach</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        <!-- Section 4: Product Pairing Strategy -->
+        <ContentCard id="pairing">
+          <SectionHeader :number="4" title="Product Pairing Strategy" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            The complementary product must have a clear, logical connection:
+          </p>
 
-        <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">Golden Rule:</p>
-          <p class="text-gray-700 leading-relaxed">
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-surface-tertiary">
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">Main Product</th>
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">Complementary Ideas</th>
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">Pairing Logic</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">Weight Loss</td>
+                  <td class="p-3 text-charcoal-600">Sleep Support, Energy, Appetite Control</td>
+                  <td class="p-3 text-charcoal-600">Sleep affects metabolism</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">Joint Support</td>
+                  <td class="p-3 text-charcoal-600">Pain Cream, Mobility Support</td>
+                  <td class="p-3 text-charcoal-600">Internal + external approach</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">Brain Health</td>
+                  <td class="p-3 text-charcoal-600">Sleep Support, Stress Relief</td>
+                  <td class="p-3 text-charcoal-600">Sleep impacts cognition</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">Digestive Health</td>
+                  <td class="p-3 text-charcoal-600">Probiotic, Enzyme Blend</td>
+                  <td class="p-3 text-charcoal-600">Complete gut health system</td>
+                </tr>
+                <tr>
+                  <td class="p-3 text-charcoal-600">Skin Care Serum</td>
+                  <td class="p-3 text-charcoal-600">Collagen, Night Cream</td>
+                  <td class="p-3 text-charcoal-600">Internal + external beauty</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <AlertBox variant="success" title="Golden Rule">
             The complementary product should have a clear, logical connection. If you have to explain too much why they go together, the pairing isn't strong enough.
+          </AlertBox>
+        </ContentCard>
+
+        <!-- Section 5: Pricing Guidelines - Icon Cards -->
+        <ContentCard id="pricing">
+          <SectionHeader :number="5" title="Pricing Guidelines" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Cross-sell pricing should feel like a reasonable addition:
           </p>
-        </div>
-      </div>
 
-      <!-- Section 5: Pricing Guidelines -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">5</span>
-          Pricing Guidelines
-        </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:target" class="w-5 h-5 text-accent" />
+              </div>
+              <h4 class="font-semibold text-navy-900 text-sm mb-1">$37-$67 Sweet Spot</h4>
+              <p class="text-xs text-charcoal-600">Best for supplements</p>
+            </div>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:trending-down" class="w-5 h-5 text-success" />
+              </div>
+              <h4 class="font-semibold text-navy-900 text-sm mb-1">Lower Than Main</h4>
+              <p class="text-xs text-charcoal-600">40-70% of main price</p>
+            </div>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-10 h-10 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:scale" class="w-5 h-5 text-warning" />
+              </div>
+              <h4 class="font-semibold text-navy-900 text-sm mb-1">Show Value</h4>
+              <p class="text-xs text-charcoal-600">Retail vs bundle price</p>
+            </div>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:file-text" class="w-5 h-5 text-accent" />
+              </div>
+              <h4 class="font-semibold text-navy-900 text-sm mb-1">Include Bonus</h4>
+              <p class="text-xs text-charcoal-600">PDF guide increases value</p>
+            </div>
+          </div>
 
-        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Optimal Price Range</h3>
-        <div class="grid md:grid-cols-2 gap-4 mb-6">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">$37-$67:</strong>
-            <span class="text-gray-700"> Sweet spot for most supplement/health offers</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Lower than main product:</strong>
-            <span class="text-gray-700"> Complementary should cost 40-70% of main purchase</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Show value:</strong>
-            <span class="text-gray-700"> Present retail price vs. bundle price</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Include bonus:</strong>
-            <span class="text-gray-700"> Add a PDF guide or similar to increase perceived value</span>
-          </div>
-        </div>
-
-        <div class="bg-blue-50 border-l-4 border-blue-500 rounded-lg p-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">Pricing Psychology:</p>
-          <p class="text-gray-700 leading-relaxed">
+          <AlertBox variant="info" title="Pricing Psychology">
             If the main order was $147, the complementary product at $67 feels like a reasonable addition (45% of main). But $147 + $147 feels too expensive and acceptance drops.
+          </AlertBox>
+        </ContentCard>
+
+        <!-- Section 6: Key Messaging - Quote Cards -->
+        <ContentCard id="messaging">
+          <SectionHeader :number="6" title="Key Messaging Points" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Focus on synergy - how the products work BETTER together:
           </p>
-        </div>
-      </div>
 
-      <!-- Section 6: Key Messaging Points -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">6</span>
-          Key Messaging Points
-        </h2>
-
-        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Focus on Synergy</h3>
-        <p class="text-gray-700 text-lg mb-4 leading-relaxed">
-          Your copy should emphasize how the products work BETTER together:
-        </p>
-        <div class="grid md:grid-cols-2 gap-4 mb-8">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"2X faster results when combined"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Complete the system"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Address the root cause"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Internal + external approach"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Day + night formula"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Customers who use both report..."</span>
-          </div>
-        </div>
-
-        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Remove Common Objections</h3>
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">"Why didn't you tell me before?"</strong>
-            <span class="text-gray-700"> - Position as "upgrade opportunity"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">"Is this necessary?"</strong>
-            <span class="text-gray-700"> - Show comparison: results with vs. without</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">"Too expensive"</strong>
-            <span class="text-gray-700"> - Emphasize bundle savings and value stack</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">"Too much at once"</strong>
-            <span class="text-gray-700"> - Explain simple usage (one in AM, one in PM, etc.)</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 7: Best Practices -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">7</span>
-          Best Practices
-        </h2>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Visual Pairing:</strong>
-            <span class="text-gray-700"> Always show both products together in the presentation</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Quantified Benefits:</strong>
-            <span class="text-gray-700"> Use specific claims like "2X faster" with disclaimers</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Social Proof:</strong>
-            <span class="text-gray-700"> Include testimonial from someone who used both products</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Match Quantities:</strong>
-            <span class="text-gray-700"> If they bought 3 bottles of main, offer 3 of complementary</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Bundle Language:</strong>
-            <span class="text-gray-700"> Call it a "system," "stack," or "combination"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Free Bonus Guide:</strong>
-            <span class="text-gray-700"> Add a PDF guide on "how to use them together"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Same Guarantee:</strong>
-            <span class="text-gray-700"> Emphasize the complementary product has same guarantee</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">One Shipment:</strong>
-            <span class="text-gray-700"> Stress that everything ships together</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Section 8: Common Mistakes to Avoid -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">8</span>
-          Common Mistakes to Avoid
-        </h2>
-
-        <div class="bg-red-50 border-l-4 border-red-500 rounded-lg p-6 mb-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">Warning:</p>
-          <p class="text-gray-700 leading-relaxed">
-            Poor product pairing destroys credibility and acceptance rates.
-          </p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Unrelated Products:</strong>
-            <span class="text-gray-700"> Random products with no logical connection</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Too Expensive:</strong>
-            <span class="text-gray-700"> Complementary product shouldn't exceed main purchase price</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Weak Connection:</strong>
-            <span class="text-gray-700"> If the benefit of combining isn't obvious, it won't sell</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">No Differentiation:</strong>
-            <span class="text-gray-700"> Make it clear this is a DIFFERENT product, not more of the same</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Complex Explanation:</strong>
-            <span class="text-gray-700"> If you need 500 words to explain why they go together, pairing is weak</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Multiple Options:</strong>
-            <span class="text-gray-700"> One complementary product only - don't create choice paralysis</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Weak Social Proof:</strong>
-            <span class="text-gray-700"> Generic testimonials don't work - need specific "both products" testimonial</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Poor Visuals:</strong>
-            <span class="text-gray-700"> Not showing products together misses the "combination" psychology</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Performance Metrics -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
-        <div class="flex items-center mb-8">
-          <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
-            📊
-          </div>
-          <h2 class="text-3xl font-bold text-gray-900">Performance Metrics & Benchmarks</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-5 border-l-4 border-blue-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">📈</span>
-              <strong class="text-gray-900 text-lg">Acceptance Rate</strong>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <!-- Synergy Messages -->
+            <div>
+              <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
+                <Icon name="lucide:zap" class="w-5 h-5 text-accent" />
+                Synergy Messages
+              </h4>
+              <div class="space-y-3">
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"2X Faster Results"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">When products combined</p>
+                </div>
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"Complete System"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">Address all aspects</p>
+                </div>
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"Day + Night Formula"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">24/7 coverage approach</p>
+                </div>
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"Internal + External"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">Comprehensive solution</p>
+                </div>
+              </div>
             </div>
-            <p class="text-gray-700 ml-11">15-30% for well-paired complementary products. Under 10% indicates poor product match.</p>
+
+            <!-- Objection Handling -->
+            <div>
+              <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
+                <Icon name="lucide:shield-check" class="w-5 h-5 text-success" />
+                Objection Handling
+              </h4>
+              <div class="space-y-3">
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success">
+                  <p class="text-navy-900 font-medium">"Why Now?"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">Position as 'upgrade opportunity'</p>
+                </div>
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success">
+                  <p class="text-navy-900 font-medium">"Is It Needed?"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">Show results comparison</p>
+                </div>
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success">
+                  <p class="text-navy-900 font-medium">"Too Expensive"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">Emphasize bundle savings</p>
+                </div>
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success">
+                  <p class="text-navy-900 font-medium">"Too Much To Take"</p>
+                  <p class="text-xs text-charcoal-500 mt-1">Explain simple usage</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Section 7: Best Practices - Do/Don't Panels -->
+        <ContentCard id="best-practices">
+          <SectionHeader :number="7" title="Best Practices & Common Mistakes" />
+
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- DO Column -->
+            <div class="bg-success/5 rounded-lg p-5 border border-success/20">
+              <div class="flex items-center gap-2 mb-4 pb-3 border-b border-success/20">
+                <div class="w-8 h-8 bg-success rounded-lg flex items-center justify-center">
+                  <Icon name="lucide:thumbs-up" class="w-4 h-4 text-white" />
+                </div>
+                <h4 class="font-bold text-navy-900 text-lg">Do This</h4>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:eye" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Visual Pairing</p>
+                    <p class="text-sm text-charcoal-600">Show both products together</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:calculator" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Quantified Benefits</p>
+                    <p class="text-sm text-charcoal-600">Use '2X faster' with disclaimers</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:message-square" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Combo Testimonial</p>
+                    <p class="text-sm text-charcoal-600">'Both products' social proof</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:layers" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Match Quantities</p>
+                    <p class="text-sm text-charcoal-600">Same quantity as main order</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:file-plus" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Free Bonus PDF</p>
+                    <p class="text-sm text-charcoal-600">Add guide for perceived value</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:shield" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Same Guarantee</p>
+                    <p class="text-sm text-charcoal-600">Emphasize protection applies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- DON'T Column -->
+            <div class="bg-error/5 rounded-lg p-5 border border-error/20">
+              <div class="flex items-center gap-2 mb-4 pb-3 border-b border-error/20">
+                <div class="w-8 h-8 bg-error rounded-lg flex items-center justify-center">
+                  <Icon name="lucide:thumbs-down" class="w-4 h-4 text-white" />
+                </div>
+                <h4 class="font-bold text-navy-900 text-lg">Avoid This</h4>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:unlink" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Unrelated Products</p>
+                    <p class="text-sm text-charcoal-600">No logical connection</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:dollar-sign" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Too Expensive</p>
+                    <p class="text-sm text-charcoal-600">Don't exceed main price</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:help-circle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Weak Connection</p>
+                    <p class="text-sm text-charcoal-600">If not obvious, won't sell</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:copy" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">No Differentiation</p>
+                    <p class="text-sm text-charcoal-600">Make clear it's different</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:file-text" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Complex Explanation</p>
+                    <p class="text-sm text-charcoal-600">Too many words = weak pairing</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:list" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Multiple Options</p>
+                    <p class="text-sm text-charcoal-600">One product only</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Section 8: Performance Metrics -->
+        <ContentCard id="metrics">
+          <div class="flex items-center mb-6">
+            <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center mr-3">
+              <Icon name="lucide:bar-chart-3" class="w-5 h-5 text-white" />
+            </div>
+            <h2 class="text-2xl font-bold text-navy-900">Performance Metrics & Benchmarks</h2>
           </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-5 border-l-4 border-orange-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">💵</span>
-              <strong class="text-gray-900 text-lg">Optimal Price Point</strong>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:trending-up" class="w-5 h-5 text-accent" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">Target: 15-30%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Acceptance Rate</strong>
+              <p class="text-charcoal-600 text-sm">Under 10% = poor product match</p>
             </div>
-            <p class="text-gray-700 ml-11">$37-$67 range performs best. Higher prices reduce acceptance significantly.</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-5 border-l-4 border-green-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">💰</span>
-              <strong class="text-gray-900 text-lg">Revenue Impact</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:dollar-sign" class="w-5 h-5 text-success" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">$37-67</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Optimal Price Point</strong>
+              <p class="text-charcoal-600 text-sm">Higher prices reduce acceptance</p>
             </div>
-            <p class="text-gray-700 ml-11">If 25% accept at $67, you add $16.75 to every customer's value on average.</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-5 border-l-4 border-purple-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">🔗</span>
-              <strong class="text-gray-900 text-lg">Product Match Impact</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:coins" class="w-5 h-5 text-accent" />
+                <span class="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded font-medium">+$16.75</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Revenue Impact</strong>
+              <p class="text-charcoal-600 text-sm">If 25% accept at $67</p>
             </div>
-            <p class="text-gray-700 ml-11">Strongly related products (joint + cream) convert 2-3X better than loosely related (joint + sleep).</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-5 border-l-4 border-indigo-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">🧪</span>
-              <strong class="text-gray-900 text-lg">A/B Test Focus</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:link" class="w-5 h-5 text-success" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">2-3X better</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Product Match Impact</strong>
+              <p class="text-charcoal-600 text-sm">Strong vs weak pairing difference</p>
             </div>
-            <p class="text-gray-700 ml-11">Test different complementary products to find best pairing - can double acceptance rate.</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-5 border-l-4 border-pink-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">📊</span>
-              <strong class="text-gray-900 text-lg">Cumulative Funnel Value</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:flask-conical" class="w-5 h-5 text-accent" />
+                <span class="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded font-medium">2X impact</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">A/B Test Focus</strong>
+              <p class="text-charcoal-600 text-sm">Test different products to find best pair</p>
             </div>
-            <p class="text-gray-700 ml-11">With proper upsells, you can increase AOV by 60-100% through the entire funnel.</p>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:pie-chart" class="w-5 h-5 text-warning" />
+                <span class="text-xs bg-warning/10 text-warning px-2 py-0.5 rounded font-medium">60-100%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Cumulative AOV Lift</strong>
+              <p class="text-charcoal-600 text-sm">Through entire funnel</p>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Quick Reference Card -->
+        <div class="bg-navy-800 rounded-lg p-6 mb-8 text-white">
+          <div class="flex items-center gap-3 mb-4">
+            <Icon name="lucide:bookmark" class="w-6 h-6" />
+            <h3 class="text-lg font-semibold">Quick Reference Cheatsheet</h3>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <div class="text-slate-400 mb-2">Price Range</div>
+              <div class="font-semibold">$37-67</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Target Accept Rate</div>
+              <div class="font-semibold">15-30%</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Price vs Main</div>
+              <div class="font-semibold">40-70% of main</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Key Claim</div>
+              <div class="font-semibold">2X faster results</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Product Type</div>
+              <div class="font-semibold">Different but related</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Social Proof</div>
+              <div class="font-semibold">Combo testimonial</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Navigation -->
-      <div class="flex flex-col sm:flex-row gap-4 mt-12">
-        <NuxtLink
-          to="/step4-downsell1"
-          class="flex-1 bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-semibold text-center hover:bg-blue-50 transition-all duration-300 hover:shadow-lg"
-        >
-          ← Previous: Downsell 1
-        </NuxtLink>
-        <NuxtLink
-          to="/step6-downsell2"
-          class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
-        >
-          Next: Downsell 2 →
-        </NuxtLink>
+        <!-- Navigation -->
+        <NavigationButtons
+          prev-to="/step4-downsell1"
+          prev-text="Back: Downsell 1"
+          next-to="/step6-downsell2"
+          next-text="Next: Downsell 2"
+        />
       </div>
-    </div>
     </div>
   </div>
 </template>
@@ -591,49 +680,101 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Step 5: Upsell 2 - BuyGoods Vendor Guide',
-  description: 'Cross-sell a different product that enhances the main purchase. Complete guide to complementary product upsells with examples and best practices.'
+  description: 'Cross-sell a different product that enhances the main purchase. Complete guide to complementary product upsells.'
 })
 </script>
 
 <style scoped>
 .page-content {
-  margin-left: 280px;
+  margin-left: 300px;
 }
 
 @media (max-width: 768px) {
   .page-content {
     margin-left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   }
 }
 
 .header {
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: #1e293b;
   color: #ffffff;
-  padding: 60px 20px;
-  min-height: 200px;
+  padding: 48px 20px;
+  min-height: 280px;
   text-align: center;
+  position: relative;
+}
+
+.header-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Main visible logo */
+.logo-main {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  width: 140px;
+  height: auto;
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+}
+
+/* Shadow logo - full height, left side */
+.logo-shadow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: auto;
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .logo-main {
+    width: 100px;
+    left: 16px;
+    bottom: 12px;
+  }
+  .logo-shadow {
+    height: 140px;
+    opacity: 0.06;
+  }
 }
 
 .step-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .header h1 {
-  font-size: 42px;
-  margin-bottom: 16px;
+  font-size: 32px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
 .header p {
-  font-size: 20px;
-  opacity: 0.95;
-  max-width: 800px;
+  font-size: 16px;
+  opacity: 0.85;
+  max-width: 600px;
   margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>

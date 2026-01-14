@@ -1,602 +1,680 @@
 <template>
   <div>
-    <Navbar :breadcrumbs="['Step 6: Thank You Page']" />
-    <Sidebar :current-step="6" />
+    <Navbar :breadcrumbs="['Step 7: Thank You Page']" />
+    <Sidebar :current-step="7" />
 
     <div class="page-content">
+      <!-- Enhanced Header -->
       <div class="header">
-        <div class="step-badge">STEP 6 OF 7</div>
-        <h1>Thank You Page</h1>
-        <p>Set expectations and reduce refunds through clear communication</p>
-      </div>
+        <!-- Logo Shadow (larger, blurred, behind) -->
+        <img src="/bg-logo-white.png" alt="" class="logo-shadow" aria-hidden="true" />
+        <!-- Logo Main (visible, on top) -->
+        <img src="/bg-logo-white.png" alt="" class="logo-main" aria-hidden="true" />
+        <div class="header-content">
+          <div class="step-badge">STEP 7 OF 8</div>
+          <h1>Thank You Page</h1>
+          <p>Set expectations and reduce refunds through clear communication</p>
+        </div>
 
-      <div class="container mx-auto px-4 py-12" style="max-width: 90%;">
-      <!-- Section 1: What is the Thank You Page? -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            1
-          </span>
-          What is the Thank You Page?
-        </h2>
-        <p class="text-gray-600 text-lg mb-4 leading-relaxed">
-          The Thank You page is the FINAL stop in your funnel after all upsells/downsells. This page confirms the order and, most importantly, sets proper expectations for delivery, communication, and results. Done right, this page can reduce your refund rate by 15-25%.
-        </p>
-        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-          Many vendors overlook this page, but it's critical. Customers who don't know what to expect are more likely to panic, email support repeatedly, or request refunds.
-        </p>
-
-        <div class="border-l-4 border-green-500 bg-green-50 p-5 rounded-lg">
-          <strong class="text-gray-900 block mb-2 text-lg">Critical Purpose:</strong>
-          <p class="text-gray-700">
-            This page prevents buyer's remorse, reduces support tickets, and significantly lowers refund rates. Every dollar spent on refunds is pure loss - this page protects your revenue.
-          </p>
+        <!-- Quick Stats Bar -->
+        <div class="flex flex-wrap justify-center gap-6 mt-8">
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:trending-down" class="w-4 h-4" />
+            <span class="text-sm">-15-25% Refunds</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:ticket" class="w-4 h-4" />
+            <span class="text-sm">-40-50% Tickets</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:shield-check" class="w-4 h-4" />
+            <span class="text-sm">Buyer Confidence</span>
+          </div>
         </div>
       </div>
 
-      <!-- Section 2: Visual Structure -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            2
-          </span>
-          Visual Structure
-        </h2>
-        <p class="text-gray-600 text-lg mb-6 leading-relaxed">
-          Here's how your Thank You page should look:
-        </p>
+      <div class="content-width py-10">
 
-        <!-- Thank You Preview -->
-        <div class="bg-gray-50 border-2 border-dashed border-gray-200 rounded-lg p-10 my-6 text-center">
-          <!-- Success Icon -->
-          <div class="inline-flex items-center justify-center w-20 h-20 bg-green-500 text-white rounded-full text-5xl mb-6">
-            ✓
+        <!-- Quick Jump Navigation -->
+        <div class="bg-surface border border-border rounded-lg p-4 mb-8 sticky top-4 z-20">
+          <div class="flex items-center gap-2 mb-3">
+            <Icon name="lucide:compass" class="w-4 h-4 text-accent" />
+            <span class="text-sm font-semibold text-navy-900">Quick Navigation</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="#overview" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Overview</a>
+            <a href="#structure" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Visual Structure</a>
+            <a href="#checklist" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Checklist</a>
+            <a href="#psychology" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Psychology</a>
+            <a href="#critical-info" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Critical Info</a>
+            <a href="#best-practices" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Best Practices</a>
+            <a href="#mistakes" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Mistakes</a>
+            <a href="#metrics" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Metrics</a>
+          </div>
+        </div>
+
+        <!-- Section 1: What is the Thank You Page? -->
+        <ContentCard id="overview">
+          <SectionHeader :number="1" title="What is the Thank You Page?" />
+          <p class="text-charcoal-600 leading-relaxed mb-4">
+            The Thank You page is the FINAL stop in your funnel after all upsells/downsells. This page confirms the order and, most importantly, sets proper expectations for delivery, communication, and results. Done right, this page can reduce your refund rate by 15-25%.
+          </p>
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Many vendors overlook this page, but it's critical. Customers who don't know what to expect are more likely to panic, email support repeatedly, or request refunds.
+          </p>
+
+          <!-- Key Benefits Grid -->
+          <div class="grid md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-success-light border border-success/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:trending-down" class="w-5 h-5 text-success" />
+                <span class="font-semibold text-navy-900">Lower Refunds</span>
+              </div>
+              <p class="text-sm text-charcoal-600">15-25% reduction in refund requests</p>
+            </div>
+            <div class="bg-accent-light border border-accent/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:ticket" class="w-5 h-5 text-accent" />
+                <span class="font-semibold text-navy-900">Fewer Tickets</span>
+              </div>
+              <p class="text-sm text-charcoal-600">40-50% less "where is my order?" emails</p>
+            </div>
+            <div class="bg-warning-light border border-warning/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:heart" class="w-5 h-5 text-warning" />
+                <span class="font-semibold text-navy-900">Happy Customers</span>
+              </div>
+              <p class="text-sm text-charcoal-600">30% higher satisfaction rating</p>
+            </div>
           </div>
 
-          <h3 class="text-4xl text-green-500 font-bold mb-3">
-            Order Confirmed! 🎉
-          </h3>
+          <AlertBox variant="success" title="Critical Purpose">
+            This page prevents buyer's remorse, reduces support tickets, and significantly lowers refund rates. Every dollar spent on refunds is pure loss - this page protects your revenue.
+          </AlertBox>
+        </ContentCard>
 
-          <p class="text-2xl text-gray-900 font-semibold mb-2">
-            Thank you for your order!
+        <!-- Section 2: Visual Structure -->
+        <ContentCard id="structure">
+          <SectionHeader :number="2" title="Visual Structure" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Here's how your Thank You page should look:
           </p>
 
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Your order has been successfully processed and you'll receive a confirmation email shortly at the email address provided.
-          </p>
+          <!-- Thank You Preview -->
+          <div class="bg-surface-tertiary border border-border rounded-lg p-6">
+            <h3 class="text-navy-900 font-semibold text-lg text-center mb-6">Thank You Page Layout Preview</h3>
 
-          <!-- Order Summary Box -->
-          <div class="bg-white border-2 border-green-500 rounded-xl p-7 my-6 max-w-2xl mx-auto">
-            <h4 class="text-gray-900 font-bold mb-4 text-lg">Order Summary</h4>
-
-            <div class="bg-gray-50 border-2 border-dashed border-gray-200 rounded-lg px-4 py-4 text-2xl font-bold text-blue-600 mb-5">
-              Order #: <span class="text-blue-600">BG-123456789</span>
+            <!-- Success Icon -->
+            <div class="flex justify-center mb-4">
+              <div class="w-16 h-16 bg-success rounded-full flex items-center justify-center">
+                <Icon name="lucide:check" class="w-8 h-8 text-white" />
+              </div>
             </div>
 
-            <div class="text-left space-y-5">
-              <div class="pb-4 border-b border-gray-200">
-                <strong class="text-gray-900">Items Ordered:</strong>
-                <div class="text-gray-600 mt-2">• 3 Bottles of [Product Name]</div>
-                <div class="text-gray-600">• 1 Bottle of [Complementary Product]</div>
+            <!-- Confirmation Headline -->
+            <h3 class="text-2xl text-success font-bold text-center mb-2">Order Confirmed!</h3>
+            <p class="text-lg text-navy-900 font-semibold text-center mb-2">Thank you for your order!</p>
+            <p class="text-charcoal-600 text-center mb-6">
+              Your order has been successfully processed and you'll receive a confirmation email shortly.
+            </p>
+
+            <!-- Order Summary Box -->
+            <div class="bg-white border-2 border-success rounded-lg p-5 mb-6 max-w-lg mx-auto">
+              <h4 class="text-navy-900 font-bold mb-4 text-center">Order Summary</h4>
+
+              <div class="bg-accent-light rounded-lg p-3 text-center mb-4">
+                <span class="text-charcoal-600">Order #:</span>
+                <span class="text-accent font-bold ml-2">BG-123456789</span>
               </div>
-              <div class="pb-4 border-b border-gray-200">
-                <strong class="text-gray-900">Total Paid:</strong> <span class="text-green-500 text-xl font-bold ml-2">$166</span>
+
+              <div class="space-y-3 text-sm">
+                <div class="pb-3 border-b border-border">
+                  <strong class="text-navy-900">Items Ordered:</strong>
+                  <div class="text-charcoal-600 mt-1">3 Bottles of [Product Name]</div>
+                  <div class="text-charcoal-600">1 Bottle of [Complementary Product]</div>
+                </div>
+                <div class="pb-3 border-b border-border flex justify-between">
+                  <strong class="text-navy-900">Total Paid:</strong>
+                  <span class="text-success font-bold">$166</span>
+                </div>
+                <div>
+                  <strong class="text-navy-900">Shipping To:</strong>
+                  <div class="text-charcoal-600 mt-1">John Doe<br>123 Main Street, City, ST 12345</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Info Grid -->
+            <div class="grid grid-cols-3 gap-3 mb-6">
+              <div class="bg-white border border-border rounded-lg p-4 text-center">
+                <Icon name="lucide:mail" class="w-6 h-6 text-accent mx-auto mb-2" />
+                <div class="text-xs font-semibold text-navy-900">Check Email</div>
+                <div class="text-xs text-charcoal-500">Confirmation sent</div>
+              </div>
+              <div class="bg-white border border-border rounded-lg p-4 text-center">
+                <Icon name="lucide:package" class="w-6 h-6 text-accent mx-auto mb-2" />
+                <div class="text-xs font-semibold text-navy-900">Processing</div>
+                <div class="text-xs text-charcoal-500">1-2 business days</div>
+              </div>
+              <div class="bg-white border border-border rounded-lg p-4 text-center">
+                <Icon name="lucide:truck" class="w-6 h-6 text-accent mx-auto mb-2" />
+                <div class="text-xs font-semibold text-navy-900">Delivery</div>
+                <div class="text-xs text-charcoal-500">7-10 business days</div>
+              </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="bg-white border border-border rounded-lg p-5 mb-6">
+              <h4 class="text-navy-900 font-bold mb-4 text-center">What Happens Next</h4>
+              <div class="space-y-3">
+                <div class="flex gap-3 items-start">
+                  <div class="w-7 h-7 bg-accent rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold">1</div>
+                  <div>
+                    <div class="font-semibold text-navy-900 text-sm">Confirmation Email (5 mins)</div>
+                    <div class="text-xs text-charcoal-600">Check inbox for order details</div>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                  <div class="w-7 h-7 bg-accent rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold">2</div>
+                  <div>
+                    <div class="font-semibold text-navy-900 text-sm">Order Processing (1-2 days)</div>
+                    <div class="text-xs text-charcoal-600">Being prepared and packaged</div>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                  <div class="w-7 h-7 bg-accent rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold">3</div>
+                  <div>
+                    <div class="font-semibold text-navy-900 text-sm">Shipping Notification (Day 2-3)</div>
+                    <div class="text-xs text-charcoal-600">Tracking info via email</div>
+                  </div>
+                </div>
+                <div class="flex gap-3 items-start">
+                  <div class="w-7 h-7 bg-success rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold">4</div>
+                  <div>
+                    <div class="font-semibold text-navy-900 text-sm">Delivery (7-10 days)</div>
+                    <div class="text-xs text-charcoal-600">Package arrives at your door</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Guarantee & Support -->
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="bg-accent-light border border-accent/20 rounded-lg p-4">
+                <div class="flex items-center gap-2 mb-2">
+                  <Icon name="lucide:shield-check" class="w-5 h-5 text-accent" />
+                  <span class="font-semibold text-navy-900">60-Day Guarantee</span>
+                </div>
+                <p class="text-xs text-charcoal-600">Full refund if not satisfied - no questions asked.</p>
+              </div>
+              <div class="bg-surface-tertiary border border-border rounded-lg p-4">
+                <div class="flex items-center gap-2 mb-2">
+                  <Icon name="lucide:headphones" class="w-5 h-5 text-accent" />
+                  <span class="font-semibold text-navy-900">Need Help?</span>
+                </div>
+                <p class="text-xs text-charcoal-600">support@yourcompany.com<br>1-800-XXX-XXXX</p>
+              </div>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Section 3: Required Elements Checklist -->
+        <ContentCard id="checklist">
+          <SectionHeader :number="3" title="Required Elements Checklist" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Every Thank You page must include these essential elements:
+          </p>
+
+          <!-- Icon Cards Grid for Required Elements -->
+          <div class="grid md:grid-cols-3 gap-4">
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:check-circle" class="w-5 h-5 text-success" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Order Confirmation</strong>
+              <p class="text-xs text-charcoal-600">Clear 'Order Confirmed' headline</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:hash" class="w-5 h-5 text-accent" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Order Number</strong>
+              <p class="text-xs text-charcoal-600">Unique identifier for reference</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:mail-check" class="w-5 h-5 text-warning" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Email Notice</strong>
+              <p class="text-xs text-charcoal-600">Tell them to check email</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:receipt" class="w-5 h-5 text-accent" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Order Summary</strong>
+              <p class="text-xs text-charcoal-600">Items purchased and total paid</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:map-pin" class="w-5 h-5 text-success" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Shipping Address</strong>
+              <p class="text-xs text-charcoal-600">Show where it's being sent</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:clock" class="w-5 h-5 text-warning" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Processing Timeline</strong>
+              <p class="text-xs text-charcoal-600">When order will ship</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:truck" class="w-5 h-5 text-accent" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Delivery Timeline</strong>
+              <p class="text-xs text-charcoal-600">When to expect delivery</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:list-ordered" class="w-5 h-5 text-success" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">What Happens Next</strong>
+              <p class="text-xs text-charcoal-600">Step-by-step timeline</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:navigation" class="w-5 h-5 text-warning" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Tracking Info</strong>
+              <p class="text-xs text-charcoal-600">When/how they'll receive tracking</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:shield-check" class="w-5 h-5 text-success" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Money-Back Guarantee</strong>
+              <p class="text-xs text-charcoal-600">Remind them of guarantee</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:headphones" class="w-5 h-5 text-accent" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Support Contact Info</strong>
+              <p class="text-xs text-charcoal-600">Email, phone, and hours</p>
+            </div>
+
+            <div class="bg-surface-tertiary border border-border rounded-lg p-4 text-center">
+              <div class="w-10 h-10 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:credit-card" class="w-5 h-5 text-warning" />
+              </div>
+              <strong class="text-navy-900 text-sm block mb-1">Billing Descriptor</strong>
+              <p class="text-xs text-charcoal-600">What appears on credit card</p>
+            </div>
+          </div>
+
+          <!-- Pro Tip -->
+          <div class="mt-6 bg-accent-light border border-accent/20 rounded-lg p-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="lucide:lightbulb" class="w-4 h-4 text-white" />
               </div>
               <div>
-                <strong class="text-gray-900">Shipping To:</strong>
-                <div class="text-gray-600 mt-2">John Doe</div>
-                <div class="text-gray-600">123 Main Street, City, ST 12345</div>
+                <strong class="text-navy-900">Pro Tip:</strong>
+                <p class="text-charcoal-600 text-sm mt-1">Tell them to check email 3-4 times on this page - customers panic if they don't see confirmation email immediately.</p>
+              </div>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Section 4: Why This Reduces Refunds -->
+        <ContentCard id="psychology">
+          <SectionHeader :number="4" title="Why This Page Reduces Refunds" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Immediately after purchasing, customers experience anxiety. This page addresses each concern:
+          </p>
+
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-surface-tertiary">
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">Customer Concern</th>
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">How Page Addresses It</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">Did my order go through?</td>
+                  <td class="p-3 text-charcoal-600">Order confirmation, number, email notice</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">When will I get it?</td>
+                  <td class="p-3 text-charcoal-600">Clear timeline: processing + shipping + delivery</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">What if it doesn't work?</td>
+                  <td class="p-3 text-charcoal-600">Prominent money-back guarantee reminder</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">Who do I contact?</td>
+                  <td class="p-3 text-charcoal-600">Clear support contact information</td>
+                </tr>
+                <tr>
+                  <td class="p-3 text-charcoal-600">Did I make right choice?</td>
+                  <td class="p-3 text-charcoal-600">Positive reinforcement and next steps</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <AlertBox variant="info" title="Refund Prevention">
+            30-40% of refund requests come from customers who "never received" their order or "didn't know what to expect." This page eliminates that confusion.
+          </AlertBox>
+        </ContentCard>
+
+        <!-- Section 5: Critical Information to Include -->
+        <ContentCard id="critical-info">
+          <SectionHeader :number="5" title="Critical Information to Include" />
+
+          <h4 class="font-semibold text-navy-900 mb-4">Delivery Timeline (Most Important)</h4>
+
+          <!-- Numbered Steps for Delivery Timeline -->
+          <div class="grid md:grid-cols-2 gap-3 mb-6">
+            <div class="flex items-start gap-3 p-3 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">1</span>
+              <div>
+                <strong class="text-navy-900 text-sm">Order Processing</strong>
+                <p class="text-xs text-charcoal-600">"Ships within 1-2 business days"</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-6 h-6 bg-accent text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">2</span>
+              <div>
+                <strong class="text-navy-900 text-sm">Shipping Time</strong>
+                <p class="text-xs text-charcoal-600">"5-7 business days for delivery"</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 bg-surface-tertiary rounded-lg border-l-4 border-success">
+              <span class="w-6 h-6 bg-success text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">3</span>
+              <div>
+                <strong class="text-navy-900 text-sm">Total Timeline</strong>
+                <p class="text-xs text-charcoal-600">"Expect delivery in 7-10 business days"</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 bg-surface-tertiary rounded-lg border-l-4 border-warning">
+              <span class="w-6 h-6 bg-warning text-white rounded-full flex items-center justify-center text-xs font-bold flex-shrink-0">4</span>
+              <div>
+                <strong class="text-navy-900 text-sm">Tracking Info</strong>
+                <p class="text-xs text-charcoal-600">"Tracking within 24-48 hours of shipment"</p>
               </div>
             </div>
           </div>
 
-          <!-- Info Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-5 my-8">
-            <div class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center">
-              <div class="text-4xl mb-3">📧</div>
-              <h4 class="text-gray-900 font-bold mb-2">Check Your Email</h4>
-              <p class="text-sm text-gray-600">
-                Confirmation sent to:<br>
-                <strong class="text-gray-900">john@example.com</strong>
-              </p>
-            </div>
-            <div class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center">
-              <div class="text-4xl mb-3">📦</div>
-              <h4 class="text-gray-900 font-bold mb-2">Processing Time</h4>
-              <p class="text-sm text-gray-600">
-                Orders ship within<br>
-                <strong class="text-gray-900">1-2 business days</strong>
-              </p>
-            </div>
-            <div class="bg-white border-2 border-gray-200 rounded-xl p-6 text-center">
-              <div class="text-4xl mb-3">🚚</div>
-              <h4 class="text-gray-900 font-bold mb-2">Delivery Time</h4>
-              <p class="text-sm text-gray-600">
-                Expect delivery in<br>
-                <strong class="text-gray-900">7-10 business days</strong>
-              </p>
-            </div>
-          </div>
+          <AlertBox variant="warning" title="Under-Promise, Over-Deliver">
+            If you say "3-5 days" and it takes 7, you'll get refund requests. Say "7-10 days" and deliver in 7, and customers are happy.
+          </AlertBox>
 
-          <!-- Timeline -->
-          <div class="bg-white border-2 border-gray-200 rounded-xl p-7 my-8">
-            <h4 class="text-gray-900 font-bold mb-6 text-center text-lg">What Happens Next</h4>
-
-            <div class="space-y-4">
-              <div class="flex gap-5 pb-4 border-b border-gray-200">
-                <div class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full flex-shrink-0">
-                  1
-                </div>
-                <div class="text-left">
-                  <h4 class="text-gray-900 font-bold">Order Confirmation Email (Within 5 minutes)</h4>
-                  <p class="text-gray-600 text-sm mt-1">Check your inbox for order details and receipt</p>
-                </div>
-              </div>
-
-              <div class="flex gap-5 pb-4 border-b border-gray-200">
-                <div class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full flex-shrink-0">
-                  2
-                </div>
-                <div class="text-left">
-                  <h4 class="text-gray-900 font-bold">Order Processing (1-2 business days)</h4>
-                  <p class="text-gray-600 text-sm mt-1">Your order is being prepared and packaged</p>
-                </div>
-              </div>
-
-              <div class="flex gap-5 pb-4 border-b border-gray-200">
-                <div class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full flex-shrink-0">
-                  3
-                </div>
-                <div class="text-left">
-                  <h4 class="text-gray-900 font-bold">Shipping Notification (Day 2-3)</h4>
-                  <p class="text-gray-600 text-sm mt-1">You'll receive tracking information via email</p>
-                </div>
-              </div>
-
-              <div class="flex gap-5">
-                <div class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full flex-shrink-0">
-                  4
-                </div>
-                <div class="text-left">
-                  <h4 class="text-gray-900 font-bold">Delivery (7-10 business days)</h4>
-                  <p class="text-gray-600 text-sm mt-1">Your package arrives at your doorstep</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Money-Back Guarantee -->
-          <div class="bg-blue-50 border-2 border-blue-600 rounded-xl p-6 my-8">
-            <h4 class="text-blue-600 font-bold mb-3">💯 60-Day Money-Back Guarantee</h4>
-            <p class="text-gray-700">
-              Try [Product Name] risk-free for 60 days. If you're not completely satisfied, contact our support team for a full refund - no questions asked.
+          <h4 class="font-semibold text-navy-900 mb-4 mt-6">Billing Descriptor</h4>
+          <p class="text-charcoal-600 leading-relaxed mb-4">
+            Tell customers what will appear on their credit card statement:
+          </p>
+          <div class="bg-accent-light border border-accent/20 rounded-lg p-4">
+            <p class="text-charcoal-600 text-sm italic">
+              "The charge on your credit card statement will appear as: CLKBANK*COM or similar - this is your [Product Name] purchase."
             </p>
           </div>
+        </ContentCard>
 
-          <!-- Support Information -->
-          <div class="bg-gray-50 border-2 border-gray-200 rounded-xl p-6 my-8">
-            <h4 class="text-gray-900 font-bold mb-3">📞 Need Help?</h4>
-            <p class="text-gray-600 mb-3">
-              Our support team is here to help with any questions.
-            </p>
-            <div class="text-gray-900">
-              <strong>Email:</strong> support@yourcompany.com<br>
-              <strong>Phone:</strong> 1-800-XXX-XXXX<br>
-              <strong>Hours:</strong> Mon-Fri, 9AM-5PM EST
+        <!-- Section 6: Best Practices -->
+        <ContentCard id="best-practices">
+          <SectionHeader :number="6" title="Best Practices" />
+
+          <!-- Do This Panel -->
+          <div class="bg-success/5 rounded-lg p-5 border border-success/20">
+            <div class="flex items-center gap-2 mb-4 pb-3 border-b border-success/20">
+              <div class="w-8 h-8 bg-success rounded-lg flex items-center justify-center">
+                <Icon name="lucide:thumbs-up" class="w-4 h-4 text-white" />
+              </div>
+              <h4 class="font-bold text-navy-900 text-lg">Do This</h4>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4">
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:target" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Be Specific</p>
+                  <p class="text-sm text-charcoal-600">Exact timelines, not vague "soon"</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:heart-handshake" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Reassure Immediately</p>
+                  <p class="text-sm text-charcoal-600">Confirmation within first few lines</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:mail" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Email Emphasis</p>
+                  <p class="text-sm text-charcoal-600">Tell them 3-4 times to check email</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:git-branch" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Visual Timeline</p>
+                  <p class="text-sm text-charcoal-600">Show step-by-step what happens next</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:file-text" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Show Order Details</p>
+                  <p class="text-sm text-charcoal-600">Let them verify everything is correct</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:shield-check" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Prominent Guarantee</p>
+                  <p class="text-sm text-charcoal-600">Reduce buyer's remorse</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:headphones" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Easy Support Access</p>
+                  <p class="text-sm text-charcoal-600">Simple to contact with questions</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <Icon name="lucide:smile" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                <div>
+                  <p class="font-medium text-navy-900">Positive Tone</p>
+                  <p class="text-sm text-charcoal-600">Celebrate their purchase</p>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
+        </ContentCard>
 
-      <!-- Section 3: Required Elements Checklist -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            3
-          </span>
-          Required Elements Checklist
-        </h2>
+        <!-- Section 7: Common Mistakes to Avoid -->
+        <ContentCard id="mistakes">
+          <SectionHeader :number="7" title="Common Mistakes to Avoid" />
 
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6">
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Order Confirmation Message:</strong> Clear "Order Confirmed" or "Thank You" headline
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Order Number:</strong> Unique identifier for customer reference
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Email Confirmation Notice:</strong> Tell them to check email (prevents panic)
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Order Summary:</strong> List what they purchased and total paid
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Shipping Address:</strong> Show where it's being sent for verification
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Processing Timeline:</strong> When order will ship (1-2 business days)
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Delivery Timeline:</strong> When to expect delivery (7-10 business days)
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>What Happens Next:</strong> Step-by-step timeline of the process
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Tracking Information:</strong> When/how they'll receive tracking
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Money-Back Guarantee:</strong> Remind them of the guarantee
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Support Contact Info:</strong> Email, phone, and hours
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Billing Descriptor:</strong> What will appear on their credit card statement
-          </li>
-        </ul>
-      </div>
-
-      <!-- Section 4: Why This Page Reduces Refunds -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            4
-          </span>
-          Why This Page Reduces Refunds
-        </h2>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Psychology of Buyer's Remorse</h3>
-        <p class="text-gray-600 text-lg mb-4 leading-relaxed">
-          Immediately after purchasing, customers often experience:
-        </p>
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            Uncertainty about whether they made the right decision
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            Anxiety about when product will arrive
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            Confusion about what happens next
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            Worry about whether the order actually went through
-          </li>
-        </ul>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">How This Page Addresses Each Concern</h3>
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr class="bg-gray-50">
-                <th class="border border-gray-200 p-4 text-left font-bold text-gray-900">Customer Concern</th>
-                <th class="border border-gray-200 p-4 text-left font-bold text-gray-900">How Thank You Page Addresses It</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-b border-gray-200">
-                <td class="border border-gray-200 p-4 text-gray-600">Did my order go through?</td>
-                <td class="border border-gray-200 p-4 text-gray-600">Order confirmation, order number, and email notice</td>
-              </tr>
-              <tr class="border-b border-gray-200">
-                <td class="border border-gray-200 p-4 text-gray-600">When will I get it?</td>
-                <td class="border border-gray-200 p-4 text-gray-600">Clear timeline: processing + shipping + delivery dates</td>
-              </tr>
-              <tr class="border-b border-gray-200">
-                <td class="border border-gray-200 p-4 text-gray-600">What if it doesn't work?</td>
-                <td class="border border-gray-200 p-4 text-gray-600">Prominent money-back guarantee reminder</td>
-              </tr>
-              <tr class="border-b border-gray-200">
-                <td class="border border-gray-200 p-4 text-gray-600">Who do I contact with questions?</td>
-                <td class="border border-gray-200 p-4 text-gray-600">Clear support contact information</td>
-              </tr>
-              <tr>
-                <td class="border border-gray-200 p-4 text-gray-600">Did I make the right choice?</td>
-                <td class="border border-gray-200 p-4 text-gray-600">Positive reinforcement and next steps</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="border-l-4 border-blue-600 bg-blue-50 p-5 rounded-lg mt-6">
-          <strong class="text-gray-900 block mb-2 text-lg">Refund Prevention:</strong>
-          <p class="text-gray-700">
-            Studies show that 30-40% of refund requests come from customers who "never received" their order or "didn't know what to expect." This page eliminates that confusion.
-          </p>
-        </div>
-      </div>
-
-      <!-- Section 5: Critical Information to Include -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            5
-          </span>
-          Critical Information to Include
-        </h2>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Delivery Timeline (Most Important)</h3>
-        <p class="text-gray-600 text-lg mb-4 leading-relaxed">
-          Be SPECIFIC about delivery timeframes:
-        </p>
-        <ul class="space-y-2 mb-6">
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Order Processing:</strong> "Ships within 1-2 business days"
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Shipping Time:</strong> "5-7 business days for delivery"
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Total Timeline:</strong> "Expect delivery in 7-10 business days"
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Tracking Info:</strong> "You'll receive tracking within 24-48 hours of shipment"
-          </li>
-        </ul>
-
-        <div class="border-l-4 border-red-500 bg-red-50 p-5 rounded-lg mb-6">
-          <strong class="text-gray-900 block mb-2 text-lg">Warning:</strong>
-          <p class="text-gray-700">
-            Under-promising is better than over-promising. If you say "3-5 days" and it takes 7, you'll get refund requests. Say "7-10 days" and deliver in 7, and customers are happy.
-          </p>
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Billing Descriptor</h3>
-        <p class="text-gray-600 text-lg mb-4 leading-relaxed">
-          Tell customers what will appear on their credit card statement:
-        </p>
-        <div class="border-l-4 border-blue-600 bg-blue-50 p-5 rounded-lg">
-          <strong class="text-gray-900 block mb-2 text-lg">Include this:</strong>
-          <p class="text-gray-700">
-            "The charge on your credit card statement will appear as: CLKBANK*COM or similar - this is your [Product Name] purchase."
-          </p>
-        </div>
-      </div>
-
-      <!-- Section 6: Best Practices -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            6
-          </span>
-          Best Practices
-        </h2>
-
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Be Specific:</strong> Exact timelines, not vague "soon"
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Reassure Immediately:</strong> Confirmation within first few lines
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Email Emphasis:</strong> Tell them 3-4 times to check email
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Visual Timeline:</strong> Show step-by-step what happens next
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Show Order Details:</strong> Let them verify everything is correct
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Prominent Guarantee:</strong> Reduce buyer's remorse by emphasizing risk-free
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Easy Support Access:</strong> Make it simple to contact you with questions
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            <strong>Positive Tone:</strong> Celebrate their purchase, don't just confirm it
-          </li>
-        </ul>
-      </div>
-
-      <!-- Section 7: Common Mistakes to Avoid -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            7
-          </span>
-          Common Mistakes to Avoid
-        </h2>
-
-        <div class="border-l-4 border-red-500 bg-red-50 p-5 rounded-lg mb-6">
-          <strong class="text-gray-900 block mb-2 text-lg">Warning:</strong>
-          <p class="text-gray-700">
+          <AlertBox variant="warning" title="Warning">
             These mistakes lead to higher refund rates and support tickets.
-          </p>
-        </div>
+          </AlertBox>
 
-        <ul class="grid grid-cols-1 md:grid-cols-2 gap-3">
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>Vague Timelines:</strong> "Ships soon" creates anxiety
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>No Order Number:</strong> Customers need a reference for support
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>Forgetting Email Notice:</strong> Customers panic if they don't see confirmation
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>Missing Contact Info:</strong> Frustrated customers refund instead of asking
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>No Guarantee Reminder:</strong> Buyer's remorse increases without reassurance
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>Overpromising Delivery:</strong> Missing delivery dates triggers refunds
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>Too Brief:</strong> One sentence confirmation isn't enough information
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-red-500 font-bold text-xl">❌</span>
-            <strong>No Billing Descriptor:</strong> Customers forget and dispute the charge
-          </li>
-        </ul>
-      </div>
-
-      <!-- Section 8: Optional But Effective Additions -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl font-bold mb-5 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white font-bold rounded-full mr-4 text-lg">
-            8
-          </span>
-          Optional But Effective Additions
-        </h2>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Social Proof Reminder</h3>
-        <p class="text-gray-600 text-lg mb-4 leading-relaxed">
-          Include a testimonial or statistic to reinforce their decision:
-        </p>
-        <div class="border-l-4 border-green-500 bg-green-50 p-5 rounded-lg mb-8">
-          <strong class="text-gray-900 block mb-2 text-lg">Example:</strong>
-          <p class="text-gray-700">
-            "You're joining over 50,000 satisfied customers who have experienced the benefits of [Product Name]!"
-          </p>
-        </div>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Usage Instructions Preview</h3>
-        <p class="text-gray-600 text-lg mb-4 leading-relaxed">
-          Give them something to look forward to:
-        </p>
-        <ul class="space-y-2 mb-8">
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            "When your order arrives, take [X] capsules daily with food"
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            "Most customers see results within 2-4 weeks"
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            "For best results, use consistently for 90 days"
-          </li>
-        </ul>
-
-        <h3 class="text-2xl font-bold text-gray-900 mb-4 mt-6">Community/Social Links</h3>
-        <p class="text-gray-600 text-lg mb-4 leading-relaxed">
-          Invite them to join your community (reduces refunds through engagement):
-        </p>
-        <ul class="space-y-2">
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            Private Facebook group for customers
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            Instagram for success stories
-          </li>
-          <li class="bg-gray-50 p-3 rounded-lg pl-10 relative">
-            <span class="absolute left-3 text-green-500 font-bold">✓</span>
-            Email list for tips and updates
-          </li>
-        </ul>
-      </div>
-
-      <!-- Performance Metrics & Benchmarks -->
-      <div class="bg-white border-2 border-gray-200 rounded-xl p-8 mb-8 shadow-sm">
-        <h2 class="flex items-center text-3xl mb-8 text-gray-900 font-bold">
-          <span class="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 text-white rounded-full font-bold text-lg mr-4">📊</span>
-          Performance Metrics & Benchmarks
-        </h2>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-5 border-l-4 border-blue-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">📉</span>
-              <strong class="text-gray-900 text-lg">Refund Rate Reduction</strong>
+          <div class="mt-6 grid md:grid-cols-2 gap-4">
+            <div class="bg-error/5 border border-error/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:x" class="w-4 h-4 text-error" />
+                <strong class="text-navy-900">Vague Timelines</strong>
+              </div>
+              <p class="text-sm text-charcoal-600">"Ships soon" creates anxiety</p>
             </div>
-            <p class="text-gray-700 ml-11">Proper thank you pages reduce refunds by 15-25% compared to basic confirmation.</p>
+
+            <div class="bg-error/5 border border-error/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:x" class="w-4 h-4 text-error" />
+                <strong class="text-navy-900">No Order Number</strong>
+              </div>
+              <p class="text-sm text-charcoal-600">Customers need reference for support</p>
+            </div>
+
+            <div class="bg-error/5 border border-error/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:x" class="w-4 h-4 text-error" />
+                <strong class="text-navy-900">Missing Email Notice</strong>
+              </div>
+              <p class="text-sm text-charcoal-600">Customers panic without confirmation</p>
+            </div>
+
+            <div class="bg-error/5 border border-error/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:x" class="w-4 h-4 text-error" />
+                <strong class="text-navy-900">Missing Contact Info</strong>
+              </div>
+              <p class="text-sm text-charcoal-600">Frustrated customers refund instead</p>
+            </div>
+
+            <div class="bg-error/5 border border-error/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:x" class="w-4 h-4 text-error" />
+                <strong class="text-navy-900">No Guarantee Reminder</strong>
+              </div>
+              <p class="text-sm text-charcoal-600">Buyer's remorse increases</p>
+            </div>
+
+            <div class="bg-error/5 border border-error/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:x" class="w-4 h-4 text-error" />
+                <strong class="text-navy-900">Overpromising Delivery</strong>
+              </div>
+              <p class="text-sm text-charcoal-600">Missing dates triggers refunds</p>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Section 8: Performance Metrics -->
+        <ContentCard id="metrics">
+          <div class="flex items-center mb-6">
+            <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center mr-3">
+              <Icon name="lucide:bar-chart-3" class="w-5 h-5 text-white" />
+            </div>
+            <h2 class="text-2xl font-bold text-navy-900">Performance Metrics & Benchmarks</h2>
           </div>
 
-          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-5 border-l-4 border-green-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">🎫</span>
-              <strong class="text-gray-900 text-lg">Support Ticket Reduction</strong>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:trending-down" class="w-5 h-5 text-success" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">-15-25%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Refund Rate Reduction</strong>
+              <p class="text-charcoal-600 text-sm">vs. basic confirmation pages</p>
             </div>
-            <p class="text-gray-700 ml-11">Clear expectations reduce "where is my order?" tickets by 40-50%.</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-5 border-l-4 border-red-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">🛡️</span>
-              <strong class="text-gray-900 text-lg">Chargeback Prevention</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:ticket" class="w-5 h-5 text-accent" />
+                <span class="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded font-medium">-40-50%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Support Ticket Reduction</strong>
+              <p class="text-charcoal-600 text-sm">"Where is my order?" tickets</p>
             </div>
-            <p class="text-gray-700 ml-11">Billing descriptor notice reduces chargebacks by 20-30%.</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-5 border-l-4 border-purple-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">⭐</span>
-              <strong class="text-gray-900 text-lg">Customer Satisfaction</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:shield-check" class="w-5 h-5 text-success" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">-20-30%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Chargeback Prevention</strong>
+              <p class="text-charcoal-600 text-sm">Billing descriptor notice</p>
             </div>
-            <p class="text-gray-700 ml-11">Customers who know what to expect rate their experience 30% higher.</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-5 border-l-4 border-orange-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">💰</span>
-              <strong class="text-gray-900 text-lg">Revenue Protection</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:star" class="w-5 h-5 text-warning" />
+                <span class="text-xs bg-warning/10 text-warning px-2 py-0.5 rounded font-medium">+30%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Customer Satisfaction</strong>
+              <p class="text-charcoal-600 text-sm">When expectations are set</p>
             </div>
-            <p class="text-gray-700 ml-11">Reducing refunds from 8% to 6% on $100k revenue = $2,000 saved monthly.</p>
-          </div>
 
-          <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-5 border-l-4 border-indigo-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">📧</span>
-              <strong class="text-gray-900 text-lg">Email Open Rates</strong>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:coins" class="w-5 h-5 text-success" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">$2,000+</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Revenue Protection</strong>
+              <p class="text-charcoal-600 text-sm">8% to 6% refunds on $100k</p>
             </div>
-            <p class="text-gray-700 ml-11">Mentioning "check email" multiple times increases confirmation email opens by 25%.</p>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:mail" class="w-5 h-5 text-accent" />
+                <span class="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded font-medium">+25%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Email Open Rates</strong>
+              <p class="text-charcoal-600 text-sm">Multiple "check email" mentions</p>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Quick Reference Card -->
+        <div class="bg-navy-800 rounded-lg p-6 mb-8 text-white">
+          <div class="flex items-center gap-3 mb-4">
+            <Icon name="lucide:bookmark" class="w-6 h-6" />
+            <h3 class="text-lg font-semibold">Quick Reference Cheatsheet</h3>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <div class="text-slate-400 mb-2">Refund Reduction</div>
+              <div class="font-semibold">15-25%</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Ticket Reduction</div>
+              <div class="font-semibold">40-50%</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Processing Time</div>
+              <div class="font-semibold">1-2 business days</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Delivery Time</div>
+              <div class="font-semibold">7-10 business days</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Key Element</div>
+              <div class="font-semibold">Timeline + Support</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Email Mentions</div>
+              <div class="font-semibold">3-4 times</div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <!-- Navigation -->
-      <div class="flex gap-4 mb-12 flex-col md:flex-row">
-        <NuxtLink to="/step6-downsell2" class="flex-1 bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-bold text-center hover:bg-blue-50 transition">
-          ← Previous: Downsell 2
-        </NuxtLink>
-        <NuxtLink to="/step2-dtc" class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-bold text-center hover:shadow-lg hover:-translate-y-0.5 transition">
-          Next: Checkout Page (Reference) →
-        </NuxtLink>
-      </div>
+        <!-- Navigation -->
+        <NavigationButtons
+          prev-to="/step6-downsell2"
+          prev-text="Back: Downsell 2"
+          next-to="/step8-footer"
+          next-text="Next: Footer & Legal"
+        />
       </div>
     </div>
   </div>
@@ -605,49 +683,101 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Step 7: Thank You Page - BuyGoods Vendor Guide',
-  description: 'Learn how to create an effective thank you page that reduces refunds by 15-25% through clear communication and proper expectation setting'
+  description: 'Learn how to create an effective thank you page that reduces refunds by 15-25% through clear communication.'
 })
 </script>
 
 <style scoped>
 .page-content {
-  margin-left: 280px;
+  margin-left: 300px;
 }
 
 @media (max-width: 768px) {
   .page-content {
     margin-left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   }
 }
 
 .header {
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: #1e293b;
   color: #ffffff;
-  padding: 60px 20px;
-  min-height: 200px;
+  padding: 48px 20px;
+  min-height: 280px;
   text-align: center;
+  position: relative;
+}
+
+.header-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Main visible logo */
+.logo-main {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  width: 140px;
+  height: auto;
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+}
+
+/* Shadow logo - full height, left side */
+.logo-shadow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: auto;
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .logo-main {
+    width: 100px;
+    left: 16px;
+    bottom: 12px;
+  }
+  .logo-shadow {
+    height: 140px;
+    opacity: 0.06;
+  }
 }
 
 .step-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .header h1 {
-  font-size: 42px;
-  margin-bottom: 16px;
+  font-size: 32px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
 .header p {
-  font-size: 20px;
-  opacity: 0.95;
-  max-width: 800px;
+  font-size: 16px;
+  opacity: 0.85;
+  max-width: 600px;
   margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>

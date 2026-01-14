@@ -1,561 +1,670 @@
 <template>
   <div>
-    <Navbar :breadcrumbs="['Step 5: Downsell 2']" />
-    <Sidebar :current-step="5" />
+    <Navbar :breadcrumbs="['Step 6: Downsell 2']" />
+    <Sidebar :current-step="6" />
 
     <div class="page-content">
+      <!-- Enhanced Header -->
       <div class="header">
-        <div class="step-badge">STEP 5 OF 7</div>
-        <h1>Downsell 2: Smaller Complement</h1>
-        <p>Final recovery offer with trial or starter size of complementary product</p>
+        <!-- Logo Shadow (larger, blurred, behind) -->
+        <img src="/bg-logo-white.png" alt="" class="logo-shadow" aria-hidden="true" />
+        <!-- Logo Main (visible, on top) -->
+        <img src="/bg-logo-white.png" alt="" class="logo-main" aria-hidden="true" />
+        <div class="header-content">
+          <div class="step-badge">STEP 6 OF 8</div>
+          <h1>Downsell 2: Trial Size</h1>
+          <p>Final recovery offer with trial or starter size of complementary product</p>
+        </div>
+
+        <!-- Quick Stats Bar -->
+        <div class="flex flex-wrap justify-center gap-6 mt-8">
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:trending-up" class="w-4 h-4" />
+            <span class="text-sm">10-20% Accept Rate</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:dollar-sign" class="w-4 h-4" />
+            <span class="text-sm">$19-27 Price</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
+            <Icon name="lucide:package" class="w-4 h-4" />
+            <span class="text-sm">1 Bottle Trial</span>
+          </div>
+        </div>
       </div>
 
-      <div class="container mx-auto px-4 py-12" style="max-width: 90%;">
-      <!-- Section 1: What is Downsell 2? -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">1</span>
-          What is Downsell 2?
-        </h2>
-        <p class="text-gray-700 text-lg mb-4 leading-relaxed">
-          This is your FINAL attempt to add value to the order. When customers decline Upsell 2 (the full complementary product), you present this last offer: a smaller, trial-sized version of that complementary product at an incredibly low price.
-        </p>
-        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-          The strategy here is simple: make the offer so small and inexpensive that it's almost silly to say no. Position it as "just try it" rather than a full commitment.
-        </p>
+      <div class="content-width py-10">
 
-        <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">Final Recovery:</p>
-          <p class="text-gray-700 leading-relaxed">
+        <!-- Quick Jump Navigation -->
+        <div class="bg-surface border border-border rounded-lg p-4 mb-8 sticky top-4 z-20">
+          <div class="flex items-center gap-2 mb-3">
+            <Icon name="lucide:compass" class="w-4 h-4 text-accent" />
+            <span class="text-sm font-semibold text-navy-900">Quick Navigation</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <a href="#overview" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Overview</a>
+            <a href="#structure" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Visual Structure</a>
+            <a href="#checklist" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Checklist</a>
+            <a href="#pricing" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Pricing</a>
+            <a href="#messaging" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Messaging</a>
+            <a href="#best-practices" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Best Practices</a>
+            <a href="#strategy" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Strategy</a>
+            <a href="#metrics" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Metrics</a>
+          </div>
+        </div>
+
+        <!-- Section 1: What is Downsell 2? -->
+        <ContentCard id="overview">
+          <SectionHeader :number="1" title="What is Downsell 2?" />
+          <p class="text-charcoal-600 leading-relaxed mb-4">
+            This is your FINAL attempt to add value to the order. When customers decline Upsell 2 (the full complementary product), you present this last offer: a smaller, trial-sized version of that complementary product at an incredibly low price.
+          </p>
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            The strategy here is simple: make the offer so small and inexpensive that it's almost silly to say no. Position it as "just try it" rather than a full commitment.
+          </p>
+
+          <!-- Key Benefits Grid -->
+          <div class="grid md:grid-cols-3 gap-4 mb-6">
+            <div class="bg-success-light border border-success/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:refresh-cw" class="w-5 h-5 text-success" />
+                <span class="font-semibold text-navy-900">Final Recovery</span>
+              </div>
+              <p class="text-sm text-charcoal-600">10-20% of declined customers convert</p>
+            </div>
+            <div class="bg-accent-light border border-accent/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:sparkles" class="w-5 h-5 text-accent" />
+                <span class="font-semibold text-navy-900">Impulse Price</span>
+              </div>
+              <p class="text-sm text-charcoal-600">Under $30 - almost silly to refuse</p>
+            </div>
+            <div class="bg-warning-light border border-warning/20 rounded-lg p-4">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:users" class="w-5 h-5 text-warning" />
+                <span class="font-semibold text-navy-900">Future Value</span>
+              </div>
+              <p class="text-sm text-charcoal-600">30-40% become repeat buyers</p>
+            </div>
+          </div>
+
+          <AlertBox variant="success" title="Final Recovery">
             10-20% of customers who declined Upsell 2 will accept this downsell. While each sale is smaller ($19-$27), it's pure additional revenue and introduces customers to the complementary product line.
-          </p>
-        </div>
-      </div>
+          </AlertBox>
+        </ContentCard>
 
-      <!-- Section 2: Visual Structure -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">2</span>
-          Visual Structure
-        </h2>
-        <p class="text-gray-700 text-lg mb-6 leading-relaxed">
-          Here's how your Downsell 2 page should look:
-        </p>
-
-        <!-- Downsell Preview -->
-        <div class="bg-gray-50 border-2 border-dashed border-gray-300 rounded-lg p-10 text-center">
-          <div class="bg-gradient-to-r from-red-600 to-red-700 text-white p-5 rounded-lg text-3xl font-bold mb-6">
-            🛑 One Last Thing Before You Go...
-          </div>
-
-          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
-            Try [Complementary Product] Risk-Free For Just $19
-          </h3>
-
-          <div class="inline-block bg-gradient-to-r from-green-500 to-green-600 text-white px-8 py-3 rounded-lg text-lg font-bold my-5">
-            ⭐ TRIAL SIZE OFFER ⭐
-          </div>
-
-          <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            We understand the full package wasn't right for you. But we'd love for you to at least TRY [Complementary Product]. We've created a special trial size - just 1 bottle for only $19. This is our absolute final offer.
+        <!-- Section 2: Visual Structure -->
+        <ContentCard id="structure">
+          <SectionHeader :number="2" title="Visual Structure" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Here's how your Downsell 2 page should look. Keep it simple and focus on the trial aspect:
           </p>
 
-          <!-- Offer Comparison -->
-          <div class="grid md:grid-cols-2 gap-5 max-w-xl mx-auto mb-8">
-            <div class="bg-red-50 border-2 border-gray-300 rounded-lg p-5 opacity-60">
-              <div class="text-xs line-through mb-2">Previous Offer</div>
-              <div class="text-2xl font-bold text-gray-600">3 Bottles</div>
-              <div class="text-lg mt-2">$67</div>
-            </div>
-            <div class="bg-green-50 border-3 border-green-500 rounded-lg p-5">
-              <div class="text-xs font-semibold text-green-600 mb-2">✓ Trial Offer</div>
-              <div class="text-3xl font-bold text-gray-900">1 Bottle</div>
-              <div class="text-2xl mt-2 font-bold text-green-600">$19</div>
-            </div>
-          </div>
+          <!-- Downsell Preview -->
+          <div class="bg-surface-tertiary border border-border rounded-lg p-6">
+            <h3 class="text-navy-900 font-semibold text-lg text-center mb-6">Final Offer Page Layout Preview</h3>
 
-          <!-- Product Showcase -->
-          <div class="flex justify-center mb-8">
-            <div class="bg-gray-100 w-32 h-40 flex items-center justify-center rounded-lg text-gray-500 text-sm border-2 border-gray-300">
-              [ TRIAL SIZE<br/>PRODUCT<br/>IMAGE ]
+            <!-- Final Offer Headline -->
+            <div class="bg-error text-white px-5 py-4 rounded-lg text-xl font-bold mb-6 text-center">
+              <Icon name="lucide:hand" class="w-5 h-5 inline mr-2" />
+              One Last Thing Before You Go...
             </div>
-          </div>
 
-          <!-- Price Highlight -->
-          <div class="bg-gradient-to-r from-green-500 to-green-600 text-white p-8 rounded-xl mb-6">
-            <div class="text-lg mb-2">Just Try It For Only:</div>
-            <div class="text-7xl font-bold my-3">$19</div>
-            <div class="text-base opacity-90">Regular Price: $49 | You Save: $30 (61% OFF)</div>
-            <div class="text-sm opacity-90 mt-3">30-Day Supply • Perfect to Test the Results</div>
-          </div>
-
-          <ul class="text-left max-w-lg mx-auto space-y-3 mb-6">
-            <li class="flex items-start">
-              <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-              <span class="text-gray-700">Just $19 - Less than a coffee per day</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-              <span class="text-gray-700">Perfect trial size - 1 bottle (30-day supply)</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-              <span class="text-gray-700">Ships FREE with your current order</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-              <span class="text-gray-700">Same 60-day money-back guarantee</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-              <span class="text-gray-700">One-click add (no re-entering info)</span>
-            </li>
-            <li class="flex items-start">
-              <span class="text-green-600 font-bold mr-3 mt-1">✓</span>
-              <span class="text-gray-700">If you love it, order more later</span>
-            </li>
-          </ul>
-
-          <!-- Final Callout -->
-          <div class="bg-yellow-50 border-3 border-yellow-500 rounded-xl p-6 mb-6">
-            <div class="text-2xl font-bold text-gray-900 mb-3">
-              🎯 This Is Your Absolute Final Chance
+            <!-- Trial Badge -->
+            <div class="text-center mb-4">
+              <div class="inline-flex items-center gap-2 bg-success text-white px-6 py-2 rounded-lg text-sm font-bold">
+                <Icon name="lucide:star" class="w-4 h-4" />
+                TRIAL SIZE OFFER
+                <Icon name="lucide:star" class="w-4 h-4" />
+              </div>
             </div>
-            <p class="text-gray-700 text-base m-0">
-              Once you click past this page, this $19 trial offer disappears forever. We'll never be able to offer this price again. If you want to try [Complementary Product], this is your only opportunity to do it risk-free at this incredible price.
+
+            <!-- Main Headline -->
+            <h3 class="text-2xl text-navy-900 font-bold text-center mb-4">
+              Try [Complementary Product] Risk-Free For Just $19
+            </h3>
+
+            <!-- Description -->
+            <p class="text-charcoal-600 max-w-2xl mx-auto mb-6 text-center">
+              We understand the full package wasn't right for you. But we'd love for you to at least TRY it. We've created a special trial size - just 1 bottle for only $19. This is our absolute final offer.
             </p>
-          </div>
 
-          <!-- Testimonial -->
-          <div class="bg-blue-50 border-2 border-blue-500 rounded-lg p-5 mb-8">
-            <div class="font-semibold text-gray-900 mb-2">
-              💡 Smart Decision:
+            <!-- Comparison Table -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+              <div class="bg-white border border-border rounded-lg p-4 text-center opacity-60">
+                <div class="text-xs text-charcoal-500 line-through mb-2">Previous Offer</div>
+                <div class="text-xl font-bold text-charcoal-600">3 Bottles</div>
+                <div class="text-lg mt-1">$67</div>
+              </div>
+              <div class="bg-success-light border-2 border-success rounded-lg p-4 text-center">
+                <div class="text-xs text-success font-semibold mb-2">Trial Offer</div>
+                <div class="text-2xl font-bold text-navy-900">1 Bottle</div>
+                <div class="text-xl mt-1 font-bold text-success">$19</div>
+              </div>
             </div>
-            <p class="text-gray-700 m-0">
-              "I almost skipped this, but for $19 I figured why not? Best decision ever - now I order it every month!" - Jennifer T.
-            </p>
-          </div>
 
-          <!-- CTA Buttons -->
-          <div class="flex gap-4 flex-wrap justify-center mb-6">
-            <div class="flex-1 min-w-[250px] bg-gradient-to-r from-green-500 to-green-600 text-white p-5 rounded-lg text-xl font-bold">
-              [ BUTTON: "YES! Just Let Me Try It For $19" ]
+            <!-- Product Showcase -->
+            <div class="flex justify-center mb-6">
+              <div class="bg-white w-32 h-40 flex items-center justify-center rounded-lg border border-border">
+                <div class="text-center">
+                  <Icon name="lucide:package" class="w-8 h-8 text-accent mx-auto mb-2" />
+                  <div class="text-xs text-charcoal-600">Trial Size</div>
+                </div>
+              </div>
             </div>
-            <div class="flex-1 min-w-[250px] bg-white text-gray-600 p-5 border-2 border-gray-300 rounded-lg text-base font-semibold">
-              [ LINK: "No thanks, I'll complete my order" ]
+
+            <!-- Price Highlight -->
+            <div class="bg-success text-white p-6 rounded-lg mb-6 text-center">
+              <div class="text-sm mb-1">Just Try It For Only:</div>
+              <div class="text-5xl font-bold my-2">$19</div>
+              <div class="text-sm opacity-90">Regular: $49 | You Save: $30 (61% OFF)</div>
+              <div class="text-xs opacity-90 mt-2">30-Day Supply - Perfect to Test the Results</div>
+            </div>
+
+            <!-- Benefits as horizontal pills -->
+            <div class="flex flex-wrap justify-center gap-2 mb-6">
+              <span class="bg-white border border-success/30 text-charcoal-700 px-3 py-1.5 rounded-full text-sm">Less than a coffee per day</span>
+              <span class="bg-white border border-success/30 text-charcoal-700 px-3 py-1.5 rounded-full text-sm">1 bottle trial size</span>
+              <span class="bg-white border border-success/30 text-charcoal-700 px-3 py-1.5 rounded-full text-sm">Ships FREE</span>
+              <span class="bg-white border border-success/30 text-charcoal-700 px-3 py-1.5 rounded-full text-sm">60-day guarantee</span>
+            </div>
+
+            <!-- Final Callout -->
+            <div class="bg-warning-light border border-warning rounded-lg p-4 mb-6 text-center">
+              <div class="flex items-center justify-center gap-2 mb-2">
+                <Icon name="lucide:alert-triangle" class="w-4 h-4 text-warning" />
+                <span class="font-semibold text-navy-900">This Is Your Absolute Final Chance</span>
+              </div>
+              <p class="text-sm text-charcoal-600">Once you click past this page, this $19 trial offer disappears forever.</p>
+            </div>
+
+            <!-- Testimonial -->
+            <div class="bg-accent-light border border-accent/20 rounded-lg p-4 mb-6">
+              <div class="flex items-center gap-2 mb-2">
+                <Icon name="lucide:lightbulb" class="w-4 h-4 text-accent" />
+                <span class="font-semibold text-navy-900">Smart Decision:</span>
+              </div>
+              <p class="text-sm text-charcoal-600 italic">
+                "I almost skipped this, but for $19 I figured why not? Best decision ever - now I order it every month!" - Jennifer T.
+              </p>
+            </div>
+
+            <!-- CTA Buttons -->
+            <div class="flex flex-col md:flex-row gap-3">
+              <div class="flex-1 bg-success text-white px-6 py-4 rounded-lg font-bold text-center">
+                <Icon name="lucide:check" class="w-4 h-4 inline mr-2" />
+                YES! Just Let Me Try It For $19
+              </div>
+              <div class="flex-1 bg-white text-charcoal-500 px-6 py-4 border border-border rounded-lg text-center text-sm">
+                No thanks, complete my order
+              </div>
             </div>
           </div>
+        </ContentCard>
 
-          <p class="text-xs text-gray-600 mt-6">
-            This is the final offer in your funnel. After this, you'll be taken to your order confirmation.
+        <!-- Section 3: Required Elements - Numbered Steps Style -->
+        <ContentCard id="checklist">
+          <SectionHeader :number="3" title="Required Page Elements" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Every Downsell 2 page must include these essential elements:
           </p>
-        </div>
-      </div>
 
-      <!-- Section 3: Required Elements Checklist -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">3</span>
-          Required Elements Checklist
-        </h2>
+          <!-- Numbered list with left border accent -->
+          <div class="space-y-3">
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+              <div>
+                <strong class="text-navy-900">Final Offer Headline</strong>
+                <p class="text-sm text-charcoal-600">Make it crystal clear this is the last chance</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+              <div>
+                <strong class="text-navy-900">Trial/Starter Positioning</strong>
+                <p class="text-sm text-charcoal-600">"Just try it" rather than full commitment</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+              <div>
+                <strong class="text-navy-900">Extremely Low Price</strong>
+                <p class="text-sm text-charcoal-600">$19-27 range - impulse purchase level</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">4</span>
+              <div>
+                <strong class="text-navy-900">Single Quantity Only</strong>
+                <p class="text-sm text-charcoal-600">One bottle or trial size - no options</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">5</span>
+              <div>
+                <strong class="text-navy-900">Price Comparison</strong>
+                <p class="text-sm text-charcoal-600">Show how much smaller/cheaper vs declined offer</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">6</span>
+              <div>
+                <strong class="text-navy-900">Heavy Discount Display</strong>
+                <p class="text-sm text-charcoal-600">Show 50-70% savings from regular price</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">7</span>
+              <div>
+                <strong class="text-navy-900">Risk Removal</strong>
+                <p class="text-sm text-charcoal-600">Emphasize guarantee, free shipping, one-click</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4 p-4 bg-surface-tertiary rounded-lg border-l-4 border-accent">
+              <span class="w-7 h-7 bg-accent text-white rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">8</span>
+              <div>
+                <strong class="text-navy-900">Finality Messaging</strong>
+                <p class="text-sm text-charcoal-600">"Never offered again" creates urgency</p>
+              </div>
+            </div>
+          </div>
 
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">"Final Offer" Headline:</strong>
-            <span class="text-gray-700"> Make it crystal clear this is the last chance</span>
+          <!-- Pro Tip -->
+          <div class="mt-6 bg-accent-light border border-accent/20 rounded-lg p-4">
+            <div class="flex items-start gap-3">
+              <div class="w-8 h-8 bg-accent rounded-lg flex items-center justify-center flex-shrink-0">
+                <Icon name="lucide:lightbulb" class="w-4 h-4 text-white" />
+              </div>
+              <div>
+                <strong class="text-navy-900">Pro Tip:</strong>
+                <p class="text-charcoal-600 text-sm mt-1">Use "I almost skipped this" testimonials - they directly address the customer's current hesitation.</p>
+              </div>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Trial/Starter Positioning:</strong>
-            <span class="text-gray-700"> Position as "just try it" rather than full commitment</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Extremely Low Price:</strong>
-            <span class="text-gray-700"> $19-27 range - almost impulse purchase level</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Small Quantity:</strong>
-            <span class="text-gray-700"> Single bottle or trial size</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Comparison to Declined Offer:</strong>
-            <span class="text-gray-700"> Show how much smaller/cheaper this is</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Heavy Discount:</strong>
-            <span class="text-gray-700"> Show 50-70% savings from regular price</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Remove All Risk:</strong>
-            <span class="text-gray-700"> Emphasize guarantee, free shipping, one-click</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Absolute Finality:</strong>
-            <span class="text-gray-700"> "Never offered again" messaging</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Social Proof:</strong>
-            <span class="text-gray-700"> Quick testimonial about trying it</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Strong Yes Button:</strong>
-            <span class="text-gray-700"> "Just let me try it for $19"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Neutral No Button:</strong>
-            <span class="text-gray-700"> Simple "Complete my order" (not negative)</span>
-          </div>
-        </div>
-      </div>
+        </ContentCard>
 
-      <!-- Section 4: Pricing Strategy -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">4</span>
-          Pricing Strategy
-        </h2>
+        <!-- Section 4: Pricing Strategy -->
+        <ContentCard id="pricing">
+          <SectionHeader :number="4" title="Pricing Strategy" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            The price should be low enough to feel like an impulse buy:
+          </p>
 
-        <div class="overflow-x-auto">
-          <table class="w-full border-collapse">
-            <thead>
-              <tr class="bg-gray-50">
-                <th class="p-4 text-left font-semibold text-gray-900 border-b border-gray-200">Upsell 2 (Declined)</th>
-                <th class="p-4 text-left font-semibold text-gray-900 border-b border-gray-200">Downsell 2 Offer</th>
-                <th class="p-4 text-left font-semibold text-gray-900 border-b border-gray-200">Psychology</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="p-4 text-gray-700 border-b border-gray-200">3 Bottles for $67</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">1 Bottle for $19</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">72% less expensive - feels like nothing</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-gray-700 border-b border-gray-200">3 Bottles for $67</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">1 Bottle for $27</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">60% less - still very affordable</td>
-              </tr>
-              <tr>
-                <td class="p-4 text-gray-700 border-b border-gray-200">6 Bottles for $97</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">2 Bottles for $27</td>
-                <td class="p-4 text-gray-700 border-b border-gray-200">72% less - removes price objection</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+          <div class="overflow-x-auto mb-6">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="bg-surface-tertiary">
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">Upsell 2 (Declined)</th>
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">Downsell 2 Offer</th>
+                  <th class="text-left p-3 font-semibold text-navy-900 border-b border-border">Psychology</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">3 Bottles for $67</td>
+                  <td class="p-3 text-charcoal-600">1 Bottle for $19</td>
+                  <td class="p-3 text-charcoal-600">72% less - feels like nothing</td>
+                </tr>
+                <tr class="border-b border-border">
+                  <td class="p-3 text-charcoal-600">3 Bottles for $67</td>
+                  <td class="p-3 text-charcoal-600">1 Bottle for $27</td>
+                  <td class="p-3 text-charcoal-600">60% less - still very affordable</td>
+                </tr>
+                <tr>
+                  <td class="p-3 text-charcoal-600">6 Bottles for $97</td>
+                  <td class="p-3 text-charcoal-600">2 Bottles for $27</td>
+                  <td class="p-3 text-charcoal-600">72% less - removes price objection</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-        <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6 mt-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">The $19 Sweet Spot:</p>
-          <p class="text-gray-700 leading-relaxed">
+          <AlertBox variant="success" title="The $19 Sweet Spot">
             $19 is psychologically significant. It's under $20 which feels like "almost nothing." It's less than a meal, less than a movie ticket. This price point maximizes impulse acceptance.
+          </AlertBox>
+        </ContentCard>
+
+        <!-- Section 5: Key Messaging - Speech Bubble / Quote Style -->
+        <ContentCard id="messaging">
+          <SectionHeader :number="5" title="Key Messaging Strategy" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            Focus on "Try" not "Buy" - every element should reduce commitment anxiety:
           </p>
-        </div>
-      </div>
 
-      <!-- Section 5: Key Messaging Strategy -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">5</span>
-          Key Messaging Strategy
-        </h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <!-- Trial Language - Quote cards -->
+            <div>
+              <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
+                <Icon name="lucide:message-circle" class="w-5 h-5 text-accent" />
+                Trial Language to Use
+              </h4>
+              <div class="space-y-3">
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent relative">
+                  <p class="text-navy-900 font-medium">"Just try it and see for yourself"</p>
+                </div>
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"Risk-free trial size"</p>
+                </div>
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"Perfect way to test it out"</p>
+                </div>
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"See if it works for you"</p>
+                </div>
+                <div class="bg-accent/5 rounded-lg p-3 border-l-4 border-accent">
+                  <p class="text-navy-900 font-medium">"If you love it, order more later"</p>
+                </div>
+              </div>
+            </div>
 
-        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Focus on "Try" Not "Buy"</h3>
-        <p class="text-gray-700 text-lg mb-4 leading-relaxed">
-          Every element should reduce commitment anxiety:
-        </p>
-        <div class="grid md:grid-cols-2 gap-4 mb-8">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Just try it and see for yourself"</span>
+            <!-- Price Anchoring - Comparison cards -->
+            <div>
+              <h4 class="font-semibold text-navy-900 mb-4 flex items-center gap-2">
+                <Icon name="lucide:scale" class="w-5 h-5 text-success" />
+                Price Comparisons
+              </h4>
+              <div class="space-y-3">
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success flex justify-between items-center">
+                  <span class="text-navy-900 font-medium">Less than $1/day</span>
+                  <span class="text-xs bg-success/20 text-success px-2 py-1 rounded">Best</span>
+                </div>
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success flex justify-between items-center">
+                  <span class="text-navy-900 font-medium">Less than a coffee</span>
+                  <span class="text-xs bg-success/20 text-success px-2 py-1 rounded">Relatable</span>
+                </div>
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success flex justify-between items-center">
+                  <span class="text-navy-900 font-medium">Cheaper than lunch</span>
+                  <span class="text-xs bg-success/20 text-success px-2 py-1 rounded">Familiar</span>
+                </div>
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success flex justify-between items-center">
+                  <span class="text-navy-900 font-medium">Only $19 to find out</span>
+                  <span class="text-xs bg-success/20 text-success px-2 py-1 rounded">Direct</span>
+                </div>
+                <div class="bg-success/5 rounded-lg p-3 border-l-4 border-success flex justify-between items-center">
+                  <span class="text-navy-900 font-medium">Almost silly to say no</span>
+                  <span class="text-xs bg-success/20 text-success px-2 py-1 rounded">Persuasive</span>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Risk-free trial size"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Perfect way to test it out"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"See if it works for you"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"If you love it, order more later"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"No commitment beyond this one bottle"</span>
-          </div>
-        </div>
+        </ContentCard>
 
-        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Emphasize the Absurdly Low Price</h3>
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Less than $1 per day"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Less than a coffee"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Cheaper than lunch"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Only $19 to find out if it works"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <span class="text-gray-700">"Almost silly to say no at this price"</span>
-          </div>
-        </div>
-      </div>
+        <!-- Section 6: Best Practices - Visual Comparison Table -->
+        <ContentCard id="best-practices">
+          <SectionHeader :number="6" title="Best Practices & Common Mistakes" />
 
-      <!-- Section 6: Best Practices -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">6</span>
-          Best Practices
-        </h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <!-- DO Column -->
+            <div class="bg-success/5 rounded-lg p-5 border border-success/20">
+              <div class="flex items-center gap-2 mb-4 pb-3 border-b border-success/20">
+                <div class="w-8 h-8 bg-success rounded-lg flex items-center justify-center">
+                  <Icon name="lucide:thumbs-up" class="w-4 h-4 text-white" />
+                </div>
+                <h4 class="font-bold text-navy-900 text-lg">Do This</h4>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:dollar-sign" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Keep Under $30</p>
+                    <p class="text-sm text-charcoal-600">Above $30 stops feeling impulsive</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:package" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Single Bottle Only</p>
+                    <p class="text-sm text-charcoal-600">Don't offer multiple quantities</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:flag" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Emphasize "Final"</p>
+                    <p class="text-sm text-charcoal-600">Make it clear funnel ends here</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:flask-conical" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Use Trial Language</p>
+                    <p class="text-sm text-charcoal-600">"Trial," "starter," "sample"</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:percent" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Massive Discount</p>
+                    <p class="text-sm text-charcoal-600">50-70% off makes it irresistible</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:heart-handshake" class="w-5 h-5 text-success flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Graceful Decline</p>
+                    <p class="text-sm text-charcoal-600">Let them go without pressure</p>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Keep Price Under $30:</strong>
-            <span class="text-gray-700"> Above $30, it stops feeling like an impulse buy</span>
+            <!-- DON'T Column -->
+            <div class="bg-error/5 rounded-lg p-5 border border-error/20">
+              <div class="flex items-center gap-2 mb-4 pb-3 border-b border-error/20">
+                <div class="w-8 h-8 bg-error rounded-lg flex items-center justify-center">
+                  <Icon name="lucide:thumbs-down" class="w-4 h-4 text-white" />
+                </div>
+                <h4 class="font-bold text-navy-900 text-lg">Avoid This</h4>
+              </div>
+              <div class="space-y-4">
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:ban" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Pricing Too High</p>
+                    <p class="text-sm text-charcoal-600">Above $30 kills impulse buy</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:layers" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Multiple Options</p>
+                    <p class="text-sm text-charcoal-600">Keep it to ONE simple offer</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:infinity" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">No Finality</p>
+                    <p class="text-sm text-charcoal-600">Must emphasize "last offer"</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:file-text" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Overselling</p>
+                    <p class="text-sm text-charcoal-600">Keep copy short and simple</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:angry" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Aggressive Decline</p>
+                    <p class="text-sm text-charcoal-600">Respect their decision</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <Icon name="lucide:puzzle" class="w-5 h-5 text-error flex-shrink-0 mt-0.5" />
+                  <div>
+                    <p class="font-medium text-navy-900">Complex Positioning</p>
+                    <p class="text-sm text-charcoal-600">Should be: "Try 1 bottle for $19"</p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Single Bottle Only:</strong>
-            <span class="text-gray-700"> Don't offer multiple quantities - keep it simple</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Emphasize "Final":</strong>
-            <span class="text-gray-700"> Make it clear the funnel ends after this</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Use Trial Language:</strong>
-            <span class="text-gray-700"> "Trial," "starter," "sample" reduce commitment fear</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Show Massive Discount:</strong>
-            <span class="text-gray-700"> 50-70% off retail makes it irresistible</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">No Pressure Decline:</strong>
-            <span class="text-gray-700"> At this point, let them go gracefully</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">One Last Testimonial:</strong>
-            <span class="text-gray-700"> Someone who "almost skipped it" and loved it</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Keep It Short:</strong>
-            <span class="text-gray-700"> Don't over-explain - simple and quick decision</span>
-          </div>
-        </div>
-      </div>
+        </ContentCard>
 
-      <!-- Section 7: Common Mistakes -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">7</span>
-          Common Mistakes to Avoid
-        </h2>
-
-        <div class="bg-red-50 border-l-4 border-red-500 rounded-lg p-6 mb-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">Warning:</p>
-          <p class="text-gray-700 leading-relaxed">
-            This is your last chance - don't blow it with these mistakes.
+        <!-- Section 7: Strategic Purpose - Icon Cards -->
+        <ContentCard id="strategy">
+          <SectionHeader :number="7" title="Strategic Purpose" />
+          <p class="text-charcoal-600 leading-relaxed mb-6">
+            This downsell serves multiple purposes beyond immediate revenue:
           </p>
-        </div>
 
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Still Too Expensive:</strong>
-            <span class="text-gray-700"> Above $30 kills the impulse buy psychology</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Multiple Options:</strong>
-            <span class="text-gray-700"> Keep it to ONE simple trial offer</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Not Emphasizing "Final":</strong>
-            <span class="text-gray-700"> Customers need to know this is the last offer</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Overselling:</strong>
-            <span class="text-gray-700"> Keep copy short - don't make them overthink</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Aggressive Decline Language:</strong>
-            <span class="text-gray-700"> At this point, respect their decision</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">No Social Proof:</strong>
-            <span class="text-gray-700"> Need that "I almost skipped this" testimonial</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Complex Positioning:</strong>
-            <span class="text-gray-700"> Should be dead simple: "Try 1 bottle for $19"</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-lg">❌</span>
-            <strong class="text-gray-900">Missing Finality Cues:</strong>
-            <span class="text-gray-700"> Make it clear they're heading to thank you page next</span>
-          </div>
-        </div>
-      </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:piggy-bank" class="w-6 h-6 text-success" />
+              </div>
+              <h4 class="font-semibold text-navy-900 mb-1">Revenue Recovery</h4>
+              <p class="text-sm text-charcoal-600">Capture 10-20% who would otherwise decline</p>
+            </div>
 
-      <!-- Section 8: Strategic Purpose -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8 border-2 border-gray-100">
-        <h2 class="flex items-center text-3xl font-bold mb-6 text-gray-900">
-          <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold text-lg mr-4">8</span>
-          Strategic Purpose
-        </h2>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:package-open" class="w-6 h-6 text-accent" />
+              </div>
+              <h4 class="font-semibold text-navy-900 mb-1">Product Introduction</h4>
+              <p class="text-sm text-charcoal-600">Get complementary product into their hands</p>
+            </div>
 
-        <h3 class="text-2xl font-semibold mb-4 text-gray-900">Beyond Immediate Revenue</h3>
-        <p class="text-gray-700 text-lg mb-4 leading-relaxed">
-          This downsell serves multiple purposes:
-        </p>
-        <div class="grid md:grid-cols-2 gap-4 mb-6">
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Revenue Recovery:</strong>
-            <span class="text-gray-700"> Capture 10-20% who would otherwise decline everything</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Product Introduction:</strong>
-            <span class="text-gray-700"> Get complementary product into their hands</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Future Sales:</strong>
-            <span class="text-gray-700"> If they like it, they'll reorder at full price</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Email Segmentation:</strong>
-            <span class="text-gray-700"> Now you know they're interested in both product lines</span>
-          </div>
-          <div class="bg-gray-50 rounded-lg p-4 relative pl-10">
-            <span class="absolute left-3 top-4 text-green-500 font-bold text-lg">✓</span>
-            <strong class="text-gray-900">Reduced Acquisition Cost:</strong>
-            <span class="text-gray-700"> Every $19 helps offset ad spend</span>
-          </div>
-        </div>
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-12 h-12 bg-warning/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:repeat" class="w-6 h-6 text-warning" />
+              </div>
+              <h4 class="font-semibold text-navy-900 mb-1">Future Sales</h4>
+              <p class="text-sm text-charcoal-600">If they like it, they'll reorder at full price</p>
+            </div>
 
-        <div class="bg-green-50 border-l-4 border-green-500 rounded-lg p-6">
-          <p class="font-bold text-gray-900 text-lg mb-2">Long-term Value:</p>
-          <p class="text-gray-700 leading-relaxed">
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center">
+              <div class="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:mail" class="w-6 h-6 text-accent" />
+              </div>
+              <h4 class="font-semibold text-navy-900 mb-1">Email Segmentation</h4>
+              <p class="text-sm text-charcoal-600">Know they're interested in both product lines</p>
+            </div>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border text-center md:col-span-2 lg:col-span-1">
+              <div class="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                <Icon name="lucide:trending-down" class="w-6 h-6 text-success" />
+              </div>
+              <h4 class="font-semibold text-navy-900 mb-1">Lower Acquisition Cost</h4>
+              <p class="text-sm text-charcoal-600">Every $19 helps offset ad spend</p>
+            </div>
+          </div>
+
+          <AlertBox variant="success" title="Long-term Value">
             30-40% of customers who accept this trial offer become repeat buyers of the complementary product line. You're not just making $19 - you're potentially creating a multi-product customer.
-          </p>
+          </AlertBox>
+        </ContentCard>
+
+        <!-- Section 8: Performance Metrics -->
+        <ContentCard id="metrics">
+          <div class="flex items-center mb-6">
+            <div class="w-9 h-9 bg-accent rounded-lg flex items-center justify-center mr-3">
+              <Icon name="lucide:bar-chart-3" class="w-5 h-5 text-white" />
+            </div>
+            <h2 class="text-2xl font-bold text-navy-900">Performance Metrics & Benchmarks</h2>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:trending-up" class="w-5 h-5 text-accent" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">Target: 10-20%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Acceptance Rate</strong>
+              <p class="text-charcoal-600 text-sm">Top performers hit 25%</p>
+            </div>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:dollar-sign" class="w-5 h-5 text-success" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">$19-27</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Optimal Price Point</strong>
+              <p class="text-charcoal-600 text-sm">$19 slightly outperforms $27</p>
+            </div>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:coins" class="w-5 h-5 text-accent" />
+                <span class="text-xs bg-accent/10 text-accent px-2 py-0.5 rounded font-medium">+$1,425</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Revenue Recovery</strong>
+              <p class="text-charcoal-600 text-sm">If 75 of 500 accept at $19</p>
+            </div>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:refresh-cw" class="w-5 h-5 text-success" />
+                <span class="text-xs bg-success/10 text-success px-2 py-0.5 rounded font-medium">30-40%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Future Value</strong>
+              <p class="text-charcoal-600 text-sm">Trial buyers become repeats</p>
+            </div>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:pie-chart" class="w-5 h-5 text-warning" />
+                <span class="text-xs bg-warning/10 text-warning px-2 py-0.5 rounded font-medium">60-120%</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Complete Funnel Impact</strong>
+              <p class="text-charcoal-600 text-sm">AOV increase over initial purchase</p>
+            </div>
+
+            <div class="bg-surface-tertiary rounded-lg p-4 border border-border">
+              <div class="flex items-center justify-between mb-3">
+                <Icon name="lucide:zap" class="w-5 h-5 text-error" />
+                <span class="text-xs bg-error/10 text-error px-2 py-0.5 rounded font-medium">Under 2s</span>
+              </div>
+              <strong class="text-navy-900 block mb-1">Load Speed Critical</strong>
+              <p class="text-charcoal-600 text-sm">Final chance - don't lose them</p>
+            </div>
+          </div>
+        </ContentCard>
+
+        <!-- Quick Reference Card -->
+        <div class="bg-navy-800 rounded-lg p-6 mb-8 text-white">
+          <div class="flex items-center gap-3 mb-4">
+            <Icon name="lucide:bookmark" class="w-6 h-6" />
+            <h3 class="text-lg font-semibold">Quick Reference Cheatsheet</h3>
+          </div>
+          <div class="grid md:grid-cols-3 gap-4 text-sm">
+            <div>
+              <div class="text-slate-400 mb-2">Price Range</div>
+              <div class="font-semibold">$19-27</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Target Accept Rate</div>
+              <div class="font-semibold">10-20%</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Quantity</div>
+              <div class="font-semibold">1 bottle only</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Discount</div>
+              <div class="font-semibold">50-70% off</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Key Message</div>
+              <div class="font-semibold">"Just try it"</div>
+            </div>
+            <div>
+              <div class="text-slate-400 mb-2">Future Value</div>
+              <div class="font-semibold">30-40% repeat</div>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <!-- Performance Metrics -->
-      <div class="bg-white rounded-2xl p-8 shadow-lg mb-8">
-        <div class="flex items-center mb-8">
-          <div class="w-12 h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl mr-4">
-            📊
-          </div>
-          <h2 class="text-3xl font-bold text-gray-900">Performance Metrics & Benchmarks</h2>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-4">
-          <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-5 border-l-4 border-blue-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">📈</span>
-              <strong class="text-gray-900 text-lg">Acceptance Rate</strong>
-            </div>
-            <p class="text-gray-700 ml-11">10-20% of those who declined Upsell 2. Top performers hit 25%.</p>
-          </div>
-
-          <div class="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-5 border-l-4 border-orange-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">💵</span>
-              <strong class="text-gray-900 text-lg">Optimal Price Point</strong>
-            </div>
-            <p class="text-gray-700 ml-11">$19-27 range performs best. $19 slightly outperforms $27.</p>
-          </div>
-
-          <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-5 border-l-4 border-green-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">💰</span>
-              <strong class="text-gray-900 text-lg">Revenue Recovery</strong>
-            </div>
-            <p class="text-gray-700 ml-11">If 500 people decline Upsell 2, and 75 accept downsell at $19 = $1,425 recovered revenue.</p>
-          </div>
-
-          <div class="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-5 border-l-4 border-purple-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">🔄</span>
-              <strong class="text-gray-900 text-lg">Future Value</strong>
-            </div>
-            <p class="text-gray-700 ml-11">30-40% of trial buyers become repeat customers of complementary product.</p>
-          </div>
-
-          <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 rounded-xl p-5 border-l-4 border-indigo-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">📊</span>
-              <strong class="text-gray-900 text-lg">Complete Funnel Impact</strong>
-            </div>
-            <p class="text-gray-700 ml-11">Proper upsell/downsell sequence can increase AOV by 60-120% over initial purchase.</p>
-          </div>
-
-          <div class="bg-gradient-to-br from-red-50 to-red-100 rounded-xl p-5 border-l-4 border-red-600">
-            <div class="flex items-start mb-2">
-              <span class="text-2xl mr-3">⚡</span>
-              <strong class="text-gray-900 text-lg">Load Speed Critical</strong>
-            </div>
-            <p class="text-gray-700 ml-11">Must load in under 2 seconds - this is final chance, don't lose them to slow loading.</p>
-          </div>
-        </div>
-      </div>
 
         <!-- Navigation -->
-        <div class="flex flex-col sm:flex-row gap-4 mt-12">
-          <NuxtLink
-            to="/step5-upsell2"
-            class="flex-1 bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-lg font-semibold text-center hover:bg-blue-50 transition-all duration-300 hover:shadow-lg"
-          >
-            ← Previous: Upsell 2
-          </NuxtLink>
-          <NuxtLink
-            to="/step7-thankyou"
-            class="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-lg font-semibold text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
-          >
-            Next: Thank You Page →
-          </NuxtLink>
-        </div>
+        <NavigationButtons
+          prev-to="/step5-upsell2"
+          prev-text="Back: Upsell 2"
+          next-to="/step7-thankyou"
+          next-text="Next: Thank You Page"
+        />
       </div>
     </div>
   </div>
@@ -564,60 +673,101 @@
 <script setup lang="ts">
 useSeoMeta({
   title: 'Step 6: Downsell 2 - BuyGoods Vendor Guide',
-  description: 'Final recovery offer with trial or starter size of complementary product. Learn pricing strategy, required elements, and best practices for your Downsell 2 funnel page.'
-})
-
-// Use useHead for additional meta tags if needed
-useHead({
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/x-icon',
-      href: '/favicon.ico',
-    },
-  ],
+  description: 'Final recovery offer with trial or starter size of complementary product at impulse pricing.'
 })
 </script>
 
 <style scoped>
 .page-content {
-  margin-left: 280px;
+  margin-left: 300px;
 }
 
 @media (max-width: 768px) {
   .page-content {
     margin-left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   }
 }
 
 .header {
-  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  background: #1e293b;
   color: #ffffff;
-  padding: 60px 20px;
-  min-height: 200px;
+  padding: 48px 20px;
+  min-height: 280px;
   text-align: center;
+  position: relative;
+}
+
+.header-content {
+  position: relative;
+  z-index: 10;
+}
+
+/* Main visible logo */
+.logo-main {
+  position: absolute;
+  left: 24px;
+  bottom: 20px;
+  width: 140px;
+  height: auto;
+  opacity: 0.85;
+  pointer-events: none;
+  user-select: none;
+  z-index: 2;
+}
+
+/* Shadow logo - full height, left side */
+.logo-shadow {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 200px;
+  width: auto;
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .logo-main {
+    width: 100px;
+    left: 16px;
+    bottom: 12px;
+  }
+  .logo-shadow {
+    height: 140px;
+    opacity: 0.06;
+  }
 }
 
 .step-badge {
   display: inline-block;
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
 }
 
 .header h1 {
-  font-size: 42px;
-  margin-bottom: 16px;
+  font-size: 32px;
+  margin-bottom: 12px;
   font-weight: 700;
 }
 
 .header p {
-  font-size: 20px;
-  opacity: 0.95;
-  max-width: 800px;
+  font-size: 16px;
+  opacity: 0.85;
+  max-width: 600px;
   margin: 0 auto;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 </style>
