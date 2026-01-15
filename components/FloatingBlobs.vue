@@ -3,7 +3,7 @@
     <img
       v-for="logo in logos"
       :key="logo.id"
-      :src="isDark ? '/bg-logo-white.png' : '/BG-logo-black.png'"
+      :src="logoSrc"
       alt=""
       class="floating-logo"
       :class="[logo.animation]"
@@ -21,10 +21,17 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, computed } from 'vue'
 import { useDarkMode } from '~/composables/useDarkMode'
 
 const { isDark } = useDarkMode()
+const config = useRuntimeConfig()
+const baseURL = config.app.baseURL || '/'
+
+const logoSrc = computed(() => {
+  const logo = isDark.value ? 'bg-logo-white.png' : 'BG-logo-black.png'
+  return `${baseURL}${logo}`
+})
 const scrollY = ref(0)
 
 const handleScroll = () => {
