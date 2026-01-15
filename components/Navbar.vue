@@ -5,22 +5,25 @@
         <Icon name="lucide:layout-grid" class="brand-icon" />
         BuyGoods Vendor Guide
       </NuxtLink>
-      <nav v-if="breadcrumbs && breadcrumbs.length" aria-label="breadcrumb" class="breadcrumb-nav">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item">
-            <NuxtLink to="/">Overview</NuxtLink>
-          </li>
-          <li
-            v-for="(crumb, index) in breadcrumbs"
-            :key="index"
-            class="breadcrumb-item"
-            :class="{ active: index === breadcrumbs.length - 1 }"
-            :aria-current="index === breadcrumbs.length - 1 ? 'page' : undefined"
-          >
-            {{ crumb }}
-          </li>
-        </ol>
-      </nav>
+      <div class="navbar-right">
+        <nav v-if="breadcrumbs && breadcrumbs.length" aria-label="breadcrumb" class="breadcrumb-nav">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <NuxtLink to="/">Overview</NuxtLink>
+            </li>
+            <li
+              v-for="(crumb, index) in breadcrumbs"
+              :key="index"
+              class="breadcrumb-item"
+              :class="{ active: index === breadcrumbs.length - 1 }"
+              :aria-current="index === breadcrumbs.length - 1 ? 'page' : undefined"
+            >
+              {{ crumb }}
+            </li>
+          </ol>
+        </nav>
+        <DarkModeToggle />
+      </div>
     </div>
   </nav>
 </template>
@@ -110,5 +113,45 @@ defineProps<{
 
 .breadcrumb-item.active {
   color: #64748b;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Dark mode styles for navbar */
+:global(html.dark) .navbar {
+  background: #0f172a;
+  border-bottom-color: #334155;
+}
+
+:global(html.dark) .navbar-brand {
+  color: #f8fafc;
+}
+
+:global(html.dark) .navbar-brand:hover {
+  color: #818cf8;
+}
+
+:global(html.dark) .brand-icon {
+  color: #818cf8;
+}
+
+:global(html.dark) .breadcrumb-item {
+  color: #94a3b8;
+}
+
+:global(html.dark) .breadcrumb-item + .breadcrumb-item::before {
+  color: #475569;
+}
+
+:global(html.dark) .breadcrumb-item a {
+  color: #818cf8;
+}
+
+:global(html.dark) .breadcrumb-item.active {
+  color: #94a3b8;
 }
 </style>

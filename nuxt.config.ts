@@ -5,8 +5,16 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
-    'nuxt-icon'
+    '@nuxt/icon'
   ],
+
+  icon: {
+    // Bundle icons for static generation (GitHub Pages)
+    clientBundle: {
+      scan: true,
+      sizeLimitKb: 256
+    }
+  },
 
   css: [
     '~/assets/css/main.css'

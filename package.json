@@ -13,7 +13,7 @@
   "dependencies": {
     "@fontsource/inter": "^5.2.8",
     "nuxt": "^3.13.0",
-    "nuxt-icon": "^1.0.0-beta.7",
+    "@nuxt/icon": "^1.10.3",
     "vue": "^3.4.0",
     "vue-router": "^4.4.0"
   },

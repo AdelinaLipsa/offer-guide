@@ -12,11 +12,589 @@ body {
   background-color: #f8fafc;
   color: #334155;
   font-size: 1.125rem; /* 18px base */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: 18px; /* Increase base font size for readability */
+}
+
+/* ==========================================
+   DARK MODE STYLES
+   ========================================== */
+
+html.dark body {
+  background-color: #0f172a;
+  color: #d1d5db;
+  font-size: 1.125rem;
+}
+
+/* Ensure consistent base font size in dark mode */
+html.dark {
+  font-size: 18px;
+}
+
+/* Better contrast for body text */
+html.dark .leading-relaxed {
+  color: #d1d5db !important;
+  line-height: 1.8 !important;
+}
+
+html.dark .section-card {
+  background-color: #1e293b;
+  border-color: #475569;
+  border-width: 2px;
+}
+
+html.dark .section-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html.dark .section-text {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+html.dark .info-box {
+  background-color: rgba(34, 197, 94, 0.12);
+  border-left-color: #4ade80;
+  border-left-width: 4px;
+}
+
+html.dark .info-box-title {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  font-size: 1.15rem;
+}
+
+html.dark .info-box-text {
+  color: #d1d5db;
+  font-size: 1.05rem;
+}
+
+/* Dark mode for common elements */
+html.dark .bg-white {
+  background-color: #1e293b !important;
+}
+
+html.dark .bg-gray-50,
+html.dark .bg-slate-50 {
+  background-color: #0f172a !important;
+}
+
+html.dark .bg-gray-100,
+html.dark .bg-slate-100 {
+  background-color: #1e293b !important;
+}
+
+html.dark .text-gray-900,
+html.dark .text-slate-900 {
+  color: #f1f5f9 !important;
+}
+
+html.dark .text-gray-800,
+html.dark .text-slate-800 {
+  color: #e2e8f0 !important;
+}
+
+html.dark .text-gray-700,
+html.dark .text-slate-700 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-gray-600,
+html.dark .text-slate-600 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-gray-500,
+html.dark .text-slate-500 {
+  color: #64748b !important;
+}
+
+html.dark .border-gray-200,
+html.dark .border-slate-200 {
+  border-color: #334155 !important;
+}
+
+html.dark .border-gray-300,
+html.dark .border-slate-300 {
+  border-color: #475569 !important;
+}
+
+/* Dark mode cards and surfaces */
+html.dark .shadow-card {
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+}
+
+html.dark .hover-subtle:hover {
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.3);
+  border-color: #475569;
+}
+
+html.dark .hover-lift:hover {
+  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.4);
+}
+
+/* Dark mode for accent colors - keep them vibrant */
+html.dark .bg-indigo-50 {
+  background-color: rgba(79, 70, 229, 0.15) !important;
+}
+
+html.dark .bg-green-50 {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+}
+
+html.dark .bg-red-50 {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+html.dark .bg-yellow-50,
+html.dark .bg-amber-50 {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+}
+
+html.dark .bg-blue-50 {
+  background-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+html.dark .bg-purple-50 {
+  background-color: rgba(168, 85, 247, 0.15) !important;
+}
+
+/* Dark mode for custom theme colors - HIGH CONTRAST */
+html.dark .text-navy-900 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+html.dark .text-navy-800 {
+  color: #f8fafc !important;
+  font-weight: 500 !important;
+}
+
+html.dark .text-charcoal-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-charcoal-500 {
+  color: #94a3b8 !important;
+}
+
+/* Dark mode typography improvements */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6 {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+}
+
+html.dark p {
+  color: #cbd5e1 !important;
+  line-height: 1.7 !important;
+}
+
+html.dark strong, html.dark b {
+  color: #f8fafc !important;
+  font-weight: 700 !important;
+}
+
+html.dark .font-semibold {
+  color: #f8fafc !important;
+}
+
+html.dark .font-bold {
+  color: #ffffff !important;
+}
+
+html.dark .font-medium {
+  color: #e2e8f0 !important;
+}
+
+/* Make labels and small text more readable */
+html.dark .text-sm {
+  color: #b8c5d3 !important;
+}
+
+html.dark .text-xs {
+  color: #94a3b8 !important;
+  font-weight: 500 !important;
+}
+
+html.dark .uppercase {
+  color: #94a3b8 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Dark mode numbered badges and circles */
+html.dark .w-7.h-7.bg-accent,
+html.dark .w-8.h-8.bg-accent,
+html.dark .w-9.h-9.bg-accent,
+html.dark .w-10.h-10.bg-accent {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4) !important;
+}
+
+/* Dark mode list items */
+html.dark li {
+  color: #cbd5e1;
+}
+
+html.dark ul li::marker {
+  color: #6366f1;
+}
+
+/* Dark mode spans within content */
+html.dark span:not([class*="text-"]):not([class*="bg-"]) {
+  color: inherit;
+}
+
+/* Ensure icon colors pop in dark mode */
+html.dark .w-4.h-4.text-success,
+html.dark .w-5.h-5.text-success {
+  color: #4ade80 !important;
+}
+
+html.dark .w-4.h-4.text-error,
+html.dark .w-5.h-5.text-error {
+  color: #f87171 !important;
+}
+
+html.dark .w-4.h-4.text-accent,
+html.dark .w-5.h-5.text-accent {
+  color: #a5b4fc !important;
+}
+
+html.dark .w-4.h-4.text-warning,
+html.dark .w-5.h-5.text-warning {
+  color: #fcd34d !important;
+}
+
+html.dark .bg-surface {
+  background-color: #1e293b !important;
+}
+
+html.dark .bg-surface-secondary {
+  background-color: #1e293b !important;
+}
+
+html.dark .bg-surface-tertiary {
+  background-color: #0f172a !important;
+}
+
+html.dark .border-border {
+  border-color: #334155 !important;
+}
+
+/* Dark mode for specific backgrounds - MORE VIBRANT */
+html.dark .bg-accent-light {
+  background-color: rgba(99, 102, 241, 0.2) !important;
+  border: 1px solid rgba(99, 102, 241, 0.3) !important;
+}
+
+html.dark .bg-success-light {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+  border: 1px solid rgba(34, 197, 94, 0.25) !important;
+}
+
+html.dark .bg-error-light {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+  border: 1px solid rgba(239, 68, 68, 0.25) !important;
+}
+
+html.dark .bg-warning-light {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  border: 1px solid rgba(245, 158, 11, 0.25) !important;
+}
+
+/* Brighter accent colors in dark mode */
+html.dark .text-accent {
+  color: #818cf8 !important;
+}
+
+html.dark .text-success {
+  color: #4ade80 !important;
+}
+
+html.dark .text-error {
+  color: #f87171 !important;
+}
+
+html.dark .text-warning {
+  color: #fbbf24 !important;
+}
+
+/* Cards need more definition in dark mode */
+html.dark .bg-white {
+  background-color: #1e293b !important;
+  border: 1px solid #334155 !important;
+}
+
+html.dark .rounded-lg.border {
+  border-color: #475569 !important;
+}
+
+html.dark .hover-subtle:hover,
+html.dark .hover-lift:hover {
+  border-color: #6366f1 !important;
+  box-shadow: 0 8px 25px -5px rgba(99, 102, 241, 0.25) !important;
+}
+
+/* Dark mode form inputs */
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #1e293b !important;
+  border-color: #475569 !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b !important;
+}
+
+html.dark input:focus,
+html.dark textarea:focus,
+html.dark select:focus {
+  border-color: #6366f1 !important;
+}
+
+/* Dark mode tables */
+html.dark table thead tr {
+  background-color: #1e293b !important;
+}
+
+html.dark table th {
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+html.dark table td {
+  border-color: #334155 !important;
+}
+
+html.dark table tr {
+  border-color: #334155 !important;
+}
+
+html.dark .text-navy-800 {
+  color: #e2e8f0 !important;
+}
+
+/* Dark mode navigation pills */
+html.dark .nav-pill {
+  background-color: #1e293b !important;
+  color: #94a3b8 !important;
+}
+
+html.dark .nav-pill:hover {
+  background-color: #4f46e5 !important;
+  color: white !important;
+}
+
+/* Dark mode for colored icon backgrounds */
+html.dark .bg-purple-100 {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+}
+
+html.dark .bg-red-100 {
+  background-color: rgba(239, 68, 68, 0.2) !important;
+}
+
+html.dark .bg-blue-100 {
+  background-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+html.dark .bg-orange-100 {
+  background-color: rgba(249, 115, 22, 0.2) !important;
+}
+
+html.dark .bg-yellow-100 {
+  background-color: rgba(234, 179, 8, 0.2) !important;
+}
+
+html.dark .bg-green-100 {
+  background-color: rgba(34, 197, 94, 0.2) !important;
+}
+
+/* Dark mode for success/error backgrounds with borders */
+html.dark .bg-success\/5,
+html.dark [class*="bg-success/5"] {
+  background-color: rgba(34, 197, 94, 0.1) !important;
+}
+
+html.dark .bg-error\/5,
+html.dark [class*="bg-error/5"] {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+}
+
+html.dark .bg-accent\/10,
+html.dark [class*="bg-accent/10"] {
+  background-color: rgba(79, 70, 229, 0.15) !important;
+}
+
+html.dark .bg-error\/10,
+html.dark [class*="bg-error/10"] {
+  background-color: rgba(239, 68, 68, 0.15) !important;
+}
+
+html.dark .bg-warning\/10,
+html.dark [class*="bg-warning/10"] {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+}
+
+html.dark .bg-success\/10,
+html.dark [class*="bg-success/10"] {
+  background-color: rgba(34, 197, 94, 0.15) !important;
+}
+
+/* Dark mode for slate colors used in dark backgrounds */
+html.dark .text-slate-300 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+/* Dark mode quick nav sticky */
+html.dark .sticky {
+  background-color: #1e293b !important;
+}
+
+/* Dark mode page content background */
+html.dark .page-content {
+  background-color: #0f172a;
+}
+
+/* Dark mode sidebar */
+html.dark .sidebar-nav {
+  background-color: #1e293b !important;
+  border-right-color: #334155 !important;
+}
+
+html.dark .sidebar-title {
+  color: #94a3b8 !important;
+}
+
+html.dark .step-progress::before {
+  background-color: #334155 !important;
+}
+
+html.dark .step-progress li.has-divider {
+  border-top-color: #334155 !important;
+}
+
+html.dark .step-circle {
+  background-color: #1e293b !important;
+  border-color: #475569 !important;
+  color: #94a3b8 !important;
+}
+
+html.dark .step-item:hover {
+  background-color: #334155 !important;
+}
+
+html.dark .step-item.current {
+  background-color: rgba(79, 70, 229, 0.15) !important;
+}
+
+html.dark .step-title-text {
+  color: #e2e8f0 !important;
+}
+
+/* Dark mode navbar */
+html.dark .navbar,
+html.dark nav.navbar {
+  background-color: #1e293b !important;
+  border-bottom-color: #334155 !important;
+}
+
+html.dark .navbar-brand {
+  color: #ffffff !important;
+}
+
+html.dark .navbar-brand:hover {
+  color: #818cf8 !important;
+}
+
+html.dark .brand-icon {
+  color: #818cf8 !important;
+}
+
+html.dark .breadcrumb-item {
+  color: #94a3b8 !important;
+}
+
+html.dark .breadcrumb-item a {
+  color: #818cf8 !important;
+}
+
+html.dark .breadcrumb-item + .breadcrumb-item::before {
+  color: #475569 !important;
+}
+
+html.dark .breadcrumb-item.active {
+  color: #cbd5e1 !important;
+}
+
+/* Dark mode content cards */
+html.dark .content-card {
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+/* Dark mode for ContentCard component */
+html.dark [class*="ContentCard"],
+html.dark .bg-white.rounded-lg.border {
+  background-color: #1e293b !important;
+}
+
+/* Dark mode buttons */
+html.dark button:not(.bg-accent):not(.bg-success):not(.bg-error):not(.bg-warning) {
+  color: #e2e8f0;
+}
+
+html.dark .bg-surface-tertiary button,
+html.dark button.bg-surface-tertiary {
+  background-color: #0f172a !important;
+  color: #94a3b8 !important;
+}
+
+/* Dark mode for expandable sections */
+html.dark .border.border-border.rounded-lg button {
+  background-color: #0f172a !important;
+}
+
+html.dark .border.border-border.rounded-lg .bg-white {
+  background-color: #1e293b !important;
+}
+
+/* Dark mode hero/header backgrounds - keep dark */
+html.dark .header-gradient-animated {
+  background: linear-gradient(
+    -45deg,
+    #0f172a,
+    #1e293b,
+    #1e1b4b,
+    #172554,
+    #0f172a
+  ) !important;
+}
+
+/* Dark mode for AlertBox */
+html.dark .alert-box {
+  border-color: #334155 !important;
+}
+
+/* Dark mode for code blocks */
+html.dark pre,
+html.dark code {
+  background-color: #0f172a !important;
+  color: #e2e8f0 !important;
 }
 
 /* Professional utility classes */

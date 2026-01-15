@@ -3,7 +3,7 @@
     <img
       v-for="logo in logos"
       :key="logo.id"
-      src="/BG-logo-black.png"
+      :src="isDark ? '/bg-logo-white.png' : '/BG-logo-black.png'"
       alt=""
       class="floating-logo"
       :class="[logo.animation]"
@@ -22,7 +22,9 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useDarkMode } from '~/composables/useDarkMode'
 
+const { isDark } = useDarkMode()
 const scrollY = ref(0)
 
 const handleScroll = () => {
@@ -109,7 +111,7 @@ const logos = Array.from({ length: logoCount }, (_, i) => {
   height: auto;
   will-change: transform;
   filter: grayscale(100%);
-  transition: transform 0.1s linear;
+  transition: transform 0.1s linear, filter 0.3s ease, opacity 0.3s ease;
 }
 
 /* Animations */
