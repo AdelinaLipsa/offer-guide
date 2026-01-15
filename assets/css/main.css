@@ -604,7 +604,7 @@ html.dark code {
 
 /* Global content width - change this to adjust all page content widths */
 .content-width {
-  width: 80%;
+  width: 60%;
   margin-left: auto;
   margin-right: auto;
 }
