@@ -105,7 +105,7 @@ const logos = Array.from({ length: logoCount }, (_, i) => {
   transition: transform 0.15s ease-out;
 }
 
-/* Reduce count on mobile */
+/* Reduce logo count on mobile for performance */
 @media (max-width: 768px) {
   .floating-logo:nth-child(odd) {
     display: none;
