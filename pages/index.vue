@@ -9,7 +9,7 @@
 
     <div class="content-width py-12">
       <!-- Intro Card -->
-      <div class="bg-white rounded-lg p-8 border border-border mb-10">
+      <div v-scroll-animate="'fade-up'" class="bg-white rounded-lg p-8 border border-border mb-10 hover-subtle">
         <h2 class="text-xl font-semibold mb-4 flex items-center text-navy-900">
           <Icon name="lucide:book-open" class="w-5 h-5 mr-3 text-accent" />
           Welcome to Your Complete Funnel Guide
@@ -27,21 +27,21 @@
       </div>
 
       <!-- Stats Row -->
-      <div class="bg-surface-tertiary rounded-lg p-8 mb-10 border border-border">
+      <div v-scroll-animate="'fade-up'" class="bg-surface-tertiary rounded-lg p-8 mb-10 border border-border">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <div class="text-center">
+          <div class="text-center scroll-animate animate-fade-up stagger-1 is-visible">
             <div class="text-3xl font-bold text-accent mb-1">7</div>
             <div class="text-charcoal-500 text-sm font-medium uppercase tracking-wide">Funnel Steps</div>
           </div>
-          <div class="text-center">
+          <div class="text-center scroll-animate animate-fade-up stagger-2 is-visible">
             <div class="text-3xl font-bold text-accent mb-1">60-120%</div>
             <div class="text-charcoal-500 text-sm font-medium uppercase tracking-wide">AOV Increase</div>
           </div>
-          <div class="text-center">
+          <div class="text-center scroll-animate animate-fade-up stagger-3 is-visible">
             <div class="text-3xl font-bold text-accent mb-1">15-25%</div>
             <div class="text-charcoal-500 text-sm font-medium uppercase tracking-wide">Refund Reduction</div>
           </div>
-          <div class="text-center">
+          <div class="text-center scroll-animate animate-fade-up stagger-4 is-visible">
             <div class="text-3xl font-bold text-accent mb-1">2-5%</div>
             <div class="text-charcoal-500 text-sm font-medium uppercase tracking-wide">VSL Conversion</div>
           </div>
@@ -49,7 +49,7 @@
       </div>
 
       <!-- Section Title -->
-      <h2 class="text-2xl font-bold text-center mb-10 text-navy-900">
+      <h2 v-scroll-animate="'fade-in'" class="text-2xl font-bold text-center mb-10 text-navy-900">
         The Complete Funnel Structure
       </h2>
 
@@ -272,42 +272,42 @@
       </div>
 
       <!-- How to Use This Guide -->
-      <div class="bg-white rounded-lg p-8 border border-border">
+      <div v-scroll-animate="'fade-up'" class="bg-white rounded-lg p-8 border border-border hover-subtle">
         <h2 class="text-xl font-semibold mb-6 flex items-center text-navy-900">
-          <Icon name="lucide:lightbulb" class="w-5 h-5 mr-3 text-accent" />
+          <Icon name="lucide:lightbulb" class="w-5 h-5 mr-3 text-accent icon-hover-rotate" />
           How to Use This Guide
         </h2>
         <div class="grid md:grid-cols-2 gap-6">
-          <div class="flex">
+          <div class="flex group">
             <div class="flex-shrink-0">
-              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm">1</div>
+              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm transition-transform duration-200 group-hover:scale-110">1</div>
             </div>
             <div class="ml-3">
               <strong class="text-navy-900">Study Each Step:</strong>
               <p class="text-charcoal-600 text-sm mt-1">Click through each step to understand the structure, requirements, and best practices.</p>
             </div>
           </div>
-          <div class="flex">
+          <div class="flex group">
             <div class="flex-shrink-0">
-              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm">2</div>
+              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm transition-transform duration-200 group-hover:scale-110">2</div>
             </div>
             <div class="ml-3">
               <strong class="text-navy-900">Note the Metrics:</strong>
               <p class="text-charcoal-600 text-sm mt-1">Pay attention to conversion rates and benchmarks to set realistic expectations.</p>
             </div>
           </div>
-          <div class="flex">
+          <div class="flex group">
             <div class="flex-shrink-0">
-              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm">3</div>
+              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm transition-transform duration-200 group-hover:scale-110">3</div>
             </div>
             <div class="ml-3">
               <strong class="text-navy-900">Avoid Common Mistakes:</strong>
               <p class="text-charcoal-600 text-sm mt-1">Each page includes a section on mistakes to avoid based on real vendor data.</p>
             </div>
           </div>
-          <div class="flex">
+          <div class="flex group">
             <div class="flex-shrink-0">
-              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm">4</div>
+              <div class="w-8 h-8 rounded-lg bg-accent text-white flex items-center justify-center font-semibold text-sm transition-transform duration-200 group-hover:scale-110">4</div>
             </div>
             <div class="ml-3">
               <strong class="text-navy-900">Replace Placeholders:</strong>

@@ -4,34 +4,16 @@
     <Sidebar :current-step="7" />
 
     <div class="page-content">
-      <!-- Header -->
-      <div class="header">
-        <!-- Logo Shadow (larger, blurred, behind) -->
-        <img src="/bg-logo-white.png" alt="" class="logo-shadow" aria-hidden="true" />
-        <!-- Logo Main (visible, on top) -->
-        <img src="/bg-logo-white.png" alt="" class="logo-main" aria-hidden="true" />
-        <div class="header-content">
-          <div class="step-badge">STEP 7 OF 8</div>
-          <h1>Checkout Page</h1>
-          <p>Convert viewers into customers with optimized pricing and package options</p>
-        </div>
-
-        <!-- Quick Stats Bar -->
-        <div class="flex flex-wrap justify-center gap-6 mt-8">
-          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
-            <Icon name="lucide:shopping-cart" class="w-4 h-4" />
-            <span class="text-sm">30-50% Checkout Rate</span>
-          </div>
-          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
-            <Icon name="lucide:package" class="w-4 h-4" />
-            <span class="text-sm">3 Package Options</span>
-          </div>
-          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
-            <Icon name="lucide:dollar-sign" class="w-4 h-4" />
-            <span class="text-sm">$150-250 AOV</span>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        badge="STEP 2 OF 8"
+        title="Checkout Page (DTC)"
+        subtitle="Convert viewers into customers with optimized pricing and package options"
+        :stats="[
+          { icon: 'lucide:shopping-cart', text: '30-50% Checkout Rate' },
+          { icon: 'lucide:package', text: '3 Package Options' },
+          { icon: 'lucide:dollar-sign', text: '$150-250 AOV' }
+        ]"
+      />
 
       <div class="content-width py-10">
         <!-- Quick Jump Navigation -->
@@ -41,12 +23,12 @@
             <span class="text-sm font-semibold text-navy-900">Quick Navigation</span>
           </div>
           <div class="flex flex-wrap gap-2">
-            <a href="#overview" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Overview</a>
-            <a href="#pricing" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">3-Tier Pricing</a>
-            <a href="#order-form" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Order Form</a>
-            <a href="#trust" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Trust Elements</a>
-            <a href="#checklist" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Checklist</a>
-            <a href="#metrics" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Metrics</a>
+            <a href="#overview" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Overview</a>
+            <a href="#pricing" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">3-Tier Pricing</a>
+            <a href="#order-form" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Order Form</a>
+            <a href="#trust" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Trust Elements</a>
+            <a href="#checklist" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Checklist</a>
+            <a href="#metrics" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Metrics</a>
           </div>
         </div>
 
@@ -380,84 +362,6 @@ useSeoMeta({
 @media (max-width: 768px) {
   .page-content {
     margin-left: 0;
-  top: 50%;
-  transform: translateY(-50%);
   }
-}
-
-.header {
-  background: #1e293b;
-  color: #ffffff;
-  padding: 48px 20px;
-  min-height: 280px;
-  text-align: center;
-  position: relative;
-}
-
-.header-content {
-  position: relative;
-  z-index: 10;
-}
-
-/* Main visible logo */
-.logo-main {
-  position: absolute;
-  left: 24px;
-  bottom: 20px;
-  width: 140px;
-  height: auto;
-  opacity: 0.85;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-}
-
-/* Shadow logo - full height, left side */
-.logo-shadow {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 400px;
-  height: auto;
-  opacity: 0.06;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .logo-main {
-    width: 100px;
-    left: 16px;
-    bottom: 12px;
-  }
-  .logo-shadow {
-    width: 250px;
-    opacity: 0.05;
-  }
-}
-
-.step-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 16px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.header h1 {
-  font-size: 32px;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.header p {
-  font-size: 16px;
-  opacity: 0.85;
-  max-width: 600px;
-  margin: 0 auto;
 }
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div
-    class="rounded-md p-4 border-l-4"
+    v-scroll-animate="'fade-up'"
+    class="rounded-md p-4 border-l-4 transition-all duration-200 hover:shadow-md hover:-translate-y-0.5"
     :class="[alertClasses, customClass]"
   >
     <div class="flex items-start">

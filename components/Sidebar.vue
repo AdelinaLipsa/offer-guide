@@ -135,15 +135,47 @@ const getTitleClass = (stepNumber: number) => {
   padding: 0.625rem 0;
   text-decoration: none;
   position: relative;
-  transition: background-color 0.2s ease;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 6px;
   margin: 0 -0.5rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
 }
 
+.step-item::before {
+  content: '';
+  position: absolute;
+  left: -0.5rem;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, #4f46e5, #7c3aed);
+  border-radius: 0 2px 2px 0;
+  transform: scaleY(0);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.step-item:hover::before,
+.step-item.current::before {
+  transform: scaleY(1);
+}
+
 .step-item:hover {
-  background-color: #f8fafc;
+  background-color: #f1f5f9;
+  transform: translateX(4px);
+}
+
+.step-item:hover .step-circle {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}
+
+.step-item.current {
+  background-color: #f0f4ff;
+}
+
+.step-item:active {
+  transform: translateX(2px) scale(0.99);
 }
 
 .step-circle {

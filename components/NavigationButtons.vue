@@ -6,21 +6,21 @@
     <NuxtLink
       v-if="prevTo"
       :to="prevTo"
-      class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm transition-colors duration-200 bg-white text-navy-800 border border-border hover:bg-surface-tertiary"
+      class="group inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm bg-white text-navy-800 border border-border hover:bg-surface-tertiary btn-hover"
       :class="flexClass"
     >
-      <Icon name="lucide:arrow-left" class="w-4 h-4 mr-2" />
+      <Icon name="lucide:arrow-left" class="w-4 h-4 mr-2 transition-transform duration-200 group-hover:-translate-x-1" />
       <span>{{ prevText }}</span>
     </NuxtLink>
 
     <NuxtLink
       v-if="nextTo"
       :to="nextTo"
-      class="inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm transition-colors duration-200 bg-accent text-white hover:bg-accent-hover"
+      class="group inline-flex items-center justify-center px-6 py-3 rounded-md font-medium text-sm bg-accent text-white hover:bg-accent-hover btn-hover"
       :class="flexClass"
     >
       <span>{{ nextText }}</span>
-      <Icon name="lucide:arrow-right" class="w-4 h-4 ml-2" />
+      <Icon name="lucide:arrow-right" class="w-4 h-4 ml-2 transition-transform duration-200 group-hover:translate-x-1" />
     </NuxtLink>
   </div>
 </template>

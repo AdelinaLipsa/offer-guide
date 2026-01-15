@@ -4,34 +4,16 @@
     <Sidebar :current-step="8" />
 
     <div class="page-content">
-      <!-- Header -->
-      <div class="header">
-        <!-- Logo Shadow (larger, blurred, behind) -->
-        <img src="/bg-logo-white.png" alt="" class="logo-shadow" aria-hidden="true" />
-        <!-- Logo Main (visible, on top) -->
-        <img src="/bg-logo-white.png" alt="" class="logo-main" aria-hidden="true" />
-        <div class="header-content">
-          <div class="step-badge">STEP 8 OF 8</div>
-          <h1>Footer & Legal</h1>
-          <p>Required disclaimers and compliance elements</p>
-        </div>
-
-        <!-- Quick Stats Bar -->
-        <div class="flex flex-wrap justify-center gap-6 mt-8">
-          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-            <Icon name="lucide:shield-alert" class="w-5 h-5" />
-            <span class="text-sm font-medium">Mandatory</span>
-          </div>
-          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-            <Icon name="lucide:file-text" class="w-5 h-5" />
-            <span class="text-sm font-medium">4 Legal Pages</span>
-          </div>
-          <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-lg">
-            <Icon name="lucide:check-circle" class="w-5 h-5" />
-            <span class="text-sm font-medium">10 Required Elements</span>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        badge="STEP 8 OF 8"
+        title="Footer & Legal"
+        subtitle="Required disclaimers and compliance elements"
+        :stats="[
+          { icon: 'lucide:shield-alert', text: 'Mandatory' },
+          { icon: 'lucide:file-text', text: '4 Legal Pages' },
+          { icon: 'lucide:check-circle', text: '10 Required Elements' }
+        ]"
+      />
 
       <div class="content-width py-10">
         <!-- Quick Jump Navigation -->
@@ -41,13 +23,13 @@
             <span class="text-sm font-semibold text-navy-900">Quick Navigation</span>
           </div>
           <div class="flex flex-wrap gap-2">
-            <a href="#critical-warning" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Critical Warning</a>
-            <a href="#why-compliance" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Why Compliance</a>
-            <a href="#footer-example" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Footer Example</a>
-            <a href="#checklist" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Checklist</a>
-            <a href="#legal-pages" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Legal Pages</a>
-            <a href="#disclaimers" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Disclaimers</a>
-            <a href="#consequences" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Consequences</a>
+            <a href="#critical-warning" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Critical Warning</a>
+            <a href="#why-compliance" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Why Compliance</a>
+            <a href="#footer-example" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Footer Example</a>
+            <a href="#checklist" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Checklist</a>
+            <a href="#legal-pages" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Legal Pages</a>
+            <a href="#disclaimers" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Disclaimers</a>
+            <a href="#consequences" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Consequences</a>
           </div>
         </div>
 
@@ -794,85 +776,7 @@ useSeoMeta({
 @media (max-width: 768px) {
   .page-content {
     margin-left: 0;
-  top: 50%;
-  transform: translateY(-50%);
   }
-}
-
-.header {
-  background: #1e293b;
-  color: #ffffff;
-  padding: 48px 20px;
-  min-height: 280px;
-  text-align: center;
-  position: relative;
-}
-
-.header-content {
-  position: relative;
-  z-index: 10;
-}
-
-/* Main visible logo */
-.logo-main {
-  position: absolute;
-  left: 24px;
-  bottom: 20px;
-  width: 140px;
-  height: auto;
-  opacity: 0.85;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-}
-
-/* Shadow logo - large watermark behind main logo */
-.logo-shadow {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 400px;
-  height: auto;
-  opacity: 0.06;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .logo-main {
-    width: 100px;
-    left: 16px;
-    bottom: 12px;
-  }
-  .logo-shadow {
-    width: 250px;
-    opacity: 0.05;
-  }
-}
-
-.step-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 16px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.header h1 {
-  font-size: 32px;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.header p {
-  font-size: 16px;
-  opacity: 0.85;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 /* Responsive tables */

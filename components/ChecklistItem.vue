@@ -1,6 +1,6 @@
 <template>
   <li
-    class="rounded-md p-4 flex items-start"
+    class="rounded-md p-4 flex items-start transition-all duration-200 hover:translate-x-1"
     :class="[
       containerClass,
       customClass

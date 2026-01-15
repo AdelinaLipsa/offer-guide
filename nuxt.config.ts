@@ -22,7 +22,9 @@ export default defineNuxtConfig({
         { name: 'description', content: 'Complete Sales Funnel Structure Guide' }
       ],
       link: []
-    }
+    },
+    pageTransition: { name: 'page', mode: 'out-in' },
+    layoutTransition: { name: 'layout', mode: 'out-in' }
   },
 
   typescript: {

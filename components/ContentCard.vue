@@ -1,6 +1,7 @@
 <template>
   <div
-    class="bg-white rounded-lg p-6 mb-6 border border-border"
+    v-scroll-animate="'fade-up'"
+    class="bg-white rounded-lg p-6 mb-6 border border-border hover-subtle"
     :class="[borderClass, customClass]"
   >
     <slot />

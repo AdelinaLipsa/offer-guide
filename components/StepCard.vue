@@ -1,6 +1,6 @@
 <template>
   <div
-    class="step-card bg-white rounded-lg p-6 h-full border border-border flex flex-col transition-shadow duration-200 hover:shadow-md"
+    class="step-card group bg-white rounded-lg p-6 h-full border border-border flex flex-col hover-lift cursor-pointer"
     :class="customClass"
   >
     <div class="flex items-center mb-4">
@@ -8,8 +8,8 @@
         class="step-number-circle w-10 h-10 rounded-lg flex items-center justify-center text-white font-semibold text-sm"
         :class="numberClass || 'bg-accent'"
       >
-        <span v-if="!numberIcon">{{ stepNumber }}</span>
-        <Icon v-else :name="numberIcon" class="w-5 h-5" />
+        <Icon v-if="numberIcon" :name="numberIcon" class="w-5 h-5 text-white" />
+        <span v-else>{{ stepNumber }}</span>
       </div>
       <span
         class="ml-auto px-3 py-1 rounded-md text-xs font-medium tracking-wide uppercase"
@@ -55,11 +55,11 @@
     <NuxtLink
       v-if="linkTo"
       :to="linkTo"
-      class="w-full text-center py-2.5 px-4 rounded-md font-medium text-sm transition-colors duration-200"
+      class="w-full text-center py-2.5 px-4 rounded-md font-medium text-sm btn-hover ripple-container"
       :class="buttonClass || 'bg-accent text-white hover:bg-accent-hover'"
     >
       {{ linkText }}
-      <Icon name="lucide:arrow-right" class="w-4 h-4 inline-block ml-1" />
+      <Icon name="lucide:arrow-right" class="w-4 h-4 inline-block ml-1 transition-transform duration-200 group-hover:translate-x-1" />
     </NuxtLink>
   </div>
 </template>
@@ -88,3 +88,22 @@ defineProps<{
   buttonClass?: string
 }>()
 </script>
+
+<style scoped>
+.step-card:hover .step-number-circle {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+
+.step-number-circle {
+  transition: transform 0.2s ease-out, box-shadow 0.2s ease-out;
+}
+
+.step-card:hover li {
+  transform: translateX(4px);
+}
+
+.step-card li {
+  transition: transform 0.2s ease-out;
+}
+</style>

@@ -4,52 +4,34 @@
     <Sidebar :current-step="1" />
 
     <div class="page-content">
-      <!-- Enhanced Header -->
-      <div class="header">
-        <!-- Logo Shadow (larger, blurred, behind) -->
-        <img src="/bg-logo-white.png" alt="" class="logo-shadow" aria-hidden="true" />
-        <!-- Logo Main (visible, on top) -->
-        <img src="/bg-logo-white.png" alt="" class="logo-main" aria-hidden="true" />
-        <div class="header-content">
-          <div class="step-badge">STEP 1 OF 7</div>
-          <h1>VSL Page (Video Sales Letter)</h1>
-          <p>The foundation of your funnel - Present your product through a compelling video presentation</p>
-        </div>
-
-        <!-- Quick Stats Bar -->
-        <div class="flex flex-wrap justify-center gap-6 mt-8">
-          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
-            <Icon name="lucide:eye" class="w-4 h-4" />
-            <span class="text-sm">2-5% Conversion Rate</span>
-          </div>
-          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
-            <Icon name="lucide:clock" class="w-4 h-4" />
-            <span class="text-sm">~50 Min Video Length</span>
-          </div>
-          <div class="bg-white/10 backdrop-blur px-4 py-2 rounded-lg flex items-center gap-2">
-            <Icon name="lucide:target" class="w-4 h-4" />
-            <span class="text-sm">40-60% Watch Rate</span>
-          </div>
-        </div>
-      </div>
+      <PageHeader
+        badge="STEP 1 OF 8"
+        title="VSL Page (Video Sales Letter)"
+        subtitle="The foundation of your funnel - Present your product through a compelling video presentation"
+        :stats="[
+          { icon: 'lucide:eye', text: '2-5% Conversion Rate' },
+          { icon: 'lucide:clock', text: '~50 Min Video Length' },
+          { icon: 'lucide:target', text: '40-60% Watch Rate' }
+        ]"
+      />
 
       <div class="content-width py-10">
 
         <!-- Quick Jump Navigation -->
-        <div class="bg-surface border border-border rounded-lg p-4 mb-8 sticky top-4 z-20">
+        <div class="bg-surface border border-border rounded-lg p-4 mb-8 sticky top-4 z-20 hover-subtle">
           <div class="flex items-center gap-2 mb-3">
-            <Icon name="lucide:compass" class="w-4 h-4 text-accent" />
+            <Icon name="lucide:compass" class="w-4 h-4 text-accent icon-hover-rotate" />
             <span class="text-sm font-semibold text-navy-900">Quick Navigation</span>
           </div>
           <div class="flex flex-wrap gap-2">
-            <a href="#overview" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Overview</a>
-            <a href="#structure" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Visual Structure</a>
-            <a href="#checklist" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Checklist</a>
-            <a href="#script" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Script Template</a>
-            <a href="#psychology" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Psychology</a>
-            <a href="#specs" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Tech Specs</a>
-            <a href="#calculator" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Calculator</a>
-            <a href="#metrics" class="text-xs px-3 py-1.5 bg-surface-tertiary hover:bg-accent hover:text-white rounded-md transition-colors">Metrics</a>
+            <a href="#overview" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Overview</a>
+            <a href="#structure" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Visual Structure</a>
+            <a href="#checklist" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Checklist</a>
+            <a href="#script" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Script Template</a>
+            <a href="#psychology" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Psychology</a>
+            <a href="#specs" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Tech Specs</a>
+            <a href="#calculator" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Calculator</a>
+            <a href="#metrics" class="nav-pill text-xs px-3 py-1.5 bg-surface-tertiary rounded-md">Metrics</a>
           </div>
         </div>
 
@@ -65,23 +47,23 @@
 
           <!-- Key Benefits Grid -->
           <div class="grid md:grid-cols-3 gap-4 mb-6">
-            <div class="bg-success-light border border-success/20 rounded-lg p-4">
+            <div class="bg-success-light border border-success/20 rounded-lg p-4 grid-item-interactive">
               <div class="flex items-center gap-2 mb-2">
-                <Icon name="lucide:trending-up" class="w-5 h-5 text-success" />
+                <Icon name="lucide:trending-up" class="w-5 h-5 text-success icon-hover-scale" />
                 <span class="font-semibold text-navy-900">Higher Conversion</span>
               </div>
               <p class="text-sm text-charcoal-600">2-5% conversion vs 0.5-1% for text-only pages</p>
             </div>
-            <div class="bg-accent-light border border-accent/20 rounded-lg p-4">
+            <div class="bg-accent-light border border-accent/20 rounded-lg p-4 grid-item-interactive">
               <div class="flex items-center gap-2 mb-2">
-                <Icon name="lucide:heart" class="w-5 h-5 text-accent" />
+                <Icon name="lucide:heart" class="w-5 h-5 text-accent icon-hover-scale" />
                 <span class="font-semibold text-navy-900">Emotional Connection</span>
               </div>
               <p class="text-sm text-charcoal-600">Video builds trust faster than text alone</p>
             </div>
-            <div class="bg-warning-light border border-warning/20 rounded-lg p-4">
+            <div class="bg-warning-light border border-warning/20 rounded-lg p-4 grid-item-interactive">
               <div class="flex items-center gap-2 mb-2">
-                <Icon name="lucide:shield-check" class="w-5 h-5 text-warning" />
+                <Icon name="lucide:shield-check" class="w-5 h-5 text-warning icon-hover-scale" />
                 <span class="font-semibold text-navy-900">Objection Handling</span>
               </div>
               <p class="text-sm text-charcoal-600">Address concerns before they arise</p>
@@ -958,82 +940,6 @@ const calculatedResults = computed(() => {
   .page-content {
     margin-left: 0;
   }
-}
-
-.header {
-  background: #1e293b;
-  color: #ffffff;
-  padding: 48px 20px;
-  min-height: 280px;
-  text-align: center;
-  position: relative;
-}
-
-.header-content {
-  position: relative;
-  z-index: 10;
-}
-
-/* Main visible logo - bottom left corner */
-.logo-main {
-  position: absolute;
-  left: 24px;
-  bottom: 20px;
-  width: 140px;
-  height: auto;
-  opacity: 0.85;
-  pointer-events: none;
-  user-select: none;
-  z-index: 2;
-}
-
-/* Shadow logo - large watermark behind main logo */
-.logo-shadow {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 400px;
-  height: auto;
-  opacity: 0.06;
-  pointer-events: none;
-  user-select: none;
-  z-index: 1;
-}
-
-@media (max-width: 768px) {
-  .logo-main {
-    width: 100px;
-    left: 16px;
-    bottom: 12px;
-  }
-  .logo-shadow {
-    width: 250px;
-    opacity: 0.05;
-  }
-}
-
-.step-badge {
-  display: inline-block;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 6px 16px;
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  margin-bottom: 12px;
-  letter-spacing: 0.5px;
-}
-
-.header h1 {
-  font-size: 32px;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.header p {
-  font-size: 16px;
-  opacity: 0.85;
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 html {
